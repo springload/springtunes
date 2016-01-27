@@ -1,9 +1,9 @@
 // =============================================================================
 // Scss Springtunes Project
 // =============================================================================\
-// 
-// IMPORTANT: Using Pleeease.io to preprocess SCSS, it is an experimental feature 
-// so preceed with caution... 
+//
+// IMPORTANT: Using Pleeease.io to preprocess SCSS, it is an experimental feature
+// so preceed with caution...
 
 // Core variables, mixins and functions
 @import 'globals/variables';
@@ -21,6 +21,7 @@
 // Components
 @import 'components/header';
 @import 'components/layout';
+@import 'components/icon';
 @import 'components/rc-slider';
 @import 'components/current-song';
 @import 'components/last-updated';
@@ -29,5 +30,5 @@
 // Utility classes
 @import 'globals/utilities';
 
-// Widths 
+// Widths
 @import 'globals/widths';

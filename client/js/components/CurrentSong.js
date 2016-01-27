@@ -10,7 +10,7 @@ export default class CurrentSong extends Component {
             <div className='current-song'>
                 <div className='song-details'>
                     <div className='song-details__graphic'>
-                        <Icon name='fa-headphones' width='40' height='45' />
+                        <Icon name='fa-headphones' iconType='big' />
                     </div>
                     <div className='song-details__content'>
                         <div className='twelve columns'>

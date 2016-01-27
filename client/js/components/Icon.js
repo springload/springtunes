@@ -3,11 +3,10 @@ import SVGInline from 'react-svg-inline';
 
 export default class Icon extends Component {
     render() {
-        const { name, width, height } = this.props;
+        const { name, iconType } = this.props;
         return (
-            <SVGInline svg={ require('../../../public/img/icons/' + name + '.svg') }
-              width={ width }
-              height={ height }
+            <SVGInline svg={ require(`../../../public/img/icons/${name}.svg`) }
+              className={ `icon-type-${iconType}` }
             />
         );
     }
@@ -15,6 +14,5 @@ export default class Icon extends Component {
 
 Icon.propTypes = {
     name: PropTypes.string.isRequired,
-    width: PropTypes.string.isRequired,
-    height: PropTypes.string.isRequired,
+    iconType: PropTypes.string.isRequired,
 };
