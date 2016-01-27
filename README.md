@@ -11,6 +11,7 @@ Current features:
 - Mute/Unmute
 - Change volume
 
+## Screenshot
 ![Screenshot Springtunes](/screenshots/sc_springtunes.png?raw=true "Screenshot Springtunes")
 
 ## Requirements
