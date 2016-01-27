@@ -1,4 +1,4 @@
-![Logo Springtunes](/public/img/springtunes.svg "Logo Springtunes")
+![Logo Springtunes](/screenshots/logo_springtunes.png?raw=true "Logo Springtunes")
 
 # springtunes [ ![Codeship Status for springload/frontend-starter-kit](https://codeship.com/projects/4be56cd0-a6df-0133-dffd-1a5a40261798/status?branch=master)](https://codeship.com/projects/130070)
 Spotify remote control through web browser.
