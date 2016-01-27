@@ -1,0 +1,21 @@
+{
+    "validateIndentation": 4,
+    "safeContextKeyword": ["self"],
+    "requireSpaceBeforeKeywords": [
+        "else",
+        "while",
+        "catch"
+    ],
+    "disallowMultipleVarDecl": "exceptUndefined",
+    "excludeFiles": [
+        "node_modules/**",
+        "**/*.min.js",
+        "**/lib/**",
+        ".grunt/**",
+        "coverage/**",
+        "lib-cov/**"
+    ],
+    "fileExtensions": [".js"],
+    "preset":"airbnb",
+    "requireCamelCaseOrUpperCaseIdentifiers": "ignoreProperties"
+}

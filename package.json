@@ -1,0 +1,81 @@
+{
+  "name": "springtunes",
+  "version": "1.0.0",
+  "description": "Control Spotify remotely from your browser. (MACOS X 10.10+ only)",
+  "author": "Vincent Audebert <vincent@springload.co.nz>",
+  "contributors": [{
+    "name": "Katie Day"
+  },
+  {
+    "name": "Thibaud Colas"
+  },
+  {
+    "name": "Josh Barr"
+  }],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/springload/springtunes.git"
+  },
+  "engines": {
+    "node": "4.2.2"
+  },
+  "keywords": [
+    "control",
+    "music",
+    "spotify",
+    "remote",
+    "redux",
+    "client"
+  ],
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/springload/springtunes/issues"
+  },
+  "homepage": "https://github.com/springload/springtunes",
+  "dependencies": {
+    "body-parser": "^1.14.2",
+    "express": "^4.13.3",
+    "isomorphic-fetch": "^2.1.1",
+    "keymirror": "^0.1.1",
+    "node-spotify-webhelper": "0.0.4",
+    "osa-spotify": "^1.0.1",
+    "raw-loader": "^0.5.1",
+    "rc-slider": "^3.3.1",
+    "react": "^0.14.0",
+    "react-dom": "^0.14.0",
+    "react-redux": "^4.0.0",
+    "react-svg-inline": "^1.0.1",
+    "redux": "^3.0.0",
+    "redux-logger": "^2.0.2",
+    "redux-thunk": "^0.1.0",
+    "spotify-node-applescript": "^0.2.2",
+    "uglifyjs": "^2.4.10"
+  },
+  "devDependencies": {
+    "babel-core": "^5.6.18",
+    "babel-eslint": "^4.1.1",
+    "babel-loader": "^5.1.4",
+    "babel-plugin-react-transform": "^1.1.0",
+    "eslint": "^1.3.1",
+    "eslint-config-airbnb": "^3.0.0",
+    "eslint-plugin-react": "^3.14.0",
+    "expect": "^1.6.0",
+    "node-libs-browser": "^0.5.2",
+    "normalize-css": "^2.3.1",
+    "pleeease-cli": "^4.0.0",
+    "react-transform-hmr": "^1.0.0",
+    "webpack": "^1.9.11",
+    "webpack-dev-middleware": "^1.2.0",
+    "webpack-hot-middleware": "^2.2.0"
+  },
+  "scripts": {
+    "build:css": "pleeease compile",
+    "linter:js": "eslint",
+    "lint": "npm run linter:js -s -- .",
+    "server": "node server/server.js",
+    "dev": "NODE_ENV=development npm run server",
+    "start": "npm run build:css && npm run dist && NODE_ENV=production npm run server",
+    "dist": "NODE_ENV=production webpack --config webpack.production.config.js"
+  },
+  "analyze": true
+}

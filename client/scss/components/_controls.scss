@@ -1,0 +1,72 @@
+// -----------------------------------------------------------------------------
+// Controls / Buttons
+// -----------------------------------------------------------------------------
+
+.controls {
+	border-top: 1px solid $color-grey-haze;
+	margin-top:1.5rem;
+	padding-top:1.5rem;
+}
+
+// .btn {
+// 	width:44px;
+// 	height:44px;
+// 	color: $color-stage-bg;
+// 	border-radius: 50px;
+// 	border:none;
+// 	box-shadow:none;
+// }
+
+button {
+    height: 38px;
+    padding: 0 .75rem;
+    color: white;
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: uppercase;
+    background-color: $color-brand-1;
+    border-radius: 2px;
+    border: none;
+    margin: 0 .3125rem .3125rem ;
+    font-weight: $font-weight-bold;
+    transition: background-color .2s ease;
+    &:first-child {
+		margin-left:0;
+	}
+	&:hover {
+		color: white;
+		background-color: $color-blue-lake;
+	}
+}
+
+.btn-orange {
+	background-color: $color-brand-2;
+    &:hover {
+        background-color: darken($color-brand-2, 20);
+    }
+}
+
+.volume-control {
+    span {
+        @extend %inline-block;
+        vertical-align: middle !important;
+        color: $color-grey-cement;
+        font-size: 14px;
+        text-transform: uppercase;
+    }
+}
+
+.rc-slider {
+    @extend %inline-block;
+    vertical-align: middle !important;
+    margin-left:1.5rem;
+    background-color: #dbebd2;
+}
+
+.rc-slider-track {
+  background-color: $color-brand-1;
+}
+
+.rc-slider-handle {
+    border: solid 2px $color-brand-1;
+}

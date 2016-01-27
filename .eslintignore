@@ -1,0 +1,10 @@
+node_modules
+*.min.js
+**/lib/
+public/
+coverage/
+gulp/
+gulpfile.js
+core/static/
+doc/
+dist/

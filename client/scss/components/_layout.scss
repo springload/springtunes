@@ -1,0 +1,17 @@
+// -----------------------------------------------------------------------------
+// Layout 
+// -----------------------------------------------------------------------------
+
+
+.container {
+  	max-width: 680px;
+}
+
+.section {
+    padding-top: 2.5rem;
+    padding-bottom: 2.5rem;
+    @include medium {
+    	padding-top: 5rem;
+    	padding-bottom: 5rem;
+    }
+}

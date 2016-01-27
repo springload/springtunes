@@ -1,0 +1,31 @@
+{
+  "in": [
+  	"node_modules/normalize-css/normalize.css",
+    "client/scss/lib/skeleton.css",
+	"client/scss/screen.scss"
+  ],
+
+  "out": "public/css/screen.min.css",
+
+  "autoprefixer": {
+    "browsers": [
+      "> 1%",
+      "ie >= 8",
+      "last 2 versions",
+      "Firefox ESR",
+      "Opera 12.1"
+    ],
+    "cascade": true
+  },
+
+  "filters": true,
+  "rem": true,
+  "pseudoElements": true,
+  "opacity": true,
+  "import": true,
+  "minifier": true,
+  "mqpacker": false,
+  "sourcemaps": false,
+  "next": false,
+  "sass": true
+}

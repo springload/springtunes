@@ -1,0 +1,96 @@
+// ----------------------------------------------------------------------------
+// Variables
+// ----------------------------------------------------------------------------
+//
+// CONTENTS --
+// 1. Colors
+// 2. Fonts
+// 3. Spacing
+// 4. Easing
+//
+
+
+// 1. Colors
+// ----------------------------------------------------------------------------
+
+
+// Brand Colors 
+$color-brand-1: #98C365;
+$color-brand-2: #F5AC35;
+
+// Stage / Body Colors
+$color-stage-bg: #fafafa;
+$color-body-bg: $color-stage-bg;
+
+// Primary Text Colors
+$color-text: #333;
+$color-text-muted: lighten($color-text, 10%);
+
+// Link Colors
+$color-links: #1ba1ee;
+$color-links-hover: darken($color-links, 10%);
+
+// Accessibilty Colors
+$color-focus: #6cc6ee;
+$color-select: #e5e5e5;
+$color-error: #f77;
+
+// Common Colors
+$color-grey-lead: #3F3F3F;
+$color-grey-cement: #8f8f8f;
+$color-grey-haze: #e5e5e5;
+$color-grey-mist: #f6f6f6;
+$color-grey-gravel: #7D8086;
+
+$color-blue-midnight: #02212f;
+$color-blue-lake: #005256;
+
+
+
+// 2. Fonts
+// ----------------------------------------------------------------------------
+
+
+$font-family-default-sans-serif: 'HelveticaNeue', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+$font-family-default-serif:  'Georgia', 'Times New Roman', Times, serif;
+
+// Site specfic fonts
+$font-family-sans-serif: 'metric', $font-family-default-sans-serif;
+$font-family-serif: $font-family-default-serif;
+
+$font-family-primary: $font-family-sans-serif;
+
+$font-size-base: 16; // px
+$line-height-base: 1.4;
+$line-height-headline: 1.25;
+
+$font-weight-light: 400;
+$font-weight-normal: 700;
+$font-weight-bold: 900;
+
+
+
+// 3. Spacing
+// ----------------------------------------------------------------------------
+
+$spacing: 1.5rem; // 24px;
+
+// Smaller
+$spacing-one-quarter: ($spacing / 4);
+$spacing-half: ($spacing / 2);
+$spacing-three-quarters: ($spacing / 1.5);
+
+// Larger
+$spacing-large-one-half: ($spacing + $spacing-half); // "One and a half"
+$spacing-double: ($spacing * 2);
+
+// Site specific Spacing
+$spacing-header: 1.125rem;
+
+
+// 4. Easing
+// ----------------------------------------------------------------------------
+
+
+$ease: cubic-bezier(.43, .11, .41 1);
+$easing-circ: cubic-bezier(.075, .82, .165, 0);
