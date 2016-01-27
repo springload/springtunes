@@ -17,9 +17,14 @@ const config = {
     module: {
         loaders: [{
             test: /\.js$/,
-            loaders: ['babel'],
+            loader: 'babel',
             exclude: /node_modules/,
             include: __dirname,
+            query: {
+                // https://github.com/babel/babel-loader#options
+                cacheDirectory: true,
+                presets: ['react', 'es2015', 'stage-2'],
+            },
         },
             {
                 test: /\.svg$/,

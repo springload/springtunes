@@ -1,7 +1,7 @@
 ![Logo Springtunes](/screenshots/logo_springtunes.png?raw=true "Logo Springtunes")
 
 # [ ![Codeship Status for springload/frontend-starter-kit](https://codeship.com/projects/4be56cd0-a6df-0133-dffd-1a5a40261798/status?branch=master)](https://codeship.com/projects/130070)
-Control your Spotify client directly from your browser without having to log in to anything.
+Control your Spotify client remotely from your browser without having to log in to anything.
 
 Current features:
 - Current track/artist/album
@@ -70,15 +70,17 @@ git commit --no-verify
 ### To production
 
 To build:
-```sh 
+```sh
 npm run dist
-npm run build:css 
+npm run build:css
 ```
 
 To run the server:
-```sh 
+```sh
 npm run start
 ```
+
+Once server is running, access to it using: `http://localhost:3000` or `http://[YOUR IP]:3000`
 
 ## API Documentation
 
