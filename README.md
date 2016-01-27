@@ -1,7 +1,15 @@
 ![Logo Springtunes](/screenshots/logo_springtunes.png?raw=true "Logo Springtunes")
 
-# springtunes [ ![Codeship Status for springload/frontend-starter-kit](https://codeship.com/projects/4be56cd0-a6df-0133-dffd-1a5a40261798/status?branch=master)](https://codeship.com/projects/130070)
-Spotify remote control through web browser.
+# [ ![Codeship Status for springload/frontend-starter-kit](https://codeship.com/projects/4be56cd0-a6df-0133-dffd-1a5a40261798/status?branch=master)](https://codeship.com/projects/130070)
+Control your Spotify client directly from your browser without having to log in to anything.
+
+Current features:
+- Current track/artist/album
+- Previous song
+- Next song
+- Play/Pause
+- Mute/Unmute
+- Change volume
 
 ![Screenshot Springtunes](/screenshots/sc_springtunes.png?raw=true "Screenshot Springtunes")
 
