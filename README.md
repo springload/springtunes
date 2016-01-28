@@ -36,7 +36,7 @@ From the command-line:
 ```sh
 cd ~/Development/sites/
 git clone git@github.com:springload/springtunes.git
-cd frontend-starter-kit
+cd springtunes
 ```
 
 To install our dependencies:
