@@ -18,6 +18,15 @@ Current features:
 - Spotify client needs to run on the machine hosting the server
 - Only compatible with MacOS X 10.10 or later
 
+## Global mode
+
+```sh
+npm install -g springtunes
+springtunes
+```
+
+If you want to change the server port you can use `PORT=XXXX springtunes`
+
 ## Installation
 
 > You first need to clone the project on your computer, and to install [Node](https://nodejs.org). This project also uses [nvm](https://github.com/creationix/nvm).
