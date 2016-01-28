@@ -91,7 +91,7 @@ npm run start
 
 Once server is running, access to it using: `http://localhost:3000` or `http://[YOUR IP]:3000`
 
-## API Documentation
+## REST API Documentation
 
 Populated using http://apidocjs.com/
 
