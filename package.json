@@ -74,6 +74,10 @@
     "webpack-dev-middleware": "^1.2.0",
     "webpack-hot-middleware": "^2.2.0"
   },
+  "bin": {
+    "springtunes": "bin/springtunes.sh"
+  },
+  "preferGlobal": "true",
   "scripts": {
     "build:css": "pleeease compile",
     "linter:js": "eslint",
