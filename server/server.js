@@ -1,16 +1,16 @@
+#!/usr/bin/env node
 /* eslint-disable no-console */
 const path = require('path');
-const webpack = require('webpack');
-const webpackDevMiddleware = require('webpack-dev-middleware');
-const webpackHotMiddleware = require('webpack-hot-middleware');
 const bodyParser = require('body-parser');
-
 const express = require('express');
 const router = require('./routes');
 const app = new (require('express'))();
 const port = process.env.PORT || 3000;
 
 if (process.env.NODE_ENV === 'development') {
+    const webpack = require('webpack');
+    const webpackDevMiddleware = require('webpack-dev-middleware');
+    const webpackHotMiddleware = require('webpack-hot-middleware');
     const config = require('../webpack.development.config.js');
     const compiler = webpack(config);
     app.use(webpackDevMiddleware(compiler, { noInfo: true, publicPath: config.output.publicPath }));

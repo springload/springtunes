@@ -5,6 +5,7 @@
 dist
 core/static
 static
+public/css/screen.min.css
 
 # -------------------------------------------------
 # OS generated files

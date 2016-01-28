@@ -1,6 +1,6 @@
 {
   "name": "springtunes",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "Control your Spotify client remotely from your browser without having to log in to anything. (MACOS X 10.10+ only)",
   "author": "Vincent Audebert <vincent@springload.co.nz>",
   "contributors": [
@@ -52,7 +52,15 @@
     "redux-logger": "^2.0.2",
     "redux-thunk": "^1.0.3",
     "spotify-node-applescript": "^0.2.2",
-    "uglifyjs": "^2.4.10",
+    "uglifyjs": "^2.4.10"
+  },
+  "devDependencies": {
+    "eslint": "^1.3.1",
+    "eslint-config-airbnb": "^4.0.0",
+    "eslint-plugin-react": "^3.14.0",
+    "expect": "^1.6.0",
+    "node-libs-browser": "^1.0.0",
+    "react-transform-hmr": "^1.0.0",
     "webpack": "^1.9.11",
     "webpack-dev-middleware": "^1.2.0",
     "webpack-hot-middleware": "^2.2.0",
@@ -66,16 +74,8 @@
     "babel-preset-stage-2": "^6.3.13",
     "normalize-css": "^2.3.1"
   },
-  "devDependencies": {
-    "eslint": "^1.3.1",
-    "eslint-config-airbnb": "^4.0.0",
-    "eslint-plugin-react": "^3.14.0",
-    "expect": "^1.6.0",
-    "node-libs-browser": "^1.0.0",
-    "react-transform-hmr": "^1.0.0"
-  },
   "bin": {
-    "springtunes": "bin/springtunes.js"
+    "springtunes": "server/server.js"
   },
   "preferGlobal": "true",
   "scripts": {
@@ -85,6 +85,7 @@
     "server": "node server/server.js",
     "dev": "NODE_ENV=development npm run server",
     "start": "npm run build:css && npm run dist && NODE_ENV=production npm run server",
+    "prepublish": "npm run build:css && npm run dist",
     "dist": "NODE_ENV=production webpack --config webpack.production.config.js"
   },
   "analyze": true
