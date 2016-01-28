@@ -90,9 +90,7 @@ router.route('/playing')
      *         error: 'Could not get the current song.'
      *     }
      */
-    .get((req, res) => {
-        return getCurrentSong(res);
-    })
+    .get((req, res) => getCurrentSong(res))
 
     /**
      * @api {post} /playing Play previous or next song
@@ -168,13 +166,9 @@ router.route('/playing')
         }
 
         if (body.action === 'back') {
-            osaSpotify.back().then(() => {
-                return getCurrentSong(res);
-            });
+            osaSpotify.back().then(() => getCurrentSong(res));
         } else if (body.action === 'next') {
-            osaSpotify.next().then(() => {
-                return getCurrentSong(res);
-            });
+            osaSpotify.next().then(() => getCurrentSong(res));
         } else {
             return res.json({ error: errorMsg });
         }
@@ -244,11 +238,10 @@ router.route('/playing')
      *         error: 'Valid actions are only "back" and "next".'
      *     }
      */
-    .put((req, res) => {
-        osaSpotify.toggle().then(() => {
-            return getCurrentSong(res);
-        });
-    });
+    .put((req, res) =>
+        osaSpotify.toggle()
+        .then(() => getCurrentSong(res))
+    );
 
 router.route('/volume')
 
@@ -282,13 +275,9 @@ router.route('/volume')
         }
 
         if (body.action === 'mute') {
-            spotify.muteVolume(() => {
-                return res.json({ isMuted: true });
-            });
+            spotify.muteVolume(() => res.json({ isMuted: true }));
         } else if (body.action === 'unmute') {
-            spotify.unmuteVolume(() => {
-                return res.json({ isMuted: false });
-            });
+            spotify.unmuteVolume(() => res.json({ isMuted: false }));
         } else {
             return res.json({ error: errorMsg });
         }
@@ -368,9 +357,7 @@ router.route('/volume')
         }
 
         if (typeof body.volume === 'number' && body.volume >= 0 && body.volume <= 100) {
-            spotify.setVolume(body.volume, () => {
-                return res.json({ value: body.volume });
-            });
+            spotify.setVolume(body.volume, () => res.json({ value: body.volume }));
         } else {
             return res.json({ error: errorMsg });
         }
