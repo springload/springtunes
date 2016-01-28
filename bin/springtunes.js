@@ -1,15 +1,13 @@
 #!/usr/bin/env node
-
-var path = require('path');
-var globalRootPath = path.join(__dirname, '..');
+/* eslint-disable no-console */
+const path = require('path');
+const globalRootPath = path.join(__dirname, '..');
 const port = process.env.PORT || 3000;
+const exec = require('child_process').exec;
 
-var sys = require('util');
-var exec = require('child_process').exec;
-
-exec('cd ' + globalRootPath, function () {
+exec(`cd ${globalRootPath}`, () => {
     console.info('==> 🌎  Server is starting on port %s.', port);
     console.info('This process should take a few minutes... Depending on your configuration...');
     console.info('After a few minutes, open up http://localhost:%s/ in your browser', port);
-    exec('npm run start', function () {});
+    exec('npm run start');
 });
