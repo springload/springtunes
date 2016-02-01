@@ -1,6 +1,6 @@
 ![Logo Springtunes](/screenshots/logo_springtunes.png?raw=true "Logo Springtunes")
 
-# [ ![Codeship Status for springload/springtunes](https://codeship.com/projects/4be56cd0-a6df-0133-dffd-1a5a40261798/status?branch=master)](https://codeship.com/projects/130070) [![Dependency Status](https://david-dm.org/springload/springtunes.svg?style=flat-square)](https://david-dm.org/springload/springtunes.svg) [![devDependency Status](https://david-dm.org/springload/springtunes/dev-status.svg?style=flat-square)](https://david-dm.org/springload/springtunes#info=devDependencies)
+# [ ![Codeship Status for springload/springtunes](https://codeship.com/projects/4be56cd0-a6df-0133-dffd-1a5a40261798/status?branch=master)](https://codeship.com/projects/130070) [![npm version](https://badge.fury.io/js/springtunes.svg)](https://badge.fury.io/js/springtunes) [![Dependency Status](https://david-dm.org/springload/springtunes.svg?style=flat-square)](https://david-dm.org/springload/springtunes.svg) [![devDependency Status](https://david-dm.org/springload/springtunes/dev-status.svg?style=flat-square)](https://david-dm.org/springload/springtunes#info=devDependencies)
 Control your Spotify client remotely from your browser without having to log in to anything.
 
 Current features:
