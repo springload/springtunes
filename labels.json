@@ -1,0 +1,114 @@
+[
+  {
+    "name": "★★★",
+    "color": "5319e7"
+  },
+  {
+    "name": "★★☆",
+    "color": "5319e7"
+  },
+  {
+    "name": "★☆☆",
+    "color": "5319e7"
+  },
+  {
+    "name": "0 - Backlog",
+    "color": "cccccc"
+  },
+  {
+    "name": "1 - Ready",
+    "color": "cccccc"
+  },
+  {
+    "name": "2 - Working",
+    "color": "cccccc"
+  },
+  {
+    "name": "3 - To be tested",
+    "color": "cccccc"
+  },
+  {
+    "name": "4 - Testing",
+    "color": "cccccc"
+  },
+  {
+    "name": "5 - Tested",
+    "color": "cccccc"
+  },
+  {
+    "name": "6 - Live",
+    "color": "cccccc"
+  },
+  {
+    "name": "BED",
+    "color": "0000CD"
+  },
+  {
+    "name": "Big",
+    "color": "A52A2A"
+  },
+  {
+    "name": "Bug",
+    "color": "fc2929"
+  },
+  {
+    "name": "Content Update",
+    "color": "ffb600"
+  },
+  {
+    "name": "Design",
+    "color": "fbca04"
+  },
+  {
+    "name": "Duplicate",
+    "color": "cccccc"
+  },
+  {
+    "name": "Enhancement",
+    "color": "84b6eb"
+  },
+  {
+    "name": "FED",
+    "color": "0e8a16"
+  },
+  {
+    "name": "Future",
+    "color": "ffffff"
+  },
+  {
+    "name": "Help wanted",
+    "color": "cc317c"
+  },
+  {
+    "name": "Invalid",
+    "color": "e6e6e6"
+  },
+  {
+    "name": "Medium",
+    "color": "F4A460"
+  },
+  {
+    "name": "Feature name 1",
+    "color": "1E90FF"
+  },
+  {
+    "name": "Question",
+    "color": "cc317c"
+  },
+  {
+    "name": "Small",
+    "color": "FFEC8B"
+  },
+  {
+    "name": "Tested & Failed",
+    "color": "e99695"
+  },
+  {
+    "name": "Tested & Passed",
+    "color": "c2e0c6"
+  },
+  {
+    "name": "Won't fix",
+    "color": "000000"
+  }
+]
