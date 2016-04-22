@@ -14,35 +14,42 @@ export default class CurrentSong extends Component {
                     </div>
                     <div className='song-details__content'>
                         <div className='twelve columns'>
-                            {!isFetching &&
+                            { !isFetching &&
                                 <div>
                                     <h2>
-                                        <a href={ currentSong.link_track } target='_blank'
-                                          title={`View track: ${currentSong.title}`}
+                                        <a
+                                            href={ currentSong.link_track }
+                                            target='_blank'
+                                            title={ `View track: ${currentSong.title}` }
                                         >
                                             { currentSong.title }
                                         </a>
                                     </h2>
                                     <h3>
-                                        <a href={ currentSong.link_artist } target='_blank'
-                                          title={`View Artist: ${currentSong.artist}`}
+                                        <a
+                                            href={ currentSong.link_artist }
+                                            target='_blank'
+                                            title={ `View Artist: ${currentSong.artist}` }
                                         >
                                             { currentSong.artist }
                                         </a>
                                     </h3>
                                     <h3>
-                                        <a href={ currentSong.link_album } target='_blank'
-                                          className='color-text-cement' title={`View Album: ${currentSong.album}`}
+                                        <a
+                                            href={ currentSong.link_album }
+                                            target='_blank'
+                                            className='color-text-cement'
+                                            title={ `View Album: ${currentSong.album}` }
                                         >
                                             { currentSong.album }
                                         </a>
                                     </h3>
                                 </div>
                             }
-                            {isFetching &&
+                            { isFetching &&
                                 <Processing />
                             }
-                            {!isFetching && error !== '' &&
+                            { !isFetching && error !== '' &&
                                 <div className='error'>
                                     Error occurred.<br />
                                     Details are: "{ error }"

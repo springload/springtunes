@@ -11,7 +11,11 @@
         "react/jsx-boolean-value": [0],
         "id-length": [1, {"min": 2, "exceptions": ["x", "y", "e", "i", "j", "k", "d", "n", "_", "$"]}],
         "jsx-quotes": [2, "prefer-single"],
-        "arrow-body-style": [2, "as-needed"]
+        "arrow-body-style": [2, "as-needed"],
+        "react/jsx-curly-spacing": [1, "always"],
+        "react/jsx-indent-props": [1, 4],
+        "react/prefer-stateless-function": [0]
+
     },
 
     "env": {

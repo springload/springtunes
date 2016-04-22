@@ -169,9 +169,9 @@ router.route('/playing')
             osaSpotify.back().then(() => getCurrentSong(res));
         } else if (body.action === 'next') {
             osaSpotify.next().then(() => getCurrentSong(res));
-        } else {
-            return res.json({ error: errorMsg });
         }
+
+        return res.json({ error: errorMsg });
     })
 
     /**
@@ -278,9 +278,9 @@ router.route('/volume')
             spotify.muteVolume(() => res.json({ isMuted: true }));
         } else if (body.action === 'unmute') {
             spotify.unmuteVolume(() => res.json({ isMuted: false }));
-        } else {
-            return res.json({ error: errorMsg });
         }
+
+        return res.json({ error: errorMsg });
     })
 
     /**
@@ -358,9 +358,9 @@ router.route('/volume')
 
         if (typeof body.volume === 'number' && body.volume >= 0 && body.volume <= 100) {
             spotify.setVolume(body.volume, () => res.json({ value: body.volume }));
-        } else {
-            return res.json({ error: errorMsg });
         }
+
+        return res.json({ error: errorMsg });
     });
 
 module.exports = router;

@@ -75,32 +75,33 @@ class App extends Component {
         const { currentSong, isFetching, playing, volume, lastUpdated, isModifyingMute, isMuted, error } = this.props;
         return (
             <div>
-				<div className='header'>
+                <div className='header'>
                     <div className='header__logo container'>
                         <Logo />
                     </div>
                 </div>
                 <div className='container section'>
                     <div className='last-updated'>
-                    <p className='u-text-uppercase'>Now Playing</p>
-                    <LastUpdated lastUpdated={ lastUpdated } />
+                        <p className='u-text-uppercase'>Now Playing</p>
+                        <LastUpdated lastUpdated={ lastUpdated } />
+                    </div>
+                    <CurrentSong isFetching={ isFetching } currentSong={ currentSong } error={ error } />
+                    <Controls
+                        isFetching={ isFetching }
+                        playing={ playing }
+                        handleRefreshClick={ this.handleRefreshClick }
+                        handleTogglePauseClick={ this.handleTogglePauseClick }
+                        handleNextClick={ this.handleNextClick }
+                        handleBackClick={ this.handleBackClick }
+                        isMuted={ isMuted }
+                        isModifyingMute={ isModifyingMute }
+                        handleMuteClick={ this.handleMuteClick }
+                        handleUnmuteClick={ this.handleUnmuteClick }
+                        volume={ volume }
+                        handleVolumeChange={ this.handleVolumeChange }
+                    />
                 </div>
-                <CurrentSong isFetching={ isFetching } currentSong={ currentSong } error={ error } />
-                <Controls isFetching={ isFetching }
-                  playing={ playing }
-                  handleRefreshClick={ this.handleRefreshClick }
-                  handleTogglePauseClick={ this.handleTogglePauseClick }
-                  handleNextClick={ this.handleNextClick }
-                  handleBackClick={ this.handleBackClick }
-                  isMuted={ isMuted }
-                  isModifyingMute={ isModifyingMute }
-                  handleMuteClick={ this.handleMuteClick }
-                  handleUnmuteClick={ this.handleUnmuteClick }
-                  volume={ volume }
-                  handleVolumeChange={ this.handleVolumeChange }
-                />
             </div>
-		</div>
         );
     }
 }

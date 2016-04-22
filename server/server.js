@@ -1,5 +1,6 @@
 #!/usr/bin/env node
 /* eslint-disable no-console */
+/* eslint-disable global-require */
 const path = require('path');
 const bodyParser = require('body-parser');
 const express = require('express');

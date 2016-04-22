@@ -28,24 +28,24 @@ export default class Controls extends Component {
                     <Icon name='fa-step-backward' iconType='small' /> Back
                 </button>
                 <button onClick={ handleTogglePauseClick } disabled={ isFetching }>
-                    {playing &&
+                    { playing &&
                         <span><Icon name='fa-pause' iconType='small' /> Pause</span>
                     }
-                    {!playing &&
+                    { !playing &&
                         <span><Icon name='fa-play' iconType='small' /> Play</span>
                     }
                 </button>
                 <button onClick={ handleNextClick } disabled={ isFetching }>
                     Next <Icon name='fa-step-forward' iconType='small' />
                 </button>
-            {!isMuted &&
+            { !isMuted &&
                 <button onClick={ handleMuteClick } disabled={ !isFetching && isModifyingMute } title='Mute'>
-                     <Icon name='fa-volume-up' iconType='small' />
+                    <Icon name='fa-volume-up' iconType='small' />
                 </button>
             }
-            {isMuted &&
+            { isMuted &&
                 <button onClick={ handleUnmuteClick } disabled={ !isFetching && isModifyingMute } title='Unmute'>
-                     <Icon name='fa-volume-off' iconType='small' />
+                    <Icon name='fa-volume-off' iconType='small' />
                 </button>
             }
                 <div className='volume-control'>

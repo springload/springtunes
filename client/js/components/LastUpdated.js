@@ -5,9 +5,9 @@ export default class LastUpdated extends Component {
         const { lastUpdated } = this.props;
         return (
             <div className='last-updated__time'>
-                {lastUpdated &&
+                { lastUpdated &&
                     <p>
-                        Last updated at {new Date(lastUpdated).toLocaleTimeString()}
+                        Last updated at { new Date(lastUpdated).toLocaleTimeString() }
                     </p>
                 }
             </div>
