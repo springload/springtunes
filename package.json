@@ -1,6 +1,6 @@
 {
   "name": "springtunes",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "description": "Control your Spotify client remotely from your browser without having to log in to anything. (MACOS X 10.10+ only)",
   "author": "Vincent Audebert <vincent@springload.co.nz>",
   "contributors": [
