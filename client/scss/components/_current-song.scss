@@ -2,15 +2,13 @@
 // Current Song
 // -----------------------------------------------------------------------------
 
-.current-song {
 
-}
 
 .song-details {
     position: relative;
     a {
-        text-decoration: none;
         color: $color-text;
+        text-decoration: none;
         &:hover {
             color: $color-blue-lake;
         }
@@ -19,12 +17,13 @@
 
 .song-details__graphic {
     @extend %inline-block;
+
     width: 60px;
     height: 60px;
+    padding-top: 7px;
     text-align: center;
-    border-radius: 30px;
-    padding-top:7px;
     background: $color-brand-1;
+    border-radius: 30px;
 }
 
 .song-details__content {
@@ -32,9 +31,7 @@
     //width:100%;
 
     padding-left: 1.5rem;
-    h4 {
 
-    }
     p {
         margin-bottom: 0;
     }

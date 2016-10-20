@@ -3,18 +3,18 @@
 // -----------------------------------------------------------------------------
 
 .last-updated {
-    p {
-        color: $color-grey-cement;
-        font-size: 13px;
-        margin-bottom: 0;
-    }
     @include medium {
         text-align: left;
+    }
+    p {
+        margin-bottom: 0;
+        font-size: 13px;
+        color: $color-grey-cement;
     }
 }
 
 .last-updated__time {
-	margin-bottom:1.25rem;
+    margin-bottom: 1.25rem;
 }
 
 .loading {

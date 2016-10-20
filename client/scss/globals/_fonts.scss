@@ -1,50 +1,49 @@
 @font-face {
-    font-family: "metric";
+    font-family: 'metric';
+    font-style: normal;
     font-weight: 700;
-    font-style: normal;
-    src:    url("../fonts/MetricWeb-Regular.eot");
-    src:    url("../fonts/MetricWeb-Regular.eot?#iefix") format("embedded-opentype"),
-    url("../fonts/MetricWeb-Regular.woff") format("woff");
+    src: url('../fonts/MetricWeb-Regular.eot');
+    src: url('../fonts/MetricWeb-Regular.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/MetricWeb-Regular.woff') format('woff');
 }
 @font-face {
-    font-family: "metric";
+    font-family: 'metric';
+    font-style: normal;
     font-weight: 900;
-    font-style: normal;
-    src:    url("../fonts/MetricWeb-Semibold.eot");
-    src:    url("../fonts/MetricWeb-Semibold.eot?#iefix") format("embedded-opentype"),
-    url("../fonts/MetricWeb-Semibold.woff") format("woff");
+    src: url('../fonts/MetricWeb-Semibold.eot');
+    src: url('../fonts/MetricWeb-Semibold.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/MetricWeb-Semibold.woff') format('woff');
 }
 @font-face {
-    font-family: "metric";
+    font-family: 'metric';
+    font-style: normal;
     font-weight: 400;
-    font-style: normal;
-    src:    url("../fonts/MetricWeb-Light.eot");
-    src:    url("../fonts/MetricWeb-Light.eot?#iefix") format("embedded-opentype"),
-    url("../fonts/MetricWeb-Light.woff") format("woff");
+    src: url('../fonts/MetricWeb-Light.eot');
+    src: url('../fonts/MetricWeb-Light.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/MetricWeb-Light.woff') format('woff');
 }
 
 @font-face {
-    font-family: "metric-light";
-    font-weight: normal;
+    font-family: 'metric-light';
     font-style: normal;
-    src:    url("../fonts/MetricWeb-Light.eot");
-    src:    url("../fonts/MetricWeb-Light.eot?#iefix") format("embedded-opentype"),
-    url("../fonts/MetricWeb-Light.woff") format("woff");
+    font-weight: normal;
+    src: url('../fonts/MetricWeb-Light.eot');
+    src: url('../fonts/MetricWeb-Light.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/MetricWeb-Light.woff') format('woff');
 }
 @font-face {
-    font-family: "metric-regular";
-    font-weight: normal;
+    font-family: 'metric-regular';
     font-style: normal;
-    src:    url("../fonts/MetricWeb-Regular.eot");
-    src:    url("../fonts/MetricWeb-Regular.eot?#iefix") format("embedded-opentype"),
-    url("../fonts/MetricWeb-Regular.woff") format("woff");
+    font-weight: normal;
+    src: url('../fonts/MetricWeb-Regular.eot');
+    src: url('../fonts/MetricWeb-Regular.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/MetricWeb-Regular.woff') format('woff');
 }
 @font-face {
-    font-family: "metric-semibold";
-    font-weight: normal;
+    font-family: 'metric-semibold';
     font-style: normal;
-    src:    url("../fonts/MetricWeb-Semibold.eot");
-    src:    url("../fonts/MetricWeb-Semibold.eot?#iefix") format("embedded-opentype"),
-    url("../fonts/MetricWeb-Semibold.woff") format("woff");
+    font-weight: normal;
+    src: url('../fonts/MetricWeb-Semibold.eot');
+    src: url('../fonts/MetricWeb-Semibold.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/MetricWeb-Semibold.woff') format('woff');
 }
-

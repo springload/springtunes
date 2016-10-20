@@ -3,9 +3,9 @@
 // -----------------------------------------------------------------------------
 
 .controls {
-	border-top: 1px solid $color-grey-haze;
-	margin-top:1.5rem;
-	padding-top:1.5rem;
+    padding-top: 1.5rem;
+    margin-top: 1.5rem;
+    border-top: 1px solid $color-grey-haze;
 }
 
 // .btn {
@@ -20,27 +20,27 @@
 button {
     height: 38px;
     padding: 0 .75rem;
-    color: white;
+    margin: 0 .3125rem .3125rem ;
     font-size: 14px;
     font-weight: 600;
+    font-weight: $font-weight-bold;
+    color: white;
     text-transform: uppercase;
     background-color: $color-brand-1;
-    border-radius: 2px;
     border: none;
-    margin: 0 .3125rem .3125rem ;
-    font-weight: $font-weight-bold;
+    border-radius: 2px;
     transition: background-color .2s ease;
     &:first-child {
-		margin-left:0;
-	}
-	&:hover {
-		color: white;
-		background-color: $color-blue-lake;
-	}
+        margin-left: 0;
+    }
+    &:hover {
+        color: white;
+        background-color: $color-blue-lake;
+    }
 }
 
 .btn-orange {
-	background-color: $color-brand-2;
+    background-color: $color-brand-2;
     &:hover {
         background-color: darken($color-brand-2, 20);
     }
@@ -49,22 +49,24 @@ button {
 .volume-control {
     span {
         @extend %inline-block;
-        vertical-align: middle !important;
-        color: $color-grey-cement;
+
         font-size: 14px;
+        color: $color-grey-cement;
         text-transform: uppercase;
+        vertical-align: middle !important;
     }
 }
 
 .rc-slider {
     @extend %inline-block;
+
+    margin-left: 1.5rem;
     vertical-align: middle !important;
-    margin-left:1.5rem;
     background-color: #dbebd2;
 }
 
 .rc-slider-track {
-  background-color: $color-brand-1;
+    background-color: $color-brand-1;
 }
 
 .rc-slider-handle {

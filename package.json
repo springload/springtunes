@@ -37,6 +37,7 @@
   "dependencies": {
     "babel-polyfill": "^6.3.14",
     "body-parser": "^1.14.2",
+    "csscomb": "^4.0.0-alpha",
     "express": "^4.13.3",
     "isomorphic-fetch": "^2.1.1",
     "keymirror": "^0.1.1",
@@ -51,6 +52,7 @@
     "redux": "^3.0.0",
     "redux-logger": "^2.0.2",
     "redux-thunk": "^2.0.1",
+    "sass-lint": "^1.9.1",
     "spotify-node-applescript": "^0.2.2",
     "uglifyjs": "^2.4.10"
   },
@@ -81,7 +83,9 @@
   "scripts": {
     "build:css": "pleeease compile",
     "linter:js": "eslint",
+    "linter:sass": "sass-lint -v -q",
     "lint": "npm run linter:js -s -- .",
+    "lint:sass": "npm run linter:sass -s",
     "server": "node server/server.js",
     "dev": "NODE_ENV=development npm run server",
     "start": "npm run build:css && npm run dist && NODE_ENV=production npm run server",
