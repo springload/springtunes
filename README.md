@@ -100,3 +100,12 @@ apidoc -i ./server
 ```
 
 Visit `index.html` inside `/doc`
+
+## To NPM
+
+- Make your changes on code base
+- Once you're sure everything is fine, `npm version patch` (will bump third number, i.e. 0.1.5 -> 0.1.6) or any other more appropriate argument (see https://docs.npmjs.com/cli/version)
+- `git push origin master --tags`
+- `npm publish`
+
+This will publish the new version to NPM website (https://www.npmjs.com/package/springtunes)
