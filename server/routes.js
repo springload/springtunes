@@ -160,15 +160,13 @@ router.route('/playing')
      */
     .post((req, res) => {
         const errorMsg = 'Valid actions are only "back" and "next".';
+        
         const body = req.body;
-        if (!body) {
-            return res.json({ error: errorMsg });
-        }
-
         if (body.action === 'back') {
-            osaSpotify.back().then(() => getCurrentSong(res));
-        } else if (body.action === 'next') {
-            osaSpotify.next().then(() => getCurrentSong(res));
+            return osaSpotify.back().then(() => getCurrentSong(res));
+        } 
+        if (body.action === 'next') {
+            return osaSpotify.next().then(() => getCurrentSong(res));
         }
 
         return res.json({ error: errorMsg });
@@ -239,8 +237,7 @@ router.route('/playing')
      *     }
      */
     .put((req, res) =>
-        osaSpotify.toggle()
-        .then(() => getCurrentSong(res))
+        osaSpotify.toggle().then(() => getCurrentSong(res))
     );
 
 router.route('/volume')
@@ -270,14 +267,12 @@ router.route('/volume')
     .post((req, res) => {
         const errorMsg = 'Valid action are only "mute" and "unmute".';
         const body = req.body;
-        if (!body) {
-            return res.json({ error: errorMsg });
-        }
 
         if (body.action === 'mute') {
-            spotify.muteVolume(() => res.json({ isMuted: true }));
-        } else if (body.action === 'unmute') {
-            spotify.unmuteVolume(() => res.json({ isMuted: false }));
+            return spotify.muteVolume(() => res.json({ isMuted: true }));
+        }
+        if (body.action === 'unmute') {
+            return spotify.unmuteVolume(() => res.json({ isMuted: false }));
         }
 
         return res.json({ error: errorMsg });
@@ -352,12 +347,9 @@ router.route('/volume')
     .put((req, res) => {
         const errorMsg = 'Valid action is only volume and must be integer value (0<=X<=100)';
         const body = req.body;
-        if (!body) {
-            return res.json({ error: errorMsg });
-        }
 
         if (typeof body.volume === 'number' && body.volume >= 0 && body.volume <= 100) {
-            spotify.setVolume(body.volume, () => res.json({ value: body.volume }));
+            return spotify.setVolume(body.volume, () => res.json({ value: body.volume }));
         }
 
         return res.json({ error: errorMsg });
