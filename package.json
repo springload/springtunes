@@ -49,6 +49,7 @@
     "react-redux": "^4.4.5",
     "react-svg-inline": "^1.1.0",
     "redux": "^3.0.0",
+    "redux-actions": "^0.13.0",
     "redux-logger": "^2.0.2",
     "redux-thunk": "^2.0.1",
     "spotify-node-applescript": "^0.2.2",

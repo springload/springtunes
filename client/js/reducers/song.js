@@ -14,9 +14,9 @@ export const songManager = (state = { }, action) => {
     case ACTIONS.RECEIVE_BACK:
       return Object.assign({}, state, {
           isFetching: false,
-          isPlaying: action.playing,
-          current: action.currentSong,
-          lastUpdated: action.receivedAt,
+          isPlaying: action.payload.playing,
+          current: action.payload.currentSong,
+          lastUpdated: action.payload.receivedAt,
       });
     default:
         return state;

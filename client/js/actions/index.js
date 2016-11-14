@@ -1,61 +1,39 @@
 import api from './api';
 import { ACTIONS } from './constants';
+import { createAction } from 'redux-actions';
 
-const requestSong = () => ({
-    type: ACTIONS.REQUEST_SONG,
-});
 
-const requestMute = () => ({
-    type: ACTIONS.REQUEST_MUTE,
-});
+const requestSong = createAction(ACTIONS.REQUEST_SONG);
+const requestMute = createAction(ACTIONS.REQUEST_MUTE);
 
-const receiveError = (response) => ({
-    type: ACTIONS.RECEIVE_ERROR,
+const receiveError = createAction(ACTIONS.RECEIVE_ERROR, (response) => ({
     error: response.error,
     receivedAt: Date.now(),
-});
+}));
 
-const receiveSong = (response) => {
-    try {
-        return {
-            type: ACTIONS.RECEIVE_SONG,
-            playing: response.playing,
-            volume: Math.round(response.volume * 100, 0),
-            currentSong: {
-                title: response.track.track_resource.name,
-                link_track: response.track.track_resource.location.og,
-                artist: response.track.artist_resource.name,
-                link_artist: response.track.artist_resource.location.og,
-                album: response.track.album_resource.name,
-                link_album: response.track.album_resource.location.og,
-            },
-            receivedAt: Date.now(),
-        };
-    } catch (exc) {
-        return {
-            type: ACTIONS.RECEIVE_ERROR,
-            error: 'Invalid return.',
-            receivedAt: Date.now(),
-        };
-    }
-};
+const receiveSong = createAction(ACTIONS.RECEIVE_SONG, (response) => ({
+    playing: response.playing,
+    volume: Math.round(response.volume * 100, 0),
+    currentSong: {
+        title: response.track.track_resource.name,
+        link_track: response.track.track_resource.location.og,
+        artist: response.track.artist_resource.name,
+        link_artist: response.track.artist_resource.location.og,
+        album: response.track.album_resource.name,
+        link_album: response.track.album_resource.location.og,
+    },
+    receivedAt: Date.now(),
+}));
 
-const receiveMuteModification = (response) => ({
-    type: ACTIONS.RECEIVE_MUTE,
-    isMuted: response.isMuted,
-});
-
-const receiveVolumeChange = (response) => ({
-    type: ACTIONS.RECEIVE_VOLUME,
-    value: response.value,
-});
+const receiveMuteModification = createAction(ACTIONS.RECEIVE_MUTE);
+const receiveVolumeChange = createAction(ACTIONS.RECEIVE_VOLUME);
 
 const fetchSong = () => dispatch => {
     dispatch(requestSong());
     return api.fetchSong()
         .then(response => response.json())
         .then(jsonResponse => {
-            if (jsonResponse.error) {
+            if(jsonResponse.error) {
                 dispatch(receiveError(jsonResponse));
             } else {
                 dispatch(receiveSong(jsonResponse));
@@ -99,20 +77,19 @@ const unmute = () => dispatch => {
 };
 
 const shouldFetchSong = (state) => {
-    const song = state.song.current;
-    if (!song) return true;
+    const song = state.song;
+    if (Object.keys(song.current).length === 0) return true;
     if (song.isFetching) return false;
     return true;
 };
 
 const shouldModifyMute = (state, calledBy) => {
-    const muting = state.volume.muting;
-    if (!muting) return false;
-    if (muting.isModifyingMute) return false;
+    const volume = state.volume;
+    if (volume.isModifyingMute) return false;
     if (calledBy === 'mute') {
-        if (muting.isMuted === true) return false;
+        if (volume.isMuted === true) return false;
     } else {
-        if (muting.isMuted === false) return false;
+        if (volume.isMuted === false) return false;
     }
 
     return true;
