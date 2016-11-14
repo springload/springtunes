@@ -1,11 +1,9 @@
-import React, { Component } from 'react';
+import React from 'react';
 
-export default class Processing extends Component {
-    render() {
-        return (
-            <div className='loading'>
-                <img src={ '../img/processing.gif' } alt='Processing... please wait...' width='24' height='24' />
-            </div>
-        );
-    }
-}
+const Processing = () => (
+  <div className='loading'>
+      <img src={ '../img/processing.gif' } alt='Processing... please wait...' width='24' height='24' />
+  </div>
+);
+
+export default Processing;

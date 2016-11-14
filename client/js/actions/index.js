@@ -1,17 +1,5 @@
-import keyMirror from 'keymirror';
 import api from './api';
-
-export const ACTIONS = keyMirror({
-    REQUEST_SONG: null,
-    REQUEST_MUTE: null,
-    RECEIVE_ERROR: null,
-    RECEIVE_SONG: null,
-    RECEIVE_TOGGLE_PAUSE: null,
-    RECEIVE_NEXT: null,
-    RECEIVE_BACK: null,
-    RECEIVE_MUTE: null,
-    RECEIVE_VOLUME: null,
-});
+import { ACTIONS } from './constants';
 
 const requestSong = () => ({
     type: ACTIONS.REQUEST_SONG,
@@ -111,14 +99,14 @@ const unmute = () => dispatch => {
 };
 
 const shouldFetchSong = (state) => {
-    const song = state.songManager.current;
+    const song = state.song.current;
     if (!song) return true;
     if (song.isFetching) return false;
     return true;
 };
 
 const shouldModifyMute = (state, calledBy) => {
-    const muting = state.volumeManager.muting;
+    const muting = state.volume.muting;
     if (!muting) return false;
     if (muting.isModifyingMute) return false;
     if (calledBy === 'mute') {

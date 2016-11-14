@@ -1,20 +1,16 @@
-import React, { Component, PropTypes } from 'react';
+import React, { PropTypes } from 'react';
 
-export default class LastUpdated extends Component {
-    render() {
-        const { lastUpdated } = this.props;
-        return (
-            <div className='last-updated__time'>
-                { lastUpdated &&
-                    <p>
-                        Last updated at { new Date(lastUpdated).toLocaleTimeString() }
-                    </p>
-                }
-            </div>
-        );
-    }
-}
-
-LastUpdated.propTypes = {
+const propTypes = {
     lastUpdated: PropTypes.number,
 };
+
+const LastUpdated = ({ lastUpdated }) => {
+    return (
+    <div className='last-updated__time'>
+        <p>
+            Last updated at { new Date(lastUpdated).toLocaleTimeString() }
+        </p>
+    </div>
+)};
+
+export default LastUpdated;
