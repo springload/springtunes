@@ -6,9 +6,7 @@ import { shouldFetchSong, shouldModifyMute } from '../utils/';
 const requestSong = createAction(ACTIONS.REQUEST_SONG);
 const requestMute = createAction(ACTIONS.REQUEST_MUTE);
 
-const receiveError = createAction(ACTIONS.RECEIVE_ERROR, (error) => ({
-    message: error.message,
-}));
+const receiveError = createAction(ACTIONS.RECEIVE_ERROR);
 
 const receiveSong = createAction(ACTIONS.RECEIVE_SONG, (response) => ({
     playing: response.playing,
@@ -33,7 +31,7 @@ const fetchSong = () => dispatch => {
         .then(response => response.json())
         .then(jsonResponse => {
             if (jsonResponse.error) {
-                dispatch(receiveError(jsonResponse.error));
+                dispatch(receiveError(new Error(jsonResponse.error)));
             } else {
                 dispatch(receiveSong(jsonResponse));
             }
