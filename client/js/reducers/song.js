@@ -12,13 +12,13 @@ export const songManager = (state = { }, action) => {
     case ACTIONS.RECEIVE_TOGGLE_PAUSE:
     case ACTIONS.RECEIVE_NEXT:
     case ACTIONS.RECEIVE_BACK:
-      return Object.assign({}, state, {
-          isFetching: false,
-          isPlaying: action.payload.playing,
-          current: action.payload.currentSong,
-          lastUpdated: action.payload.receivedAt,
-      });
+        return Object.assign({}, state, {
+            isFetching: false,
+            isPlaying: action.payload.playing,
+            current: action.payload.currentSong,
+            lastUpdated: action.payload.receivedAt,
+        });
     default:
         return state;
     }
-}
+};

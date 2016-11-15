@@ -14,8 +14,8 @@
         "arrow-body-style": [2, "as-needed"],
         "react/jsx-curly-spacing": [1, "always"],
         "react/jsx-indent-props": [1, 4],
+        "react/jsx-indent": [1, 4],
         "react/prefer-stateless-function": [0]
-
     },
 
     "env": {

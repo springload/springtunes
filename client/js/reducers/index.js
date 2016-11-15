@@ -1,5 +1,4 @@
 import { combineReducers } from 'redux';
-import { ACTIONS } from '../actions/constants';
 import { songManager } from './song';
 import { volumeManager } from './volume';
 import { errorManager } from './error';

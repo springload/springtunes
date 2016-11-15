@@ -10,4 +10,4 @@ export const errorManager = (state = {}, action) => {
     default:
         return state;
     }
-}
+};

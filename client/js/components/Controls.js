@@ -17,7 +17,7 @@ const propTypes = {
     volumeChange: PropTypes.func.isRequired,
 };
 
-const Controls = ({ 
+const Controls = ({
     isFetching,
     isModifyingMute,
     isMuted,
@@ -65,5 +65,7 @@ const Controls = ({
         </div>
     </div>
 );
+
+Controls.propTypes = propTypes;
 
 export default Controls;

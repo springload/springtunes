@@ -23,16 +23,15 @@ const springtunesCreateStore = () => {
         volume: {
             isModifyingMute: false,
             isMuted: false,
-            value: 50
+            value: 50,
         },
         error: {
             message: '',
-        }
+        },
     };
     return createStore(rootReducer, stateDefault, compose(
         applyMiddleware(...middleware),
-        // Expose store to Redux DevTools extension.
-        global.devToolsExtension ? global.devToolsExtension() : fct => fct
+        global.devToolsExtension ? global.devToolsExtension() : fct => fct // Expose store to Redux DevTools extension.
     ));
 };
 

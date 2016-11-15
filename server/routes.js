@@ -160,11 +160,12 @@ router.route('/playing')
      */
     .post((req, res) => {
         const errorMsg = 'Valid actions are only "back" and "next".';
-        
+
         const body = req.body;
         if (body.action === 'back') {
             return osaSpotify.back().then(() => getCurrentSong(res));
-        } 
+        }
+
         if (body.action === 'next') {
             return osaSpotify.next().then(() => getCurrentSong(res));
         }

@@ -6,7 +6,7 @@ const propTypes = {
     isFetching: PropTypes.bool.isRequired,
     currentSong: PropTypes.object.isRequired,
     error: PropTypes.string,
-}
+};
 
 const CurrentSong = ({ currentSong, isFetching, error }) => (
     <div className='current-song'>
