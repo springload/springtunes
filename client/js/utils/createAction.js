@@ -1,4 +1,5 @@
 // import from https://github.com/acdlite/redux-actions/blob/master/src/createAction.js
+// We consider this as tested
 import identity from 'lodash/identity';
 
 export default function createAction(type, payloadCreator, metaCreator) {
