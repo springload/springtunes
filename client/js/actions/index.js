@@ -74,7 +74,7 @@ const unmute = () => dispatch => {
 };
 
 export const fetchSongIfNeeded = () => (dispatch, getState) => {
-    if (shouldFetchSong(getState())) {
+    if (shouldFetchSong(getState().song)) {
         return dispatch(fetchSong());
     }
 
@@ -82,7 +82,7 @@ export const fetchSongIfNeeded = () => (dispatch, getState) => {
 };
 
 export const togglePauseIfNeeded = () => (dispatch, getState) => {
-    if (shouldFetchSong(getState())) {
+    if (shouldFetchSong(getState().song)) {
         return dispatch(togglePause());
     }
 
@@ -90,7 +90,7 @@ export const togglePauseIfNeeded = () => (dispatch, getState) => {
 };
 
 export const nextIfNeeded = () => (dispatch, getState) => {
-    if (shouldFetchSong(getState())) {
+    if (shouldFetchSong(getState().song)) {
         return dispatch(next());
     }
 
@@ -98,7 +98,7 @@ export const nextIfNeeded = () => (dispatch, getState) => {
 };
 
 export const backIfNeeded = () => (dispatch, getState) => {
-    if (shouldFetchSong(getState())) {
+    if (shouldFetchSong(getState().song)) {
         return dispatch(back());
     }
 
@@ -106,7 +106,7 @@ export const backIfNeeded = () => (dispatch, getState) => {
 };
 
 export const muteIfNeeded = () => (dispatch, getState) => {
-    if (shouldModifyMute(getState(), 'mute')) {
+    if (shouldModifyMute(getState().volume, 'mute')) {
         return dispatch(mute());
     }
 
@@ -114,7 +114,7 @@ export const muteIfNeeded = () => (dispatch, getState) => {
 };
 
 export const unmuteIfNeeded = () => (dispatch, getState) => {
-    if (shouldModifyMute(getState(), 'unmute')) {
+    if (shouldModifyMute(getState().volume, 'unmute')) {
         return dispatch(unmute());
     }
 
