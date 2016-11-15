@@ -26,6 +26,7 @@ const springtunesCreateStore = () => {
             value: 50,
         },
         error: {
+            hasError: false,
             message: '',
         },
     };

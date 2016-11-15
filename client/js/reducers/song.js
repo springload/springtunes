@@ -18,6 +18,11 @@ export const songManager = (state = { }, action) => {
             current: action.payload.currentSong,
             lastUpdated: action.payload.receivedAt,
         });
+    case ACTIONS.RECEIVE_ERROR:
+        return Object.assign({}, state, {
+            isFetching: false,
+            lastUpdated: action.payload.receivedAt,
+        });
     default:
         return state;
     }

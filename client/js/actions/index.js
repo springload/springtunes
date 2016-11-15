@@ -1,14 +1,13 @@
 import api from './api';
 import { ACTIONS } from './constants';
-import { createAction } from 'redux-actions';
-
+import createAction from '../utils/createAction';
+import { shouldFetchSong, shouldModifyMute } from '../utils/';
 
 const requestSong = createAction(ACTIONS.REQUEST_SONG);
 const requestMute = createAction(ACTIONS.REQUEST_MUTE);
 
-const receiveError = createAction(ACTIONS.RECEIVE_ERROR, (response) => ({
-    error: response.error,
-    receivedAt: Date.now(),
+const receiveError = createAction(ACTIONS.RECEIVE_ERROR, (error) => ({
+    message: error.message,
 }));
 
 const receiveSong = createAction(ACTIONS.RECEIVE_SONG, (response) => ({
@@ -33,8 +32,8 @@ const fetchSong = () => dispatch => {
     return api.fetchSong()
         .then(response => response.json())
         .then(jsonResponse => {
-            if(jsonResponse.error) {
-                dispatch(receiveError(jsonResponse));
+            if (jsonResponse.error) {
+                dispatch(receiveError(jsonResponse.error));
             } else {
                 dispatch(receiveSong(jsonResponse));
             }
@@ -74,25 +73,6 @@ const unmute = () => dispatch => {
     return api.unmute()
     .then(response => response.json())
     .then(jsonResponse => dispatch(receiveMuteModification(jsonResponse)));
-};
-
-const shouldFetchSong = (state) => {
-    const song = state.song;
-    if (Object.keys(song.current).length === 0) return true;
-    if (song.isFetching) return false;
-    return true;
-};
-
-const shouldModifyMute = (state, calledBy) => {
-    const volume = state.volume;
-    if (volume.isModifyingMute) return false;
-    if (calledBy === 'mute') {
-        if (volume.isMuted === true) return false;
-    } else {
-        if (volume.isMuted === false) return false;
-    }
-
-    return true;
 };
 
 export const fetchSongIfNeeded = () => (dispatch, getState) => {

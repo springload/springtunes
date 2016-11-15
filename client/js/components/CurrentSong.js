@@ -5,10 +5,11 @@ import Icon from '../components/Icon';
 const propTypes = {
     isFetching: PropTypes.bool.isRequired,
     currentSong: PropTypes.object.isRequired,
+    hasError: PropTypes.bool,
     error: PropTypes.string,
 };
 
-const CurrentSong = ({ currentSong, isFetching, error }) => (
+const CurrentSong = ({ currentSong, isFetching, hasError, error }) => (
     <div className='current-song'>
         <div className='song-details'>
             <div className='song-details__graphic'>
@@ -51,7 +52,7 @@ const CurrentSong = ({ currentSong, isFetching, error }) => (
                     { isFetching &&
                         <Processing />
                     }
-                    { !isFetching && error !== '' &&
+                    { !isFetching && hasError &&
                         <div className='error'>
                             Error occurred.<br />
                             Details are: "{ error }"

@@ -5,6 +5,7 @@ const mapStateToProps = (state) => (
     {
         isFetching: state.song.isFetching,
         currentSong: state.song.current,
+        hasError: state.error.hasError,
         error: state.error.message,
     }
 );
