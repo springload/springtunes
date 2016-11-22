@@ -19,7 +19,8 @@
     "url": "https://github.com/springload/springtunes.git"
   },
   "engines": {
-    "node": "4.2.4"
+    "node": "^6",
+    "npm": "^3"
   },
   "keywords": [
     "control",
@@ -70,8 +71,8 @@
     "jest": "^17.0.2",
     "node-libs-browser": "^1.0.0",
     "normalize-css": "^2.3.1",
-    "pleeease-cli": "^4.0.0",
     "react-test-renderer": "^15.3.2",
+    "pleeease": "^4.1.0",
     "react-transform-hmr": "^1.0.0",
     "webpack": "^1.9.11",
     "webpack-dev-middleware": "^1.2.0"
