@@ -1,0 +1,25 @@
+exports[`test App 1`] = `
+<div>
+  <div
+    className="header">
+    <div
+      className="header__logo container">
+      <Logo />
+    </div>
+  </div>
+  <div
+    className="container section">
+    <div
+      className="last-updated">
+      <p
+        className="u-text-uppercase">
+        Now Playing
+      </p>
+      <LastUpdated
+        lastUpdated={23525345345} />
+    </div>
+    <Connect(CurrentSong) />
+    <Connect(Controls) />
+  </div>
+</div>
+`;

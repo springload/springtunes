@@ -1,23 +1,14 @@
 import React from 'react';
-import IntelligentApp from '../containers/IntelligentApp';
-import renderer from 'react-test-renderer';
+import App from './App';
+import ReactTestUtils from 'react-addons-test-utils';
 
 test('App', () => {
-    const component = renderer.create(
-        <IntelligentApp />
+    const shallowRenderer = ReactTestUtils.createRenderer();
+    const result = shallowRenderer.render(
+        <App
+            lastUpdated={23525345345}
+            fetchSongIfNeeded={() => {}}
+        />
     );
-    const tree = component.toJSON();
-    expect(tree).toMatchSnapshot();
-
-    // // manually trigger the callback
-    // tree.props.onMouseEnter();
-    // // re-rendering
-    // tree = component.toJSON();
-    // expect(tree).toMatchSnapshot();
-
-    // // manually trigger the callback
-    // tree.props.onMouseLeave();
-    // // re-rendering
-    // tree = component.toJSON();
-    // expect(tree).toMatchSnapshot();
+    expect(result).toMatchSnapshot();
 });

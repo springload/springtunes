@@ -46,8 +46,8 @@
     "osa-spotify": "^1.0.1",
     "raw-loader": "^0.5.1",
     "rc-slider": "^3.3.1",
-    "react": "^15.3.2",
-    "react-dom": "^15.3.2",
+    "react": "^15.4.0",
+    "react-dom": "^15.4.0",
     "react-redux": "^4.4.6",
     "react-svg-inline": "^1.2.0",
     "redux": "^3.0.0",
@@ -71,8 +71,10 @@
     "jest": "^17.0.2",
     "node-libs-browser": "^1.0.0",
     "normalize-css": "^2.3.1",
-    "react-test-renderer": "^15.3.2",
+    "object-assign": "^4.1.0",
     "pleeease": "^4.1.0",
+    "react-addons-test-utils": "^15.4.0",
+    "react-test-renderer": "^15.4.0",
     "react-transform-hmr": "^1.0.0",
     "webpack": "^1.9.11",
     "webpack-dev-middleware": "^1.2.0"
@@ -90,21 +92,26 @@
     "start": "npm run build:css && npm run dist && NODE_ENV=production npm run server",
     "prepublish": "npm run build:css && npm run dist",
     "dist": "NODE_ENV=production webpack --config webpack.production.config.js",
-    "test": "jest || true",
+    "test": "jest",
     "test:watch": "jest --watch",
     "test:coverage": "jest --coverage"
   },
   "jest": {
-    "scriptPreprocessor": "<rootDir>/node_modules/babel-jest",
-    "testFileExtensions": [
-      "es6",
-      "js"
-    ],
+    "transform": {
+      ".*": "<rootDir>/node_modules/babel-jest"
+    },
+    "testRegex": "(/__tests__/.*|\\.(test|spec))\\.(es6|js|json)$",
+    "moduleNameMapper": {
+      "commonUtil": "<rootDir>/client/common/src/util/index.js"
+    },
     "moduleFileExtensions": [
       "js",
       "json",
       "es6"
-    ]
+    ],
+    "globals": {
+      "dataLayer": []
+    }
   },
   "analyze": true
 }
