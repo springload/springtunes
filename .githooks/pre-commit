@@ -13,7 +13,7 @@ NEW_FILES=$(git --no-pager diff --name-only --cached)
 NEW_FILES_NO_SNAPSHOTS=$(echo "$NEW_FILES" | { grep -v js.snap || true; })
 
 # Exit early if there is no file
-if [ -z $NEW_FILES_NO_SNAPSHOTS ];
+if [ -z "$NEW_FILES_NO_SNAPSHOTS" ];
 then
     exit 0
 fi
