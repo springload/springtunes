@@ -16,7 +16,7 @@ describe('Utils - index', () => {
 
         it('empty song', () => {
             expect(shouldFetchSong({
-                current: {}
+                current: {},
             })).toBeTruthy();
         });
 
@@ -68,20 +68,20 @@ describe('Utils - index', () => {
 
         it('is modifying', () => {
             expect(shouldModifyMute({
-                isModifyingMute: true
+                isModifyingMute: true,
             })).toBeFalsy();
         });
 
         it('is not modifying', () => {
             expect(shouldModifyMute({
-                isModifyingMute: false
+                isModifyingMute: false,
             })).toBeTruthy();
         });
 
         it('is not modifying, not muted and called by mute', () => {
             expect(shouldModifyMute({
                 isModifyingMute: false,
-                isMuted: false
+                isMuted: false,
             }, 'mute')).toBeTruthy();
         });
 
@@ -95,7 +95,7 @@ describe('Utils - index', () => {
         it('is not modifying, muted and called by mute', () => {
             expect(shouldModifyMute({
                 isModifyingMute: false,
-                isMuted: true
+                isMuted: true,
             }, 'mute')).toBeFalsy();
         });
 

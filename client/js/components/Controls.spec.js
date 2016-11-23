@@ -10,18 +10,18 @@ describe('Controls component', () => {
         const shallowRenderer = ReactTestUtils.createRenderer();
         const result = shallowRenderer.render(
             <Controls
-                isFetching={false}
-                isModifyingMute={false}
-                isMuted={false}
-                isPlaying={false}
-                volume={50}
-                refreshClick={emptyFunc}
-                togglePauseClick={emptyFunc}
-                backClick={emptyFunc}
-                nextClick={emptyFunc}
-                muteClick={emptyFunc}
-                unmuteClick={emptyFunc}
-                volumeChange={emptyFunc}
+                isFetching={ false }
+                isModifyingMute={ false }
+                isMuted={ false }
+                isPlaying={ false }
+                volume={ 50 }
+                refreshClick={ emptyFunc }
+                togglePauseClick={ emptyFunc }
+                backClick={ emptyFunc }
+                nextClick={ emptyFunc }
+                muteClick={ emptyFunc }
+                unmuteClick={ emptyFunc }
+                volumeChange={ emptyFunc }
             />
         );
         expect(result).toMatchSnapshot();
@@ -31,18 +31,18 @@ describe('Controls component', () => {
         const shallowRenderer = ReactTestUtils.createRenderer();
         const result = shallowRenderer.render(
             <Controls
-                isFetching={true}
-                isModifyingMute={false}
-                isMuted={false}
-                isPlaying={false}
-                volume={50}
-                refreshClick={emptyFunc}
-                togglePauseClick={emptyFunc}
-                backClick={emptyFunc}
-                nextClick={emptyFunc}
-                muteClick={emptyFunc}
-                unmuteClick={emptyFunc}
-                volumeChange={emptyFunc}
+                isFetching={ true }
+                isModifyingMute={ false }
+                isMuted={ false }
+                isPlaying={ false }
+                volume={ 50 }
+                refreshClick={ emptyFunc }
+                togglePauseClick={ emptyFunc }
+                backClick={ emptyFunc }
+                nextClick={ emptyFunc }
+                muteClick={ emptyFunc }
+                unmuteClick={ emptyFunc }
+                volumeChange={ emptyFunc }
             />
         );
         expect(result).toMatchSnapshot();
@@ -52,18 +52,18 @@ describe('Controls component', () => {
         const shallowRenderer = ReactTestUtils.createRenderer();
         const result = shallowRenderer.render(
             <Controls
-                isFetching={false}
-                isModifyingMute={true}
-                isMuted={false}
-                isPlaying={false}
-                volume={50}
-                refreshClick={emptyFunc}
-                togglePauseClick={emptyFunc}
-                backClick={emptyFunc}
-                nextClick={emptyFunc}
-                muteClick={emptyFunc}
-                unmuteClick={emptyFunc}
-                volumeChange={emptyFunc}
+                isFetching={ false }
+                isModifyingMute={ true }
+                isMuted={ false }
+                isPlaying={ false }
+                volume={ 50 }
+                refreshClick={ emptyFunc }
+                togglePauseClick={ emptyFunc }
+                backClick={ emptyFunc }
+                nextClick={ emptyFunc }
+                muteClick={ emptyFunc }
+                unmuteClick={ emptyFunc }
+                volumeChange={ emptyFunc }
             />
         );
         expect(result).toMatchSnapshot();
@@ -73,18 +73,18 @@ describe('Controls component', () => {
         const shallowRenderer = ReactTestUtils.createRenderer();
         const result = shallowRenderer.render(
             <Controls
-                isFetching={false}
-                isModifyingMute={false}
-                isMuted={true}
-                isPlaying={false}
-                volume={50}
-                refreshClick={emptyFunc}
-                togglePauseClick={emptyFunc}
-                backClick={emptyFunc}
-                nextClick={emptyFunc}
-                muteClick={emptyFunc}
-                unmuteClick={emptyFunc}
-                volumeChange={emptyFunc}
+                isFetching={ false }
+                isModifyingMute={ false }
+                isMuted={ true }
+                isPlaying={ false }
+                volume={ 50 }
+                refreshClick={ emptyFunc }
+                togglePauseClick={ emptyFunc }
+                backClick={ emptyFunc }
+                nextClick={ emptyFunc }
+                muteClick={ emptyFunc }
+                unmuteClick={ emptyFunc }
+                volumeChange={ emptyFunc }
             />
         );
         expect(result).toMatchSnapshot();
@@ -94,18 +94,18 @@ describe('Controls component', () => {
         const shallowRenderer = ReactTestUtils.createRenderer();
         const result = shallowRenderer.render(
             <Controls
-                isFetching={false}
-                isModifyingMute={false}
-                isMuted={false}
-                isPlaying={true}
-                volume={50}
-                refreshClick={emptyFunc}
-                togglePauseClick={emptyFunc}
-                backClick={emptyFunc}
-                nextClick={emptyFunc}
-                muteClick={emptyFunc}
-                unmuteClick={emptyFunc}
-                volumeChange={emptyFunc}
+                isFetching={ false }
+                isModifyingMute={ false }
+                isMuted={ false }
+                isPlaying={ true }
+                volume={ 50 }
+                refreshClick={ emptyFunc }
+                togglePauseClick={ emptyFunc }
+                backClick={ emptyFunc }
+                nextClick={ emptyFunc }
+                muteClick={ emptyFunc }
+                unmuteClick={ emptyFunc }
+                volumeChange={ emptyFunc }
             />
         );
         expect(result).toMatchSnapshot();
@@ -117,18 +117,18 @@ describe('Controls component', () => {
 
         const component = shallow(
             <Controls
-                isFetching={false}
-                isModifyingMute={false}
-                isMuted={false}
-                isPlaying={true}
-                volume={50}
-                refreshClick={testOnClick}
-                togglePauseClick={emptyFunc}
-                backClick={emptyFunc}
-                nextClick={emptyFunc}
-                muteClick={emptyFunc}
-                unmuteClick={emptyFunc}
-                volumeChange={emptyFunc}
+                isFetching={ false }
+                isModifyingMute={ false }
+                isMuted={ false }
+                isPlaying={ true }
+                volume={ 50 }
+                refreshClick={ testOnClick }
+                togglePauseClick={ emptyFunc }
+                backClick={ emptyFunc }
+                nextClick={ emptyFunc }
+                muteClick={ emptyFunc }
+                unmuteClick={ emptyFunc }
+                volumeChange={ emptyFunc }
             />
         );
 
@@ -142,18 +142,18 @@ describe('Controls component', () => {
 
         const component = shallow(
             <Controls
-                isFetching={false}
-                isModifyingMute={false}
-                isMuted={false}
-                isPlaying={true}
-                volume={50}
-                refreshClick={emptyFunc}
-                togglePauseClick={emptyFunc}
-                backClick={testOnClick}
-                nextClick={emptyFunc}
-                muteClick={emptyFunc}
-                unmuteClick={emptyFunc}
-                volumeChange={emptyFunc}
+                isFetching={ false }
+                isModifyingMute={ false }
+                isMuted={ false }
+                isPlaying={ true }
+                volume={ 50 }
+                refreshClick={ emptyFunc }
+                togglePauseClick={ emptyFunc }
+                backClick={ testOnClick }
+                nextClick={ emptyFunc }
+                muteClick={ emptyFunc }
+                unmuteClick={ emptyFunc }
+                volumeChange={ emptyFunc }
             />
         );
 
@@ -167,18 +167,18 @@ describe('Controls component', () => {
 
         const component = shallow(
             <Controls
-                isFetching={false}
-                isModifyingMute={false}
-                isMuted={false}
-                isPlaying={true}
-                volume={50}
-                refreshClick={emptyFunc}
-                togglePauseClick={testOnClick}
-                backClick={emptyFunc}
-                nextClick={emptyFunc}
-                muteClick={emptyFunc}
-                unmuteClick={emptyFunc}
-                volumeChange={emptyFunc}
+                isFetching={ false }
+                isModifyingMute={ false }
+                isMuted={ false }
+                isPlaying={ true }
+                volume={ 50 }
+                refreshClick={ emptyFunc }
+                togglePauseClick={ testOnClick }
+                backClick={ emptyFunc }
+                nextClick={ emptyFunc }
+                muteClick={ emptyFunc }
+                unmuteClick={ emptyFunc }
+                volumeChange={ emptyFunc }
             />
         );
 
@@ -192,18 +192,18 @@ describe('Controls component', () => {
 
         const component = shallow(
             <Controls
-                isFetching={false}
-                isModifyingMute={false}
-                isMuted={false}
-                isPlaying={true}
-                volume={50}
-                refreshClick={emptyFunc}
-                togglePauseClick={emptyFunc}
-                backClick={emptyFunc}
-                nextClick={testOnClick}
-                muteClick={emptyFunc}
-                unmuteClick={emptyFunc}
-                volumeChange={emptyFunc}
+                isFetching={ false }
+                isModifyingMute={ false }
+                isMuted={ false }
+                isPlaying={ true }
+                volume={ 50 }
+                refreshClick={ emptyFunc }
+                togglePauseClick={ emptyFunc }
+                backClick={ emptyFunc }
+                nextClick={ testOnClick }
+                muteClick={ emptyFunc }
+                unmuteClick={ emptyFunc }
+                volumeChange={ emptyFunc }
             />
         );
 
@@ -217,18 +217,18 @@ describe('Controls component', () => {
 
         const component = shallow(
             <Controls
-                isFetching={false}
-                isModifyingMute={false}
-                isMuted={false}
-                isPlaying={true}
-                volume={50}
-                refreshClick={emptyFunc}
-                togglePauseClick={emptyFunc}
-                backClick={emptyFunc}
-                nextClick={emptyFunc}
-                muteClick={testOnClick}
-                unmuteClick={emptyFunc}
-                volumeChange={emptyFunc}
+                isFetching={ false }
+                isModifyingMute={ false }
+                isMuted={ false }
+                isPlaying={ true }
+                volume={ 50 }
+                refreshClick={ emptyFunc }
+                togglePauseClick={ emptyFunc }
+                backClick={ emptyFunc }
+                nextClick={ emptyFunc }
+                muteClick={ testOnClick }
+                unmuteClick={ emptyFunc }
+                volumeChange={ emptyFunc }
             />
         );
 
@@ -242,18 +242,18 @@ describe('Controls component', () => {
 
         const component = shallow(
             <Controls
-                isFetching={false}
-                isModifyingMute={false}
-                isMuted={true}
-                isPlaying={true}
-                volume={50}
-                refreshClick={emptyFunc}
-                togglePauseClick={emptyFunc}
-                backClick={emptyFunc}
-                nextClick={emptyFunc}
-                muteClick={emptyFunc}
-                unmuteClick={testOnClick}
-                volumeChange={emptyFunc}
+                isFetching={ false }
+                isModifyingMute={ false }
+                isMuted={ true }
+                isPlaying={ true }
+                volume={ 50 }
+                refreshClick={ emptyFunc }
+                togglePauseClick={ emptyFunc }
+                backClick={ emptyFunc }
+                nextClick={ emptyFunc }
+                muteClick={ emptyFunc }
+                unmuteClick={ testOnClick }
+                volumeChange={ emptyFunc }
             />
         );
 
@@ -265,18 +265,18 @@ describe('Controls component', () => {
     it('renders correctly numbers of buttons', () => {
         const component = shallow(
             <Controls
-                isFetching={false}
-                isModifyingMute={false}
-                isMuted={false}
-                isPlaying={false}
-                volume={50}
-                refreshClick={emptyFunc}
-                togglePauseClick={emptyFunc}
-                backClick={emptyFunc}
-                nextClick={emptyFunc}
-                muteClick={emptyFunc}
-                unmuteClick={emptyFunc}
-                volumeChange={emptyFunc}
+                isFetching={ false }
+                isModifyingMute={ false }
+                isMuted={ false }
+                isPlaying={ false }
+                volume={ 50 }
+                refreshClick={ emptyFunc }
+                togglePauseClick={ emptyFunc }
+                backClick={ emptyFunc }
+                nextClick={ emptyFunc }
+                muteClick={ emptyFunc }
+                unmuteClick={ emptyFunc }
+                volumeChange={ emptyFunc }
             />
         );
 
@@ -287,18 +287,18 @@ describe('Controls component', () => {
     it('renders correctly numbers of buttons', () => {
         const component = shallow(
             <Controls
-                isFetching={false}
-                isModifyingMute={false}
-                isMuted={true}
-                isPlaying={false}
-                volume={50}
-                refreshClick={emptyFunc}
-                togglePauseClick={emptyFunc}
-                backClick={emptyFunc}
-                nextClick={emptyFunc}
-                muteClick={emptyFunc}
-                unmuteClick={emptyFunc}
-                volumeChange={emptyFunc}
+                isFetching={ false }
+                isModifyingMute={ false }
+                isMuted={ true }
+                isPlaying={ false }
+                volume={ 50 }
+                refreshClick={ emptyFunc }
+                togglePauseClick={ emptyFunc }
+                backClick={ emptyFunc }
+                nextClick={ emptyFunc }
+                muteClick={ emptyFunc }
+                unmuteClick={ emptyFunc }
+                volumeChange={ emptyFunc }
             />
         );
 

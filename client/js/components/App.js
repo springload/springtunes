@@ -18,14 +18,14 @@ class App extends Component {
         const { lastUpdated } = this.props;
         return (
             <div>
-                <div className='header'>
-                    <div className='header__logo container'>
+                <div className="header">
+                    <div className="header__logo container">
                         <Logo />
                     </div>
                 </div>
-                <div className='container section'>
-                    <div className='last-updated'>
-                        <p className='u-text-uppercase'>Now Playing</p>
+                <div className="container section">
+                    <div className="last-updated">
+                        <p className="u-text-uppercase">Now Playing</p>
                         <LastUpdated lastUpdated={ lastUpdated } />
                     </div>
                     <IntelligentCurrentSong />

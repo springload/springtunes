@@ -10,15 +10,20 @@
         "react/sort-comp": [0],
         "react/jsx-boolean-value": [0],
         "id-length": [1, {"min": 2, "exceptions": ["x", "y", "e", "i", "j", "k", "d", "n", "_", "$"]}],
-        "jsx-quotes": [2, "prefer-single"],
+        "jsx-quotes": [2, "prefer-double"],
         "arrow-body-style": [2, "as-needed"],
-        "react/jsx-curly-spacing": [1, "always"],
+        "react/jsx-curly-spacing": [1, "always", {
+            "spacing": {
+                "objectLiterals": "never"
+            },
+            "allowMultiline": true
+        }],
         "react/jsx-indent-props": [1, 4],
         "react/jsx-indent": [1, 4],
         "react/prefer-stateless-function": [0]
     },
 
     "env": {
-        "mocha": true
+        "jest": true
     }
 }

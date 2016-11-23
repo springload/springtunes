@@ -7,17 +7,15 @@ describe('CurrentSong component', () => {
         const shallowRenderer = ReactTestUtils.createRenderer();
         const result = shallowRenderer.render(
             <CurrentSong
-                isFetching={false}
-                currentSong={
-                    {
-                        title: "Test song",
-                        artist: "Test artist",
-                        album: "Test album",
-                        link_track: "http://test.com",
-                        link_artist: "http://test.com",
-                        link_album: "http://test.com",
-                    }
-                }
+                isFetching={ false }
+                currentSong={{
+                    title: 'Test song',
+                    artist: 'Test artist',
+                    album: 'Test album',
+                    link_track: 'http://test.com',
+                    link_artist: 'http://test.com',
+                    link_album: 'http://test.com',
+                }}
             />
         );
         expect(result).toMatchSnapshot();
@@ -27,17 +25,15 @@ describe('CurrentSong component', () => {
         const shallowRenderer = ReactTestUtils.createRenderer();
         const result = shallowRenderer.render(
             <CurrentSong
-                isFetching={true}
-                currentSong={
-                    {
-                        title: "Test song",
-                        artist: "Test artist",
-                        album: "Test album",
-                        link_track: "http://test.com",
-                        link_artist: "http://test.com",
-                        link_album: "http://test.com",
-                    }
-                }
+                isFetching={ true }
+                currentSong={{
+                    title: 'Test song',
+                    artist: 'Test artist',
+                    album: 'Test album',
+                    link_track: 'http://test.com',
+                    link_artist: 'http://test.com',
+                    link_album: 'http://test.com',
+                }}
             />
         );
         expect(result).toMatchSnapshot();
@@ -47,18 +43,16 @@ describe('CurrentSong component', () => {
         const shallowRenderer = ReactTestUtils.createRenderer();
         const result = shallowRenderer.render(
             <CurrentSong
-                isFetching={false}
-                currentSong={
-                    {
-                        title: "Test song",
-                        artist: "Test artist",
-                        album: "Test album",
-                        link_track: "http://test.com",
-                        link_artist: "http://test.com",
-                        link_album: "http://test.com",
-                    }
-                }
-                hasError={true}
+                isFetching={ false }
+                currentSong={{
+                    title: 'Test song',
+                    artist: 'Test artist',
+                    album: 'Test album',
+                    link_track: 'http://test.com',
+                    link_artist: 'http://test.com',
+                    link_album: 'http://test.com',
+                }}
+                hasError={ true }
                 error="ERROR"
             />
         );
