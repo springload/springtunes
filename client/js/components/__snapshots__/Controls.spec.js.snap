@@ -5,7 +5,7 @@ exports[`Controls component renders correctly with isFetching true 1`] = `
     className="btn-orange"
     disabled={true}
     onClick={[Function]}>
-    <Unknown
+    <Icon
       iconType="small"
       name="fa-refresh" />
      Refresh
@@ -13,7 +13,7 @@ exports[`Controls component renders correctly with isFetching true 1`] = `
   <button
     disabled={true}
     onClick={[Function]}>
-    <Unknown
+    <Icon
       iconType="small"
       name="fa-step-backward" />
      Back
@@ -22,7 +22,7 @@ exports[`Controls component renders correctly with isFetching true 1`] = `
     disabled={true}
     onClick={[Function]}>
     <span>
-      <Unknown
+      <Icon
         iconType="small"
         name="fa-play" />
        Play
@@ -32,7 +32,7 @@ exports[`Controls component renders correctly with isFetching true 1`] = `
     disabled={true}
     onClick={[Function]}>
     Next 
-    <Unknown
+    <Icon
       iconType="small"
       name="fa-step-forward" />
   </button>
@@ -40,7 +40,7 @@ exports[`Controls component renders correctly with isFetching true 1`] = `
     disabled={false}
     onClick={[Function]}
     title="Mute">
-    <Unknown
+    <Icon
       iconType="small"
       name="fa-volume-up" />
   </button>
@@ -80,7 +80,7 @@ exports[`Controls component renders correctly with isModifyingMute true 1`] = `
     className="btn-orange"
     disabled={false}
     onClick={[Function]}>
-    <Unknown
+    <Icon
       iconType="small"
       name="fa-refresh" />
      Refresh
@@ -88,7 +88,7 @@ exports[`Controls component renders correctly with isModifyingMute true 1`] = `
   <button
     disabled={false}
     onClick={[Function]}>
-    <Unknown
+    <Icon
       iconType="small"
       name="fa-step-backward" />
      Back
@@ -97,7 +97,7 @@ exports[`Controls component renders correctly with isModifyingMute true 1`] = `
     disabled={false}
     onClick={[Function]}>
     <span>
-      <Unknown
+      <Icon
         iconType="small"
         name="fa-play" />
        Play
@@ -107,7 +107,7 @@ exports[`Controls component renders correctly with isModifyingMute true 1`] = `
     disabled={false}
     onClick={[Function]}>
     Next 
-    <Unknown
+    <Icon
       iconType="small"
       name="fa-step-forward" />
   </button>
@@ -115,7 +115,7 @@ exports[`Controls component renders correctly with isModifyingMute true 1`] = `
     disabled={true}
     onClick={[Function]}
     title="Mute">
-    <Unknown
+    <Icon
       iconType="small"
       name="fa-volume-up" />
   </button>
@@ -155,7 +155,7 @@ exports[`Controls component renders correctly with isMuted 1`] = `
     className="btn-orange"
     disabled={false}
     onClick={[Function]}>
-    <Unknown
+    <Icon
       iconType="small"
       name="fa-refresh" />
      Refresh
@@ -163,7 +163,7 @@ exports[`Controls component renders correctly with isMuted 1`] = `
   <button
     disabled={false}
     onClick={[Function]}>
-    <Unknown
+    <Icon
       iconType="small"
       name="fa-step-backward" />
      Back
@@ -172,7 +172,7 @@ exports[`Controls component renders correctly with isMuted 1`] = `
     disabled={false}
     onClick={[Function]}>
     <span>
-      <Unknown
+      <Icon
         iconType="small"
         name="fa-play" />
        Play
@@ -182,7 +182,7 @@ exports[`Controls component renders correctly with isMuted 1`] = `
     disabled={false}
     onClick={[Function]}>
     Next 
-    <Unknown
+    <Icon
       iconType="small"
       name="fa-step-forward" />
   </button>
@@ -190,7 +190,7 @@ exports[`Controls component renders correctly with isMuted 1`] = `
     disabled={false}
     onClick={[Function]}
     title="Unmute">
-    <Unknown
+    <Icon
       iconType="small"
       name="fa-volume-off" />
   </button>
@@ -230,7 +230,7 @@ exports[`Controls component renders correctly with isPlaying true 1`] = `
     className="btn-orange"
     disabled={false}
     onClick={[Function]}>
-    <Unknown
+    <Icon
       iconType="small"
       name="fa-refresh" />
      Refresh
@@ -238,7 +238,7 @@ exports[`Controls component renders correctly with isPlaying true 1`] = `
   <button
     disabled={false}
     onClick={[Function]}>
-    <Unknown
+    <Icon
       iconType="small"
       name="fa-step-backward" />
      Back
@@ -247,7 +247,7 @@ exports[`Controls component renders correctly with isPlaying true 1`] = `
     disabled={false}
     onClick={[Function]}>
     <span>
-      <Unknown
+      <Icon
         iconType="small"
         name="fa-pause" />
        Pause
@@ -257,7 +257,7 @@ exports[`Controls component renders correctly with isPlaying true 1`] = `
     disabled={false}
     onClick={[Function]}>
     Next 
-    <Unknown
+    <Icon
       iconType="small"
       name="fa-step-forward" />
   </button>
@@ -265,7 +265,7 @@ exports[`Controls component renders correctly with isPlaying true 1`] = `
     disabled={false}
     onClick={[Function]}
     title="Mute">
-    <Unknown
+    <Icon
       iconType="small"
       name="fa-volume-up" />
   </button>
@@ -305,7 +305,7 @@ exports[`Controls component renders correctly with min params 1`] = `
     className="btn-orange"
     disabled={false}
     onClick={[Function]}>
-    <Unknown
+    <Icon
       iconType="small"
       name="fa-refresh" />
      Refresh
@@ -313,7 +313,7 @@ exports[`Controls component renders correctly with min params 1`] = `
   <button
     disabled={false}
     onClick={[Function]}>
-    <Unknown
+    <Icon
       iconType="small"
       name="fa-step-backward" />
      Back
@@ -322,7 +322,7 @@ exports[`Controls component renders correctly with min params 1`] = `
     disabled={false}
     onClick={[Function]}>
     <span>
-      <Unknown
+      <Icon
         iconType="small"
         name="fa-play" />
        Play
@@ -332,7 +332,7 @@ exports[`Controls component renders correctly with min params 1`] = `
     disabled={false}
     onClick={[Function]}>
     Next 
-    <Unknown
+    <Icon
       iconType="small"
       name="fa-step-forward" />
   </button>
@@ -340,7 +340,7 @@ exports[`Controls component renders correctly with min params 1`] = `
     disabled={false}
     onClick={[Function]}
     title="Mute">
-    <Unknown
+    <Icon
       iconType="small"
       name="fa-volume-up" />
   </button>

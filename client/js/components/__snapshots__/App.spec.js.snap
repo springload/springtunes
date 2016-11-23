@@ -4,7 +4,7 @@ exports[`App component renders correctly with min params 1`] = `
     className="header">
     <div
       className="header__logo container">
-      <Unknown />
+      <Logo />
     </div>
   </div>
   <div
@@ -15,11 +15,11 @@ exports[`App component renders correctly with min params 1`] = `
         className="u-text-uppercase">
         Now Playing
       </p>
-      <Unknown
+      <LastUpdated
         lastUpdated={23525345345} />
     </div>
-    <Connect(Component) />
-    <Connect(Component) />
+    <Connect(CurrentSong) />
+    <Connect(Controls) />
   </div>
 </div>
 `;

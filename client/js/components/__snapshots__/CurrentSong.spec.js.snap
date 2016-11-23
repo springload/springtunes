@@ -5,7 +5,7 @@ exports[`CurrentSong component renders correctly when error 1`] = `
     className="song-details">
     <div
       className="song-details__graphic">
-      <Unknown
+      <Icon
         iconType="big"
         name="fa-headphones" />
     </div>
@@ -61,7 +61,7 @@ exports[`CurrentSong component renders correctly when fetching 1`] = `
     className="song-details">
     <div
       className="song-details__graphic">
-      <Unknown
+      <Icon
         iconType="big"
         name="fa-headphones" />
     </div>
@@ -69,7 +69,7 @@ exports[`CurrentSong component renders correctly when fetching 1`] = `
       className="song-details__content">
       <div
         className="twelve columns">
-        <Unknown />
+        <Processing />
       </div>
     </div>
   </div>
@@ -83,7 +83,7 @@ exports[`CurrentSong component renders correctly with min params 1`] = `
     className="song-details">
     <div
       className="song-details__graphic">
-      <Unknown
+      <Icon
         iconType="big"
         name="fa-headphones" />
     </div>
