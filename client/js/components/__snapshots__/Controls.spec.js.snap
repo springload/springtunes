@@ -1,0 +1,374 @@
+exports[`Controls component renders correctly with isFetching true 1`] = `
+<div
+  className="controls">
+  <button
+    className="btn-orange"
+    disabled={true}
+    onClick={[Function]}>
+    <Unknown
+      iconType="small"
+      name="fa-refresh" />
+     Refresh
+  </button>
+  <button
+    disabled={true}
+    onClick={[Function]}>
+    <Unknown
+      iconType="small"
+      name="fa-step-backward" />
+     Back
+  </button>
+  <button
+    disabled={true}
+    onClick={[Function]}>
+    <span>
+      <Unknown
+        iconType="small"
+        name="fa-play" />
+       Play
+    </span>
+  </button>
+  <button
+    disabled={true}
+    onClick={[Function]}>
+    Next 
+    <Unknown
+      iconType="small"
+      name="fa-step-forward" />
+  </button>
+  <button
+    disabled={false}
+    onClick={[Function]}
+    title="Mute">
+    <Unknown
+      iconType="small"
+      name="fa-volume-up" />
+  </button>
+  <div
+    className="volume-control">
+    <span>
+      Volume
+    </span>
+    <Slider
+      allowCross={true}
+      className=""
+      disabled={true}
+      dots={false}
+      handle={<Handle />}
+      included={true}
+      marks={Object {}}
+      max={100}
+      min={0}
+      onAfterChange={[Function]}
+      onBeforeChange={[Function]}
+      onChange={[Function]}
+      prefixCls="rc-slider"
+      range={false}
+      step={1}
+      tipFormatter={[Function]}
+      tipTransitionName=""
+      value={50}
+      vertical={false} />
+  </div>
+</div>
+`;
+
+exports[`Controls component renders correctly with isModifyingMute true 1`] = `
+<div
+  className="controls">
+  <button
+    className="btn-orange"
+    disabled={false}
+    onClick={[Function]}>
+    <Unknown
+      iconType="small"
+      name="fa-refresh" />
+     Refresh
+  </button>
+  <button
+    disabled={false}
+    onClick={[Function]}>
+    <Unknown
+      iconType="small"
+      name="fa-step-backward" />
+     Back
+  </button>
+  <button
+    disabled={false}
+    onClick={[Function]}>
+    <span>
+      <Unknown
+        iconType="small"
+        name="fa-play" />
+       Play
+    </span>
+  </button>
+  <button
+    disabled={false}
+    onClick={[Function]}>
+    Next 
+    <Unknown
+      iconType="small"
+      name="fa-step-forward" />
+  </button>
+  <button
+    disabled={true}
+    onClick={[Function]}
+    title="Mute">
+    <Unknown
+      iconType="small"
+      name="fa-volume-up" />
+  </button>
+  <div
+    className="volume-control">
+    <span>
+      Volume
+    </span>
+    <Slider
+      allowCross={true}
+      className=""
+      disabled={false}
+      dots={false}
+      handle={<Handle />}
+      included={true}
+      marks={Object {}}
+      max={100}
+      min={0}
+      onAfterChange={[Function]}
+      onBeforeChange={[Function]}
+      onChange={[Function]}
+      prefixCls="rc-slider"
+      range={false}
+      step={1}
+      tipFormatter={[Function]}
+      tipTransitionName=""
+      value={50}
+      vertical={false} />
+  </div>
+</div>
+`;
+
+exports[`Controls component renders correctly with isMuted 1`] = `
+<div
+  className="controls">
+  <button
+    className="btn-orange"
+    disabled={false}
+    onClick={[Function]}>
+    <Unknown
+      iconType="small"
+      name="fa-refresh" />
+     Refresh
+  </button>
+  <button
+    disabled={false}
+    onClick={[Function]}>
+    <Unknown
+      iconType="small"
+      name="fa-step-backward" />
+     Back
+  </button>
+  <button
+    disabled={false}
+    onClick={[Function]}>
+    <span>
+      <Unknown
+        iconType="small"
+        name="fa-play" />
+       Play
+    </span>
+  </button>
+  <button
+    disabled={false}
+    onClick={[Function]}>
+    Next 
+    <Unknown
+      iconType="small"
+      name="fa-step-forward" />
+  </button>
+  <button
+    disabled={false}
+    onClick={[Function]}
+    title="Unmute">
+    <Unknown
+      iconType="small"
+      name="fa-volume-off" />
+  </button>
+  <div
+    className="volume-control">
+    <span>
+      Volume
+    </span>
+    <Slider
+      allowCross={true}
+      className=""
+      disabled={false}
+      dots={false}
+      handle={<Handle />}
+      included={true}
+      marks={Object {}}
+      max={100}
+      min={0}
+      onAfterChange={[Function]}
+      onBeforeChange={[Function]}
+      onChange={[Function]}
+      prefixCls="rc-slider"
+      range={false}
+      step={1}
+      tipFormatter={[Function]}
+      tipTransitionName=""
+      value={50}
+      vertical={false} />
+  </div>
+</div>
+`;
+
+exports[`Controls component renders correctly with isPlaying true 1`] = `
+<div
+  className="controls">
+  <button
+    className="btn-orange"
+    disabled={false}
+    onClick={[Function]}>
+    <Unknown
+      iconType="small"
+      name="fa-refresh" />
+     Refresh
+  </button>
+  <button
+    disabled={false}
+    onClick={[Function]}>
+    <Unknown
+      iconType="small"
+      name="fa-step-backward" />
+     Back
+  </button>
+  <button
+    disabled={false}
+    onClick={[Function]}>
+    <span>
+      <Unknown
+        iconType="small"
+        name="fa-pause" />
+       Pause
+    </span>
+  </button>
+  <button
+    disabled={false}
+    onClick={[Function]}>
+    Next 
+    <Unknown
+      iconType="small"
+      name="fa-step-forward" />
+  </button>
+  <button
+    disabled={false}
+    onClick={[Function]}
+    title="Mute">
+    <Unknown
+      iconType="small"
+      name="fa-volume-up" />
+  </button>
+  <div
+    className="volume-control">
+    <span>
+      Volume
+    </span>
+    <Slider
+      allowCross={true}
+      className=""
+      disabled={false}
+      dots={false}
+      handle={<Handle />}
+      included={true}
+      marks={Object {}}
+      max={100}
+      min={0}
+      onAfterChange={[Function]}
+      onBeforeChange={[Function]}
+      onChange={[Function]}
+      prefixCls="rc-slider"
+      range={false}
+      step={1}
+      tipFormatter={[Function]}
+      tipTransitionName=""
+      value={50}
+      vertical={false} />
+  </div>
+</div>
+`;
+
+exports[`Controls component renders correctly with min params 1`] = `
+<div
+  className="controls">
+  <button
+    className="btn-orange"
+    disabled={false}
+    onClick={[Function]}>
+    <Unknown
+      iconType="small"
+      name="fa-refresh" />
+     Refresh
+  </button>
+  <button
+    disabled={false}
+    onClick={[Function]}>
+    <Unknown
+      iconType="small"
+      name="fa-step-backward" />
+     Back
+  </button>
+  <button
+    disabled={false}
+    onClick={[Function]}>
+    <span>
+      <Unknown
+        iconType="small"
+        name="fa-play" />
+       Play
+    </span>
+  </button>
+  <button
+    disabled={false}
+    onClick={[Function]}>
+    Next 
+    <Unknown
+      iconType="small"
+      name="fa-step-forward" />
+  </button>
+  <button
+    disabled={false}
+    onClick={[Function]}
+    title="Mute">
+    <Unknown
+      iconType="small"
+      name="fa-volume-up" />
+  </button>
+  <div
+    className="volume-control">
+    <span>
+      Volume
+    </span>
+    <Slider
+      allowCross={true}
+      className=""
+      disabled={false}
+      dots={false}
+      handle={<Handle />}
+      included={true}
+      marks={Object {}}
+      max={100}
+      min={0}
+      onAfterChange={[Function]}
+      onBeforeChange={[Function]}
+      onChange={[Function]}
+      prefixCls="rc-slider"
+      range={false}
+      step={1}
+      tipFormatter={[Function]}
+      tipTransitionName=""
+      value={50}
+      vertical={false} />
+  </div>
+</div>
+`;

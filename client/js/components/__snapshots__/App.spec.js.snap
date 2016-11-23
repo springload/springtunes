@@ -1,10 +1,10 @@
-exports[`test App 1`] = `
+exports[`App component renders correctly with min params 1`] = `
 <div>
   <div
     className="header">
     <div
       className="header__logo container">
-      <Logo />
+      <Unknown />
     </div>
   </div>
   <div
@@ -15,11 +15,11 @@ exports[`test App 1`] = `
         className="u-text-uppercase">
         Now Playing
       </p>
-      <LastUpdated
+      <Unknown
         lastUpdated={23525345345} />
     </div>
-    <Connect(CurrentSong) />
-    <Connect(Controls) />
+    <Connect(Component) />
+    <Connect(Component) />
   </div>
 </div>
 `;

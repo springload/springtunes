@@ -1,3 +1,5 @@
+// Not tested. Needs to be replaced by http://springload.github.io/react-svg-icon/
+
 import React, { PropTypes } from 'react';
 import SVGInline from 'react-svg-inline';
 

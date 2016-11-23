@@ -1,0 +1,9 @@
+exports[`LastUpdated component renders correctly with min params 1`] = `
+<div
+  className="last-updated__time">
+  <p>
+    Last updated at 
+    2:39:02 PM
+  </p>
+</div>
+`;

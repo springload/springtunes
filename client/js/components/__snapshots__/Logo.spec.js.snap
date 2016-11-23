@@ -1,0 +1,10 @@
+exports[`Logo component renders correctly with min params 1`] = `
+<div
+  className="logo">
+  <img
+    alt="Springtunes Logo"
+    height="41"
+    src="../img/springtunes.svg"
+    width="250" />
+</div>
+`;

@@ -5,7 +5,7 @@ import IntelligentControls from '../containers/IntelligentControls';
 import Logo from '../components/Logo';
 
 const propTypes = {
-    lastUpdated: PropTypes.number,
+    lastUpdated: PropTypes.number.isRequired,
     fetchSongIfNeeded: PropTypes.func.isRequired,
 };
 

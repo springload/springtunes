@@ -1,0 +1,125 @@
+exports[`CurrentSong component renders correctly when error 1`] = `
+<div
+  className="current-song">
+  <div
+    className="song-details">
+    <div
+      className="song-details__graphic">
+      <Unknown
+        iconType="big"
+        name="fa-headphones" />
+    </div>
+    <div
+      className="song-details__content">
+      <div
+        className="twelve columns">
+        <div>
+          <h2>
+            <a
+              href="http://test.com"
+              target="_blank"
+              title="View track: Test song">
+              Test song
+            </a>
+          </h2>
+          <h3>
+            <a
+              href="http://test.com"
+              target="_blank"
+              title="View Artist: Test artist">
+              Test artist
+            </a>
+          </h3>
+          <h3>
+            <a
+              className="color-text-cement"
+              href="http://test.com"
+              target="_blank"
+              title="View Album: Test album">
+              Test album
+            </a>
+          </h3>
+        </div>
+        <div
+          className="error">
+          Error occurred.
+          <br />
+          Details are: \"
+          ERROR
+          \"
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`CurrentSong component renders correctly when fetching 1`] = `
+<div
+  className="current-song">
+  <div
+    className="song-details">
+    <div
+      className="song-details__graphic">
+      <Unknown
+        iconType="big"
+        name="fa-headphones" />
+    </div>
+    <div
+      className="song-details__content">
+      <div
+        className="twelve columns">
+        <Unknown />
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`CurrentSong component renders correctly with min params 1`] = `
+<div
+  className="current-song">
+  <div
+    className="song-details">
+    <div
+      className="song-details__graphic">
+      <Unknown
+        iconType="big"
+        name="fa-headphones" />
+    </div>
+    <div
+      className="song-details__content">
+      <div
+        className="twelve columns">
+        <div>
+          <h2>
+            <a
+              href="http://test.com"
+              target="_blank"
+              title="View track: Test song">
+              Test song
+            </a>
+          </h2>
+          <h3>
+            <a
+              href="http://test.com"
+              target="_blank"
+              title="View Artist: Test artist">
+              Test artist
+            </a>
+          </h3>
+          <h3>
+            <a
+              className="color-text-cement"
+              href="http://test.com"
+              target="_blank"
+              title="View Album: Test album">
+              Test album
+            </a>
+          </h3>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;

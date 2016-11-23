@@ -1,7 +1,7 @@
 import React, { PropTypes } from 'react';
 
 const propTypes = {
-    lastUpdated: PropTypes.number,
+    lastUpdated: PropTypes.number.isRequired,
 };
 
 const LastUpdated = ({ lastUpdated }) => (
