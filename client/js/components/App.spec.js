@@ -7,8 +7,8 @@ describe('App component', () => {
         const shallowRenderer = ReactTestUtils.createRenderer();
         const result = shallowRenderer.render(
             <App
-                lastUpdated={ 23525345345 }
-                fetchSongIfNeeded={ () => {} }
+                lastUpdated={23525345345}
+                fetchSongIfNeeded={() => {}}
             />
         );
         expect(result).toMatchSnapshot();
@@ -19,8 +19,8 @@ describe('App component', () => {
         const shallowRenderer = ReactTestUtils.createRenderer();
         shallowRenderer.render(
             <App
-                lastUpdated={ 23525345345 }
-                fetchSongIfNeeded={ () => { fetchSong = true; } }
+                lastUpdated={23525345345}
+                fetchSongIfNeeded={() => { fetchSong = true; }}
             />
         );
         const instance = shallowRenderer.getMountedInstance();

@@ -10,8 +10,8 @@ const propTypes = {
 
 const Icon = ({ name, iconType }) => (
     <SVGInline
-        svg={ require(`../../../public/img/icons/${name}.svg`) } // eslint-disable-line global-require
-        className={ `icon-type-${iconType}` }
+        svg={require(`../../../public/img/icons/${name}.svg`)} // eslint-disable-line global-require
+        className={`icon-type-${iconType}`}
     />
 );
 

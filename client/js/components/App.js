@@ -26,7 +26,7 @@ class App extends Component {
                 <div className="container section">
                     <div className="last-updated">
                         <p className="u-text-uppercase">Now Playing</p>
-                        <LastUpdated lastUpdated={ lastUpdated } />
+                        <LastUpdated lastUpdated={lastUpdated} />
                     </div>
                     <IntelligentCurrentSong />
                     <IntelligentControls />

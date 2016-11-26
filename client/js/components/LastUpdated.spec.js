@@ -7,7 +7,7 @@ describe('LastUpdated component', () => {
         const shallowRenderer = ReactTestUtils.createRenderer();
         const result = shallowRenderer.render(
             <LastUpdated
-                lastUpdated={ 2342342342 }
+                lastUpdated={2342342342}
             />
         );
         expect(result).toMatchSnapshot();

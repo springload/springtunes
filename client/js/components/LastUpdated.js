@@ -7,7 +7,7 @@ const propTypes = {
 const LastUpdated = ({ lastUpdated }) => (
     <div className="last-updated__time">
         <p>
-            Last updated at { new Date(lastUpdated).toLocaleTimeString() }
+            Last updated at {new Date(lastUpdated).toLocaleTimeString()}
         </p>
     </div>
 );

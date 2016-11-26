@@ -7,7 +7,7 @@ describe('CurrentSong component', () => {
         const shallowRenderer = ReactTestUtils.createRenderer();
         const result = shallowRenderer.render(
             <CurrentSong
-                isFetching={ false }
+                isFetching={false}
                 currentSong={{
                     title: 'Test song',
                     artist: 'Test artist',
@@ -25,7 +25,7 @@ describe('CurrentSong component', () => {
         const shallowRenderer = ReactTestUtils.createRenderer();
         const result = shallowRenderer.render(
             <CurrentSong
-                isFetching={ true }
+                isFetching={true}
                 currentSong={{
                     title: 'Test song',
                     artist: 'Test artist',
@@ -43,7 +43,7 @@ describe('CurrentSong component', () => {
         const shallowRenderer = ReactTestUtils.createRenderer();
         const result = shallowRenderer.render(
             <CurrentSong
-                isFetching={ false }
+                isFetching={false}
                 currentSong={{
                     title: 'Test song',
                     artist: 'Test artist',
@@ -52,7 +52,7 @@ describe('CurrentSong component', () => {
                     link_artist: 'http://test.com',
                     link_album: 'http://test.com',
                 }}
-                hasError={ true }
+                hasError={true}
                 error="ERROR"
             />
         );
