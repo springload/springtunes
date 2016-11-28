@@ -11,11 +11,9 @@ const port = process.env.PORT || 3000;
 if (process.env.NODE_ENV === 'development') {
     const webpack = require('webpack');
     const webpackDevMiddleware = require('webpack-dev-middleware');
-    const webpackHotMiddleware = require('webpack-hot-middleware');
     const config = require('../webpack.development.config.js');
     const compiler = webpack(config);
     app.use(webpackDevMiddleware(compiler, { noInfo: true, publicPath: config.output.publicPath }));
-    app.use(webpackHotMiddleware(compiler));
 }
 
 app.use('/static', express.static(path.resolve(`${__dirname}/../dist`)));

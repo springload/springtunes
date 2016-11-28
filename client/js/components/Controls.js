@@ -31,37 +31,37 @@ const Controls = ({
     unmuteClick,
     volumeChange,
 }) => (
-    <div className='controls'>
-        <button className='btn-orange' onClick={ refreshClick } disabled={ isFetching }>
-            <Icon name='fa-refresh' iconType='small' /> Refresh
+    <div className="controls">
+        <button className="btn-orange" onClick={refreshClick} disabled={isFetching}>
+            <Icon name="fa-refresh" iconType="small" /> Refresh
         </button>
-        <button onClick={ backClick } disabled={ isFetching }>
-            <Icon name='fa-step-backward' iconType='small' /> Back
+        <button onClick={backClick} disabled={isFetching}>
+            <Icon name="fa-step-backward" iconType="small" /> Back
         </button>
-        <button onClick={ togglePauseClick } disabled={ isFetching }>
-            { isPlaying &&
-                <span><Icon name='fa-pause' iconType='small' /> Pause</span>
+        <button onClick={togglePauseClick} disabled={isFetching}>
+            {isPlaying &&
+                <span><Icon name="fa-pause" iconType="small" /> Pause</span>
             }
-            { !isPlaying &&
-                <span><Icon name='fa-play' iconType='small' /> Play</span>
+            {!isPlaying &&
+                <span><Icon name="fa-play" iconType="small" /> Play</span>
             }
         </button>
-        <button onClick={ nextClick } disabled={ isFetching }>
-            Next <Icon name='fa-step-forward' iconType='small' />
+        <button onClick={nextClick} disabled={isFetching}>
+            Next <Icon name="fa-step-forward" iconType="small" />
         </button>
-    { !isMuted &&
-        <button onClick={ muteClick } disabled={ !isFetching && isModifyingMute } title='Mute'>
-            <Icon name='fa-volume-up' iconType='small' />
+    {!isMuted &&
+        <button onClick={muteClick} disabled={!isFetching && isModifyingMute} title="Mute">
+            <Icon name="fa-volume-up" iconType="small" />
         </button>
     }
-    { isMuted &&
-        <button onClick={ unmuteClick } disabled={ !isFetching && isModifyingMute } title='Unmute'>
-            <Icon name='fa-volume-off' iconType='small' />
+    {isMuted &&
+        <button onClick={unmuteClick} disabled={!isFetching && isModifyingMute} title="Unmute">
+            <Icon name="fa-volume-off" iconType="small" />
         </button>
     }
-        <div className='volume-control'>
+        <div className="volume-control">
             <span>Volume</span>
-            <Slider value={ volume } onChange={ volumeChange } disabled={ isFetching } />
+            <Slider value={volume} onChange={volumeChange} disabled={isFetching} />
         </div>
     </div>
 );

@@ -1,3 +1,5 @@
+// Not tested. Needs to be replaced by http://springload.github.io/react-svg-icon/
+
 import React, { PropTypes } from 'react';
 import SVGInline from 'react-svg-inline';
 
@@ -8,8 +10,8 @@ const propTypes = {
 
 const Icon = ({ name, iconType }) => (
     <SVGInline
-        svg={ require(`../../../public/img/icons/${name}.svg`) } // eslint-disable-line global-require
-        className={ `icon-type-${iconType}` }
+        svg={require(`../../../public/img/icons/${name}.svg`)} // eslint-disable-line global-require
+        className={`icon-type-${iconType}`}
     />
 );
 
