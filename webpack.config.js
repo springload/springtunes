@@ -22,7 +22,6 @@ const config = {
                 exclude: /node_modules/,
                 include: __dirname,
                 query: {
-                    // https://github.com/babel/babel-loader#options
                     cacheDirectory: true,
                 },
             },

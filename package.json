@@ -28,7 +28,8 @@
     "spotify",
     "remote",
     "redux",
-    "client"
+    "client",
+    "server"
   ],
   "license": "MIT",
   "bugs": {
