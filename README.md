@@ -11,6 +11,8 @@ Current features:
 - Mute/Unmute
 - Change volume
 
+**If you use Springtunes and like it, please give us a GitHub star ;)**
+
 ## Screenshot
 ![Screenshot Springtunes](/screenshots/sc_springtunes.png?raw=true "Screenshot Springtunes")
 
@@ -61,6 +63,12 @@ npm run dev
 npm run build:css
 # Runs linting.
 npm run lint
+# Runs tests.
+npm run test
+# Runs test watcher
+npm run test:watch
+# Check coverage
+npm run test:coverage
 ```
 
 ### Using the git hooks
