@@ -76,7 +76,7 @@
     "node-libs-browser": "^1.0.0",
     "normalize-css": "^2.3.1",
     "object-assign": "^4.1.0",
-    "pleeease": "^4.1.0",
+    "pleeease-cli": "^4.0.0",
     "react-addons-test-utils": "^15.4.0",
     "react-test-renderer": "^15.4.0",
     "react-transform-hmr": "^1.0.0",
@@ -88,7 +88,7 @@
   },
   "preferGlobal": "true",
   "scripts": {
-    "build:css": "pleeease compile",
+    "build:css": "pleeease-compile",
     "linter:js": "eslint",
     "lint": "npm run linter:js -s -- .",
     "server": "node server/server.js",
