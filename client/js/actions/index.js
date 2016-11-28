@@ -1,66 +1,29 @@
-import keyMirror from 'keymirror';
 import api from './api';
+import { ACTIONS } from './constants';
+import createAction from '../utils/createAction';
+import { shouldFetchSong, shouldModifyMute } from '../utils/';
 
-export const ACTIONS = keyMirror({
-    REQUEST_SONG: null,
-    REQUEST_MUTE: null,
-    RECEIVE_ERROR: null,
-    RECEIVE_SONG: null,
-    RECEIVE_TOGGLE_PAUSE: null,
-    RECEIVE_NEXT: null,
-    RECEIVE_BACK: null,
-    RECEIVE_MUTE: null,
-    RECEIVE_VOLUME: null,
-});
+const requestSong = createAction(ACTIONS.REQUEST_SONG);
+const requestMute = createAction(ACTIONS.REQUEST_MUTE);
 
-const requestSong = () => ({
-    type: ACTIONS.REQUEST_SONG,
-});
+const receiveError = createAction(ACTIONS.RECEIVE_ERROR);
 
-const requestMute = () => ({
-    type: ACTIONS.REQUEST_MUTE,
-});
-
-const receiveError = (response) => ({
-    type: ACTIONS.RECEIVE_ERROR,
-    error: response.error,
+const receiveSong = createAction(ACTIONS.RECEIVE_SONG, (response) => ({
+    playing: response.playing,
+    volume: Math.round(response.volume * 100, 0),
+    currentSong: {
+        title: response.track.track_resource.name,
+        link_track: response.track.track_resource.location.og,
+        artist: response.track.artist_resource.name,
+        link_artist: response.track.artist_resource.location.og,
+        album: response.track.album_resource.name,
+        link_album: response.track.album_resource.location.og,
+    },
     receivedAt: Date.now(),
-});
+}));
 
-const receiveSong = (response) => {
-    try {
-        return {
-            type: ACTIONS.RECEIVE_SONG,
-            playing: response.playing,
-            volume: Math.round(response.volume * 100, 0),
-            currentSong: {
-                title: response.track.track_resource.name,
-                link_track: response.track.track_resource.location.og,
-                artist: response.track.artist_resource.name,
-                link_artist: response.track.artist_resource.location.og,
-                album: response.track.album_resource.name,
-                link_album: response.track.album_resource.location.og,
-            },
-            receivedAt: Date.now(),
-        };
-    } catch (exc) {
-        return {
-            type: ACTIONS.RECEIVE_ERROR,
-            error: 'Invalid return.',
-            receivedAt: Date.now(),
-        };
-    }
-};
-
-const receiveMuteModification = (response) => ({
-    type: ACTIONS.RECEIVE_MUTE,
-    isMuted: response.isMuted,
-});
-
-const receiveVolumeChange = (response) => ({
-    type: ACTIONS.RECEIVE_VOLUME,
-    value: response.value,
-});
+const receiveMuteModification = createAction(ACTIONS.RECEIVE_MUTE);
+const receiveVolumeChange = createAction(ACTIONS.RECEIVE_VOLUME);
 
 const fetchSong = () => dispatch => {
     dispatch(requestSong());
@@ -68,7 +31,7 @@ const fetchSong = () => dispatch => {
         .then(response => response.json())
         .then(jsonResponse => {
             if (jsonResponse.error) {
-                dispatch(receiveError(jsonResponse));
+                dispatch(receiveError(new Error(jsonResponse.error)));
             } else {
                 dispatch(receiveSong(jsonResponse));
             }
@@ -110,28 +73,8 @@ const unmute = () => dispatch => {
     .then(jsonResponse => dispatch(receiveMuteModification(jsonResponse)));
 };
 
-const shouldFetchSong = (state) => {
-    const song = state.songManager.current;
-    if (!song) return true;
-    if (song.isFetching) return false;
-    return true;
-};
-
-const shouldModifyMute = (state, calledBy) => {
-    const muting = state.volumeManager.muting;
-    if (!muting) return false;
-    if (muting.isModifyingMute) return false;
-    if (calledBy === 'mute') {
-        if (muting.isMuted === true) return false;
-    } else {
-        if (muting.isMuted === false) return false;
-    }
-
-    return true;
-};
-
 export const fetchSongIfNeeded = () => (dispatch, getState) => {
-    if (shouldFetchSong(getState())) {
+    if (shouldFetchSong(getState().song)) {
         return dispatch(fetchSong());
     }
 
@@ -139,7 +82,7 @@ export const fetchSongIfNeeded = () => (dispatch, getState) => {
 };
 
 export const togglePauseIfNeeded = () => (dispatch, getState) => {
-    if (shouldFetchSong(getState())) {
+    if (shouldFetchSong(getState().song)) {
         return dispatch(togglePause());
     }
 
@@ -147,7 +90,7 @@ export const togglePauseIfNeeded = () => (dispatch, getState) => {
 };
 
 export const nextIfNeeded = () => (dispatch, getState) => {
-    if (shouldFetchSong(getState())) {
+    if (shouldFetchSong(getState().song)) {
         return dispatch(next());
     }
 
@@ -155,7 +98,7 @@ export const nextIfNeeded = () => (dispatch, getState) => {
 };
 
 export const backIfNeeded = () => (dispatch, getState) => {
-    if (shouldFetchSong(getState())) {
+    if (shouldFetchSong(getState().song)) {
         return dispatch(back());
     }
 
@@ -163,7 +106,7 @@ export const backIfNeeded = () => (dispatch, getState) => {
 };
 
 export const muteIfNeeded = () => (dispatch, getState) => {
-    if (shouldModifyMute(getState(), 'mute')) {
+    if (shouldModifyMute(getState().volume, 'mute')) {
         return dispatch(mute());
     }
 
@@ -171,7 +114,7 @@ export const muteIfNeeded = () => (dispatch, getState) => {
 };
 
 export const unmuteIfNeeded = () => (dispatch, getState) => {
-    if (shouldModifyMute(getState(), 'unmute')) {
+    if (shouldModifyMute(getState().volume, 'unmute')) {
         return dispatch(unmute());
     }
 

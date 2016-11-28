@@ -40,6 +40,7 @@
     "express": "^4.13.3",
     "isomorphic-fetch": "^2.1.1",
     "keymirror": "^0.1.1",
+    "lodash": "^4.17.0",
     "node-spotify-webhelper": "0.0.4",
     "osa-spotify": "^1.0.1",
     "raw-loader": "^0.5.1",
@@ -71,7 +72,6 @@
     "babel-plugin-react-transform": "^2.0.0",
     "babel-preset-es2015": "^6.3.13",
     "babel-preset-react": "^6.3.13",
-    "babel-preset-stage-2": "^6.3.13",
     "normalize-css": "^2.3.1"
   },
   "bin": {

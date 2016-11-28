@@ -23,7 +23,7 @@ const config = {
             query: {
                 // https://github.com/babel/babel-loader#options
                 cacheDirectory: true,
-                presets: ['react', 'es2015', 'stage-2'],
+                presets: ['react', 'es2015'],
             },
         },
             {
