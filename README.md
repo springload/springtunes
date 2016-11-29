@@ -20,7 +20,7 @@ Current features:
 - Spotify client needs to run on the machine hosting the server
 - Only compatible with MacOS X 10.10 or later
 
-## Global mode
+## Global mode / Simple use
 
 ```sh
 npm install -g springtunes
