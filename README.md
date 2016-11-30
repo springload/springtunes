@@ -32,7 +32,7 @@ springtunes
 
 If you want to change the server port you can use `PORT=XXXX springtunes`
 
-By default, you should not be able to access Springtunes on the host machine using [http://localhost:3000/](http://localhost:3000/)
+By default, you should be able to access Springtunes on the host machine using [http://localhost:3000/](http://localhost:3000/)
 
 Then, to access it from another computer on your network, use something like http://[IP_ADDRESS_HOST_MACHINE_WITH_SPOTIFY:3000/]
 
