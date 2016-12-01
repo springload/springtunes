@@ -36,6 +36,10 @@ By default, you should be able to access Springtunes on the host machine using [
 
 Then, to access it from another computer on your network, use something like http://[IP_ADDRESS_HOST_MACHINE_WITH_SPOTIFY:3000/]
 
+## Browser extension
+
+Once Springtunes server is running, you can also install [the Springtunes browser extension](https://github.com/springload/springtunes-webextension/) for supported browser.
+
 ## Contribute
 
 If you want to contribute to this project, please check [this page](./CONTRIBUTING.md).

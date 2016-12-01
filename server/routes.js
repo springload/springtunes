@@ -14,6 +14,23 @@ router.use((req, res, next) => {
     next(); // make sure we go to the next routes and don't stop here
 });
 
+router.route('/ping')
+    /**
+     * @api {get} /ping Ping the API
+     * @apiName Ping
+     * @apiGroup API
+     *
+     * @apiSuccess {String} status API returns OK. Used by browser extension to check that the server URL is correct.
+     *
+     * @apiSuccessExample Success-Response:
+     *     HTTP/1.1 200 OK
+     *     {
+     *           "status": "ok"
+     *     }
+     *
+    **/
+    .get((req, res) => res.json({ status: 'ok' }));
+
 const getCurrentSong = (res) => {
     spotifyWebHelper.getStatus((err, jsonBlob) => {
         if (err) {
