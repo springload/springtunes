@@ -48,7 +48,7 @@ api.unmute = () => fetch('/api/volume', {
     body: JSON.stringify({ action: 'unmute' }),
 });
 
-api.changeVolume = (volumeValue) => fetch('/api/volume', {
+api.changeVolume = volumeValue => fetch('/api/volume', {
     method: 'PUT',
     headers: {
         Accept: 'application/json',

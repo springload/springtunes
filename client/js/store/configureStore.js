@@ -32,7 +32,7 @@ const springtunesCreateStore = () => {
     };
     return createStore(rootReducer, stateDefault, compose(
         applyMiddleware(...middleware),
-        global.devToolsExtension ? global.devToolsExtension() : fct => fct // Expose store to Redux DevTools extension.
+        global.devToolsExtension ? global.devToolsExtension() : fct => fct, // Expose store to Redux DevTools extension.
     ));
 };
 

@@ -3,6 +3,7 @@ const express = require('express');
 const osaSpotify = require('osa-spotify');
 const nodeSpotifyWebHelper = require('node-spotify-webhelper');
 const spotify = require('spotify-node-applescript');
+
 const spotifyWebHelper = new nodeSpotifyWebHelper.SpotifyWebHelper();
 
 const router = express();
@@ -255,7 +256,7 @@ router.route('/playing')
      *     }
      */
     .put((req, res) =>
-        osaSpotify.toggle().then(() => getCurrentSong(res))
+        osaSpotify.toggle().then(() => getCurrentSong(res)),
     );
 
 router.route('/volume')

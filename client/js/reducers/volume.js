@@ -1,6 +1,6 @@
-import { ACTIONS } from '../actions/constants';
+import ACTIONS from '../actions/constants';
 
-export const volumeManager = (state = { }, action) => {
+const volumeManager = (state = { }, action) => {
     switch (action.type) {
     case ACTIONS.RECEIVE_SONG:
         return Object.assign({}, state, {
@@ -26,3 +26,5 @@ export const volumeManager = (state = { }, action) => {
         return state;
     }
 };
+
+export default volumeManager;

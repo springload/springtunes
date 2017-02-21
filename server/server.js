@@ -6,6 +6,7 @@ const bodyParser = require('body-parser');
 const express = require('express');
 const router = require('./routes');
 const app = new (require('express'))();
+
 const port = process.env.PORT || 3000;
 
 if (process.env.NODE_ENV === 'development') {

@@ -49,12 +49,12 @@ const Controls = ({
         <button onClick={nextClick} disabled={isFetching}>
             Next <Icon name="fa-step-forward" iconType="small" />
         </button>
-    {!isMuted &&
+        {!isMuted &&
         <button onClick={muteClick} disabled={!isFetching && isModifyingMute} title="Mute">
             <Icon name="fa-volume-up" iconType="small" />
         </button>
     }
-    {isMuted &&
+        {isMuted &&
         <button onClick={unmuteClick} disabled={!isFetching && isModifyingMute} title="Unmute">
             <Icon name="fa-volume-off" iconType="small" />
         </button>

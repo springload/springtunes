@@ -1,6 +1,6 @@
-import { ACTIONS } from '../actions/constants';
+import ACTIONS from '../actions/constants';
 
-export const songManager = (state = { }, action) => {
+const songManager = (state = { }, action) => {
     switch (action.type) {
     case ACTIONS.REQUEST_SONG:
         return Object.assign({}, state, {
@@ -27,3 +27,5 @@ export const songManager = (state = { }, action) => {
         return state;
     }
 };
+
+export default songManager;

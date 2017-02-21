@@ -1,6 +1,6 @@
-import { ACTIONS } from '../actions/constants';
+import ACTIONS from '../actions/constants';
 
-export const errorManager = (state = {}, action) => {
+const errorManager = (state = {}, action) => {
     switch (action.type) {
     case ACTIONS.RECEIVE_ERROR:
         return Object.assign({}, state, {
@@ -16,3 +16,5 @@ export const errorManager = (state = {}, action) => {
         return state;
     }
 };
+
+export default errorManager;

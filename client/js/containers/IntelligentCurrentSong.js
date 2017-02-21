@@ -1,7 +1,7 @@
 import { connect } from 'react-redux';
 import CurrentSong from '../components/CurrentSong';
 
-const mapStateToProps = (state) => (
+const mapStateToProps = state => (
     {
         isFetching: state.song.isFetching,
         currentSong: state.song.current,

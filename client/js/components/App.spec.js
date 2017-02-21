@@ -1,6 +1,6 @@
 import React from 'react';
-import App from './App';
 import ReactTestUtils from 'react-addons-test-utils';
+import App from './App';
 
 describe('App component', () => {
     it('renders correctly with min params', () => {
@@ -9,7 +9,7 @@ describe('App component', () => {
             <App
                 lastUpdated={23525345345}
                 fetchSongIfNeeded={() => {}}
-            />
+            />,
         );
         expect(result).toMatchSnapshot();
     });
@@ -21,7 +21,7 @@ describe('App component', () => {
             <App
                 lastUpdated={23525345345}
                 fetchSongIfNeeded={() => { fetchSong = true; }}
-            />
+            />,
         );
         const instance = shallowRenderer.getMountedInstance();
         instance.componentDidMount();

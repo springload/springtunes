@@ -1,6 +1,6 @@
 import React from 'react';
-import CurrentSong from './CurrentSong';
 import ReactTestUtils from 'react-addons-test-utils';
+import CurrentSong from './CurrentSong';
 
 describe('CurrentSong component', () => {
     it('renders correctly with min params', () => {
@@ -16,7 +16,7 @@ describe('CurrentSong component', () => {
                     link_artist: 'http://test.com',
                     link_album: 'http://test.com',
                 }}
-            />
+            />,
         );
         expect(result).toMatchSnapshot();
     });
@@ -34,7 +34,7 @@ describe('CurrentSong component', () => {
                     link_artist: 'http://test.com',
                     link_album: 'http://test.com',
                 }}
-            />
+            />,
         );
         expect(result).toMatchSnapshot();
     });
@@ -54,7 +54,7 @@ describe('CurrentSong component', () => {
                 }}
                 hasError={true}
                 error="ERROR"
-            />
+            />,
         );
         expect(result).toMatchSnapshot();
     });

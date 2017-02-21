@@ -9,6 +9,11 @@ const propTypes = {
     error: PropTypes.string,
 };
 
+const defaultProps = {
+    hasError: false,
+    error: '',
+};
+
 const CurrentSong = ({ currentSong, isFetching, hasError, error }) => (
     <div className="current-song">
         <div className="song-details">
@@ -23,6 +28,7 @@ const CurrentSong = ({ currentSong, isFetching, hasError, error }) => (
                                 <a
                                     href={currentSong.link_track}
                                     target="_blank"
+                                    rel="noopener noreferrer"
                                     title={`View track: ${currentSong.title}`}
                                 >
                                     {currentSong.title}
@@ -32,6 +38,7 @@ const CurrentSong = ({ currentSong, isFetching, hasError, error }) => (
                                 <a
                                     href={currentSong.link_artist}
                                     target="_blank"
+                                    rel="noopener noreferrer"
                                     title={`View Artist: ${currentSong.artist}`}
                                 >
                                     {currentSong.artist}
@@ -41,6 +48,7 @@ const CurrentSong = ({ currentSong, isFetching, hasError, error }) => (
                                 <a
                                     href={currentSong.link_album}
                                     target="_blank"
+                                    rel="noopener noreferrer"
                                     className="color-text-cement"
                                     title={`View Album: ${currentSong.album}`}
                                 >
@@ -65,5 +73,6 @@ const CurrentSong = ({ currentSong, isFetching, hasError, error }) => (
 );
 
 CurrentSong.propTypes = propTypes;
+CurrentSong.defaultProps = defaultProps;
 
 export default CurrentSong;

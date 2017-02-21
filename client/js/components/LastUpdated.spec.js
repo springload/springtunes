@@ -1,6 +1,6 @@
 import React from 'react';
-import LastUpdated from './LastUpdated';
 import ReactTestUtils from 'react-addons-test-utils';
+import LastUpdated from './LastUpdated';
 
 describe('LastUpdated component', () => {
     it('renders correctly with min params', () => {
@@ -8,7 +8,7 @@ describe('LastUpdated component', () => {
         const result = shallowRenderer.render(
             <LastUpdated
                 lastUpdated={2342342342}
-            />
+            />,
         );
         expect(result).toMatchSnapshot();
     });

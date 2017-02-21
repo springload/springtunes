@@ -1,7 +1,7 @@
 import React from 'react';
-import Controls from './Controls';
 import ReactTestUtils from 'react-addons-test-utils';
 import { shallow } from 'enzyme';
+import Controls from './Controls';
 
 const emptyFunc = () => {};
 
@@ -22,7 +22,7 @@ describe('Controls component', () => {
                 muteClick={emptyFunc}
                 unmuteClick={emptyFunc}
                 volumeChange={emptyFunc}
-            />
+            />,
         );
         expect(result).toMatchSnapshot();
     });
@@ -43,7 +43,7 @@ describe('Controls component', () => {
                 muteClick={emptyFunc}
                 unmuteClick={emptyFunc}
                 volumeChange={emptyFunc}
-            />
+            />,
         );
         expect(result).toMatchSnapshot();
     });
@@ -64,7 +64,7 @@ describe('Controls component', () => {
                 muteClick={emptyFunc}
                 unmuteClick={emptyFunc}
                 volumeChange={emptyFunc}
-            />
+            />,
         );
         expect(result).toMatchSnapshot();
     });
@@ -85,7 +85,7 @@ describe('Controls component', () => {
                 muteClick={emptyFunc}
                 unmuteClick={emptyFunc}
                 volumeChange={emptyFunc}
-            />
+            />,
         );
         expect(result).toMatchSnapshot();
     });
@@ -106,7 +106,7 @@ describe('Controls component', () => {
                 muteClick={emptyFunc}
                 unmuteClick={emptyFunc}
                 volumeChange={emptyFunc}
-            />
+            />,
         );
         expect(result).toMatchSnapshot();
     });
@@ -129,7 +129,7 @@ describe('Controls component', () => {
                 muteClick={emptyFunc}
                 unmuteClick={emptyFunc}
                 volumeChange={emptyFunc}
-            />
+            />,
         );
 
         component.find('button').first().simulate('click');
@@ -154,7 +154,7 @@ describe('Controls component', () => {
                 muteClick={emptyFunc}
                 unmuteClick={emptyFunc}
                 volumeChange={emptyFunc}
-            />
+            />,
         );
 
         component.find('button').at(1).simulate('click');
@@ -179,7 +179,7 @@ describe('Controls component', () => {
                 muteClick={emptyFunc}
                 unmuteClick={emptyFunc}
                 volumeChange={emptyFunc}
-            />
+            />,
         );
 
         component.find('button').at(2).simulate('click');
@@ -204,7 +204,7 @@ describe('Controls component', () => {
                 muteClick={emptyFunc}
                 unmuteClick={emptyFunc}
                 volumeChange={emptyFunc}
-            />
+            />,
         );
 
         component.find('button').at(3).simulate('click');
@@ -229,7 +229,7 @@ describe('Controls component', () => {
                 muteClick={testOnClick}
                 unmuteClick={emptyFunc}
                 volumeChange={emptyFunc}
-            />
+            />,
         );
 
         component.find('button').at(4).simulate('click');
@@ -254,7 +254,7 @@ describe('Controls component', () => {
                 muteClick={emptyFunc}
                 unmuteClick={testOnClick}
                 volumeChange={emptyFunc}
-            />
+            />,
         );
 
         component.find('button').at(4).simulate('click');
@@ -277,7 +277,7 @@ describe('Controls component', () => {
                 muteClick={emptyFunc}
                 unmuteClick={emptyFunc}
                 volumeChange={emptyFunc}
-            />
+            />,
         );
 
         expect(component.find('button').length).toBe(5);
@@ -299,7 +299,7 @@ describe('Controls component', () => {
                 muteClick={emptyFunc}
                 unmuteClick={emptyFunc}
                 volumeChange={emptyFunc}
-            />
+            />,
         );
 
         expect(component.find('button').length).toBe(5);
