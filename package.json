@@ -81,12 +81,13 @@
     "normalize-css": "^2.3.1",
     "object-assign": "^4.1.0",
     "pleeease-cli": "^4.0.0",
-    
     "react-test-renderer": "^15.4.0",
     "react-transform-hmr": "^1.0.0",
     "sass-lint": "^1.10.2",
     "stylefmt": "^5.1.2",
-    "stylelint-order": "^0.3.0"    
+    "stylelint": "^7.9.0",
+    "stylelint-config-standard": "^16.0.0",
+    "stylelint-order": "^0.3.0"
   },
   "bin": {
     "springtunes": "server/server.js"
