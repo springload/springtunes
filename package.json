@@ -96,7 +96,7 @@
     "stylefmt": "stylefmt -r ./client/scss/**/*.scss ./client/scss/*.scss",
     "build:css": "pleeease-compile",
     "linter:js": "eslint",
-    "linter:sass": "sass-lint -v -q",
+    "linter:sass": "npm run stylefmt && sass-lint -v -q",
     "lint": "npm run linter:js -s -- . && npm run linter:sass",
     "server": "node server/server.js",
     "dev": "NODE_ENV=development npm run server",
