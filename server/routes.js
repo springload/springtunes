@@ -255,9 +255,7 @@ router.route('/playing')
      *         error: 'Valid actions are only "back" and "next".'
      *     }
      */
-    .put((req, res) =>
-        osaSpotify.toggle().then(() => getCurrentSong(res)),
-    );
+    .put((req, res) => osaSpotify.toggle().then(() => getCurrentSong(res)));
 
 router.route('/volume')
 
