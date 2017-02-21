@@ -15,8 +15,8 @@
 
 
 // Brand Colors
-$color-brand-1: #7DC265;
-$color-brand-2: #F5AC35;
+$color-brand-1: #7dc265;
+$color-brand-2: #f5ac35;
 
 // Stage / Body Colors
 $color-stage-bg: #fafafa;
@@ -36,34 +36,30 @@ $color-select: #e5e5e5;
 $color-error: #f77;
 
 // Common Colors
-$color-grey-lead: #3F3F3F;
+$color-white: #fff;
+$color-black: #000;
+$color-grey-lead: #3f3f3f;
 $color-grey-cement: #8f8f8f;
 $color-grey-haze: #e5e5e5;
 $color-grey-mist: #f6f6f6;
-$color-grey-gravel: #7D8086;
-
+$color-grey-gravel: #7d8086;
 $color-blue-midnight: #02212f;
 $color-blue-lake: #005256;
-
+$color-green-track: #dbebd2;
 
 
 // 2. Fonts
 // ----------------------------------------------------------------------------
-
-
 $font-family-default-sans-serif: 'HelveticaNeue', 'Helvetica Neue', Helvetica, Arial, sans-serif;
-$font-family-default-serif:  'Georgia', 'Times New Roman', Times, serif;
+$font-family-default-serif: 'Georgia', 'Times New Roman', Times, serif;
 
 // Site specfic fonts
 $font-family-sans-serif: 'Fira Sans', $font-family-default-sans-serif;
 $font-family-serif: $font-family-default-serif;
-
 $font-family-primary: $font-family-sans-serif;
-
 $font-size-base: 16; // px
 $line-height-base: 1.4;
 $line-height-headline: 1.25;
-
 $font-weight-light: 400;
 $font-weight-normal: 700;
 $font-weight-bold: 900;
@@ -72,7 +68,6 @@ $font-weight-bold: 900;
 
 // 3. Spacing
 // ----------------------------------------------------------------------------
-
 $spacing: 1.5rem; // 24px;
 
 // Smaller
@@ -90,7 +85,5 @@ $spacing-header: 1.125rem;
 
 // 4. Easing
 // ----------------------------------------------------------------------------
-
-
 $ease: cubic-bezier(.43, .11, .41 1);
 $easing-circ: cubic-bezier(.075, .82, .165, 0);

@@ -6,29 +6,47 @@
 // so preceed with caution...
 
 // Core variables, mixins and functions
+
 @import 'globals/variables';
+
 @import 'globals/functions';
+
 @import 'globals/breakpoints';
 
+@import 'globals/mixins';
+
 // Base imports
+
 @import 'globals/fonts';
+
 @import 'globals/elements';
+
 @import 'globals/typography';
 
 // Layout styles
+
 @import 'globals/grid';
 
 // Components
+
 @import 'components/header';
+
 @import 'components/layout';
+
 @import 'components/icon';
+
 @import 'components/rc-slider';
+
 @import 'components/current-song';
+
 @import 'components/last-updated';
+
 @import 'components/controls';
 
 // Utility classes
+
 @import 'globals/utilities';
 
 // Widths
+
 @import 'globals/widths';

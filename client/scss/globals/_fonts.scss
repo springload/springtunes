@@ -1,24 +1,25 @@
+// sass-lint:disable no-duplicate-properties
+
 @font-face {
-    font-family: "Fira Sans";
+    font-family: 'Fira Sans';
     font-weight: 700;
     font-style: normal;
-    src:    url("../fonts/FiraSans-Regular.eot");
-    src:    url("../fonts/FiraSans-Regular.eot?#iefix") format("embedded-opentype"),
-    url("../fonts/FiraSans-Regular.woff") format("woff");
+    src: url('../fonts/FiraSans-Regular.eot');
+    src: url('../fonts/FiraSans-Regular.eot?#iefix') format('embedded-opentype'), url('../fonts/FiraSans-Regular.woff') format('woff');
 }
+
 @font-face {
-    font-family: "Fira Sans";
+    font-family: 'Fira Sans';
     font-weight: 900;
     font-style: normal;
-    src:    url("../fonts/FiraSans-Semibold.eot");
-    src:    url("../fonts/FiraSans-Semibold.eot?#iefix") format("embedded-opentype"),
-    url("../fonts/FiraSans-Semibold.woff") format("woff");
+    src: url('../fonts/FiraSans-Semibold.eot');
+    src: url('../fonts/FiraSans-Semibold.eot?#iefix') format('embedded-opentype'), url('../fonts/FiraSans-Semibold.woff') format('woff');
 }
+
 @font-face {
-    font-family: "Fira Sans";
+    font-family: 'Fira Sans';
     font-weight: 400;
     font-style: normal;
-    src:    url("../fonts/FiraSans-Light.eot");
-    src:    url("../fonts/FiraSans-Light.eot?#iefix") format("embedded-opentype"),
-    url("../fonts/FiraSans-Light.woff") format("woff");
+    src: url('../fonts/FiraSans-Light.eot');
+    src: url('../fonts/FiraSans-Light.eot?#iefix') format('embedded-opentype'), url('../fonts/FiraSans-Light.woff') format('woff');
 }

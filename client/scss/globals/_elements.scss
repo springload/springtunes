@@ -2,14 +2,11 @@
 // Elements
 // -----------------------------------------------------------------------------
 
-*,
-:after,
-:before {
+*, ::after, ::before {
     box-sizing: border-box;
 }
 
-*:active,
-*:focus {
+*:active, *:focus {
     outline: none;
 }
 
@@ -29,9 +26,8 @@ html {
     height: 100%;
     min-height: 100%;
     font-size: 16px; // aka 1rem!
-    background-color:$color-grey-mist;
-
-    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    background-color: $color-grey-mist;
+    -webkit-tap-highlight-color: $color-black;
 }
 
 body {
@@ -42,7 +38,6 @@ body {
     color: $color-text;
     background-color: $color-grey-mist;
 }
-
 
 ::selection {
     background: $color-select; // WebKit/Blink Browsers

@@ -14,32 +14,31 @@
 // ----------------------------------------------------------------------------
 //
 
-.u-clearfix,
-%clearfix {
-    &:before,
-    &:after {
-        content: " ";
+@mixin clearfix {
+    &::before, &::after {
         display: table;
+        content: ' ';
     }
-    &:after {
+
+    &::after {
         clear: both;
     }
 }
 
-.u-inline-block,
-%inline-block {
-    *display: inline;
+.u-clearfix {
+
+    @include clearfix;
+}
+
+.u-inline-block {
     display: inline-block;
-    *zoom: 1;
     vertical-align: top;
 }
 
-.u-inline-block-medium,
-%inline-block-medium {
+.u-inline-block-medium {
+
     @include medium {
-        *display: inline;
         display: inline-block;
-        *zoom: 1;
         vertical-align: top;
     }
 }
@@ -64,15 +63,17 @@
 
 .u-hidden-small {
     // @small (_breakpoints.scss) must use max-width 
-    @include small { 
-        display:none;
+
+    @include small {
+        display: none;
         visibility: hidden;
     }
 }
 
 .u-hidden-medium {
-    @include medium { 
-        display:none;
+
+    @include medium {
+        display: none;
         visibility: hidden;
     }
 }
@@ -93,15 +94,13 @@
     overflow: hidden;
 }
 
-.u-margin-center,
-%margin-center {
+.u-margin-center, %margin-center {
     margin-left: auto;
     margin-right: auto;
 }
 
-.u-list,
-%list-reset {
-    margin: 0; 
+.u-list, %list-reset {
+    margin: 0;
     padding: 0;
     list-style: none;
 }
@@ -152,17 +151,16 @@
 //
 
 // An accessible label that takes up no visual space
-.u-accessible,
-%visuallyhidden {
+.u-accessible, %visuallyhidden {
     position: absolute;
     width: 1px;
     height: 1px;
     padding: 0;
     margin: -1px;
-    overflow: hidden; 
-    clip: rect(0, 0, 0, 0); /* Deprecated but still needed to support Firefox & IE */
-    -webkit-clip-path: inset(1px); /* Webkit support */
-    clip-path: inset(1px); /* New (experimental) CSS property */
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0); // Deprecated but still needed to support Firefox & IE
+    -webkit-clip-path: inset(1px); // Webkit support
+    clip-path: inset(1px); // New (experimental) CSS property
     border: 0;
 }
 

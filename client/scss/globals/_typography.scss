@@ -2,57 +2,52 @@
 // Typography
 // -----------------------------------------------------------------------------
 
-
-%font-smoothing {
+@mixin font-smoothing {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
 }
 
-%font-smoothing-off {
+@mixin font-smoothing-off {
     -webkit-font-smoothing: subpixel-antialiased;
     -moz-osx-font-smoothing: auto;
 }
 
-
-%serif {
+@mixin serif {
     font-family: $font-family-serif;
 }
 
-%sans-serif {
+@mixin sans-serif {
     font-family: $font-family-sans-serif;
 }
 
-%body-type-size {
+@mixin body-type-size {
     font-size: rem($font-size-base);
-    @extend %font-smoothing;
+
+    @include font-smoothing;
 
     @include medium {
         font-size: rem($font-size-base + 2);
     }
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-    @extend %font-smoothing;
+h1, h2, h3, h4, h5, h6 {
+
+    @include font-smoothing;
     line-height: $line-height-headline;
-    font-weight:$font-weight-normal;
+    font-weight: $font-weight-normal;
     letter-spacing: 0;
+
     &:first-child {
         margin-top: 0;
     }
+
     > a {
         font-weight: inherit;
         text-decoration: none;
     }
 }
 
-%h1,
-.h1,
-h1 {
+%h1, .h1, h1 {
     font-size: rem(28);
 
     @include medium {
@@ -60,65 +55,39 @@ h1 {
     }
 }
 
-%h2,
-.h2,
-h2 {
-    margin-bottom:0;
+%h2, .h2, h2 {
+    margin-bottom: 0;
     font-weight: $font-weight-bold;
     font-size: 1.5rem;
 }
 
-%h3,
-.h3,
-h3 {
+%h3, .h3, h3 {
     font-size: 1.25rem;
-    margin-bottom:0;
-}
-
-.h4,
-h4 {
-    
+    margin-bottom: 0;
 }
 
 p {
     margin-bottom: 1rem;
 }
 
-p,
-ul,
-ol,
-dl,
-address {
+p, ul, ol, dl, address {
     margin-top: 0;
 }
 
-p,
-li,
-label,
-td,
-th,
-input,
-textarea,
-button,
-select,
-blockquote,
-cite, {
-    @extend %body-type-size;
+p, li, label, td, th, input, textarea, button, select, blockquote, cite {
+
+    @include body-type-size;
 }
 
 p:empty {
     display: none;
 }
 
-.strong,
-strong,
-b {
+.strong, strong, b {
     font-weight: $font-weight-bold;
 }
 
-.italic,
-i,
-em {
+.italic, i, em {
     font-style: italic;
 }
 

@@ -8,13 +8,14 @@
         font-size: 13px;
         margin-bottom: 0;
     }
+
     @include medium {
         text-align: left;
     }
 }
 
 .last-updated__time {
-	margin-bottom:1.25rem;
+    margin-bottom: 1.25rem;
 }
 
 .loading {

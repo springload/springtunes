@@ -20,21 +20,18 @@
     font-size: 0;
 
     > * {
-        @extend %inline-block;
-
+        display: inline-block;
         width: 100%;
         margin-top: 0;
         // Font-size medium reset the block to the context of body (ie, 16px)
         font-size: medium;
         text-align: left;
         vertical-align: top;
-
         text-justify: auto;
     }
 
-    &:after {
-        @extend %inline-block;
-
+    &::after {
+        display: inline-block;
         width: 100%;
         height: 0;
         content: '';
@@ -49,14 +46,13 @@
 // the children in order to create a grid with consistent column widths.
 
 // The gutters can be toggled off with  the `-gutters-off` modifier class.
-
 $grid-gutter: 3rem;
 $grid-gutter-wide: 6rem;
 $grid-row-spacing: 1.5rem;
 
 .grid-float {
-    @extend %clearfix;
 
+    @include clearfix;
     width: auto;
     margin-left: -$grid-gutter;
 
@@ -66,8 +62,7 @@ $grid-row-spacing: 1.5rem;
         padding-left: $grid-gutter;
     }
 
-    &.-gutters-off,
-    &.-flush {
+    &.-gutters-off, &.-flush {
         margin-left: 0;
 
         > * {
@@ -76,6 +71,7 @@ $grid-row-spacing: 1.5rem;
     }
 
     &.-gutter-wide {
+
         @include medium {
             margin-left: -$grid-gutter-wide;
 
