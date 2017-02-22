@@ -118,17 +118,20 @@ $color-tooltip-shadow: #d9d9d9;
     background-color: $color-grey-light;
 }
 
-.rc-slider-disabled .rc-slider-handle, .rc-slider-disabled .rc-slider-dot {
+.rc-slider-disabled .rc-slider-handle,
+.rc-slider-disabled .rc-slider-dot {
     border-color: $color-grey-light;
     background-color: $color-white;
     cursor: not-allowed;
 }
 
-.rc-slider-disabled .rc-slider-mark-text, .rc-slider-disabled .rc-slider-dot {
+.rc-slider-disabled .rc-slider-mark-text,
+.rc-slider-disabled .rc-slider-dot {
     cursor: not-allowed !important;
 }
 
-.rc-slider-tooltip-zoom-down-enter, .rc-slider-tooltip-zoom-down-appear {
+.rc-slider-tooltip-zoom-down-enter,
+.rc-slider-tooltip-zoom-down-appear {
     display: block !important;
     animation-duration: .3s;
     animation-fill-mode: both;
@@ -142,7 +145,8 @@ $color-tooltip-shadow: #d9d9d9;
     animation-play-state: paused;
 }
 
-.rc-slider-tooltip-zoom-down-enter.rc-slider-tooltip-zoom-down-enter-active, .rc-slider-tooltip-zoom-down-appear.rc-slider-tooltip-zoom-down-appear-active {
+.rc-slider-tooltip-zoom-down-enter.rc-slider-tooltip-zoom-down-enter-active,
+.rc-slider-tooltip-zoom-down-appear.rc-slider-tooltip-zoom-down-appear-active {
     animation-name: rcSliderTooltipZoomDownIn;
     animation-play-state: running;
 }
@@ -152,7 +156,8 @@ $color-tooltip-shadow: #d9d9d9;
     animation-play-state: running;
 }
 
-.rc-slider-tooltip-zoom-down-enter, .rc-slider-tooltip-zoom-down-appear {
+.rc-slider-tooltip-zoom-down-enter,
+.rc-slider-tooltip-zoom-down-appear {
     transform: scale(0, 0);
     animation-timing-function: cubic-bezier(.23, 1, .32, 1);
 }

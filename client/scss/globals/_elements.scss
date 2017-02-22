@@ -2,11 +2,14 @@
 // Elements
 // -----------------------------------------------------------------------------
 
-*, ::after, ::before {
+*,
+::after,
+::before {
     box-sizing: border-box;
 }
 
-*:active, *:focus {
+*:active,
+*:focus {
     outline: none;
 }
 

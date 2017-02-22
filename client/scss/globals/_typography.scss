@@ -30,8 +30,12 @@
     }
 }
 
-h1, h2, h3, h4, h5, h6 {
-
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
     @include font-smoothing;
     line-height: $line-height-headline;
     font-weight: $font-weight-normal;
@@ -47,7 +51,9 @@ h1, h2, h3, h4, h5, h6 {
     }
 }
 
-%h1, .h1, h1 {
+%h1,
+.h1,
+h1 {
     font-size: rem(28);
 
     @include medium {
@@ -55,13 +61,17 @@ h1, h2, h3, h4, h5, h6 {
     }
 }
 
-%h2, .h2, h2 {
+%h2,
+.h2,
+h2 {
     margin-bottom: 0;
     font-weight: $font-weight-bold;
     font-size: 1.5rem;
 }
 
-%h3, .h3, h3 {
+%h3,
+.h3,
+h3 {
     font-size: 1.25rem;
     margin-bottom: 0;
 }
@@ -70,12 +80,25 @@ p {
     margin-bottom: 1rem;
 }
 
-p, ul, ol, dl, address {
+p,
+ul,
+ol,
+dl,
+address {
     margin-top: 0;
 }
 
-p, li, label, td, th, input, textarea, button, select, blockquote, cite {
-
+p,
+li,
+label,
+td,
+th,
+input,
+textarea,
+button,
+select,
+blockquote,
+cite {
     @include body-type-size;
 }
 
@@ -83,11 +106,15 @@ p:empty {
     display: none;
 }
 
-.strong, strong, b {
+.strong,
+strong,
+b {
     font-weight: $font-weight-bold;
 }
 
-.italic, i, em {
+.italic,
+i,
+em {
     font-style: italic;
 }
 

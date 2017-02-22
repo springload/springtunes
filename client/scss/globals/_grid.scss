@@ -51,7 +51,6 @@ $grid-gutter-wide: 6rem;
 $grid-row-spacing: 1.5rem;
 
 .grid-float {
-
     @include clearfix;
     width: auto;
     margin-left: -$grid-gutter;
@@ -62,7 +61,8 @@ $grid-row-spacing: 1.5rem;
         padding-left: $grid-gutter;
     }
 
-    &.-gutters-off, &.-flush {
+    &.-gutters-off,
+    &.-flush {
         margin-left: 0;
 
         > * {
@@ -71,7 +71,6 @@ $grid-row-spacing: 1.5rem;
     }
 
     &.-gutter-wide {
-
         @include medium {
             margin-left: -$grid-gutter-wide;
 
