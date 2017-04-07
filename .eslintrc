@@ -13,7 +13,8 @@
         "arrow-body-style": [2, "as-needed"],
         "react/jsx-indent-props": [1, 4],
         "react/jsx-indent": [1, 4],
-        "react/prefer-stateless-function": [0]
+        "react/prefer-stateless-function": [0],
+        "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }]
     },
     "env": {
         "es6": true,

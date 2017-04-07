@@ -8,7 +8,7 @@ const requestMute = createAction(ACTIONS.REQUEST_MUTE);
 
 const receiveError = createAction(ACTIONS.RECEIVE_ERROR);
 
-const receiveSong = createAction(ACTIONS.RECEIVE_SONG, (response) => ({
+const receiveSong = createAction(ACTIONS.RECEIVE_SONG, response => ({
     playing: response.playing,
     volume: Math.round(response.volume * 100, 0),
     currentSong: {
@@ -25,11 +25,11 @@ const receiveSong = createAction(ACTIONS.RECEIVE_SONG, (response) => ({
 const receiveMuteModification = createAction(ACTIONS.RECEIVE_MUTE);
 const receiveVolumeChange = createAction(ACTIONS.RECEIVE_VOLUME);
 
-const fetchSong = () => dispatch => {
+const fetchSong = () => (dispatch) => {
     dispatch(requestSong());
     return api.fetchSong()
         .then(response => response.json())
-        .then(jsonResponse => {
+        .then((jsonResponse) => {
             if (jsonResponse.error) {
                 dispatch(receiveError(new Error(jsonResponse.error)));
             } else {
@@ -38,35 +38,35 @@ const fetchSong = () => dispatch => {
         });
 };
 
-const togglePause = () => dispatch => {
+const togglePause = () => (dispatch) => {
     dispatch(requestSong());
     return api.togglePause()
     .then(response => response.json())
     .then(jsonResponse => dispatch(receiveSong(jsonResponse)));
 };
 
-const next = () => dispatch => {
+const next = () => (dispatch) => {
     dispatch(requestSong());
     return api.next()
     .then(response => response.json())
     .then(jsonResponse => dispatch(receiveSong(jsonResponse)));
 };
 
-const back = () => dispatch => {
+const back = () => (dispatch) => {
     dispatch(requestSong());
     return api.back()
     .then(response => response.json())
     .then(jsonResponse => dispatch(receiveSong(jsonResponse)));
 };
 
-const mute = () => dispatch => {
+const mute = () => (dispatch) => {
     dispatch(requestMute());
     return api.mute()
     .then(response => response.json())
     .then(jsonResponse => dispatch(receiveMuteModification(jsonResponse)));
 };
 
-const unmute = () => dispatch => {
+const unmute = () => (dispatch) => {
     dispatch(requestMute());
     return api.unmute()
     .then(response => response.json())
@@ -121,7 +121,14 @@ export const unmuteIfNeeded = () => (dispatch, getState) => {
     return null;
 };
 
-export const changeVolume = (volumeValue) => dispatch =>
+export const changeVolume = volumeValue => dispatch =>
     api.changeVolume(volumeValue)
     .then(response => response.json())
     .then(jsonResponse => dispatch(receiveVolumeChange(jsonResponse)));
+
+export const playURL = url => (dispatch) => {
+    dispatch(requestSong());
+    api.playURL(url)
+    .then(response => response.json())
+    .then(jsonResponse => dispatch(receiveSong(jsonResponse)));
+};

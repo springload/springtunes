@@ -3,6 +3,7 @@ const express = require('express');
 const osaSpotify = require('osa-spotify');
 const nodeSpotifyWebHelper = require('node-spotify-webhelper');
 const spotify = require('spotify-node-applescript');
+
 const spotifyWebHelper = new nodeSpotifyWebHelper.SpotifyWebHelper();
 
 const router = express();
@@ -37,9 +38,88 @@ const getCurrentSong = (res) => {
             return res.json({ error: 'Could not get the current song.' });
         }
 
+        console.log(jsonBlob);
         return res.json(jsonBlob);
     });
 };
+
+/**
+     * @api {post} /play Play the given song / playlist
+     * @apiName PlaySong
+     * @apiGroup Song
+     *
+     * @apiParam {String} [url]  Song/Playlist Spotify URL
+     *
+     * @apiSuccess {Boolean} playing Song is playing or not.
+     * @apiSuccess {Object} track Object containing track resource, artist resource, album resource (cf example)
+     * @apiSuccess {Integer} volume Current volume (0<=x<=1)
+     *
+     * @apiSuccessExample Success-Response:
+     *     HTTP/1.1 200 OK
+     *     {
+     *           "version": 9,
+     *           "client_version": "",
+     *           "playing": true,
+     *           "shuffle": true,
+     *           "repeat": false,
+     *           "play_enabled": true,
+     *           "prev_enabled": true,
+     *           "next_enabled": true,
+     *           "track": {
+     *               "track_resource": {
+     *                   "name": "Live At Lowlands - Continuous Mix",
+     *                   "uri": "spotify:track:5PwC9QBTcXjsiutp2BISkg",
+     *                   "location": {
+     *                       "og": "https://open.spotify.com/track/5PwC9QBTcXjsiutp2BISkg"
+     *                   }
+     *               },
+     *               "artist_resource": {
+     *                   "name": "Dr. Lektroluv",
+     *                   "uri": "spotify:artist:71zryDK7t1BUFnqbOpSqxa",
+     *                   "location": {
+     *                       "og": "https://open.spotify.com/artist/71zryDK7t1BUFnqbOpSqxa"
+     *                   }
+     *               },
+     *               "album_resource": {
+     *                  "name": "Live At Lowlands",
+     *                   "uri": "spotify:album:3FOllYiUU9ZM284tHCMEEY",
+     *                   "location": {
+     *                       "og": "https://open.spotify.com/album/3FOllYiUU9ZM284tHCMEEY"
+     *                   }
+     *               },
+     *               "length": 4318,
+     *               "track_type": "normal"
+     *           },
+     *           "context": {},
+     *           "playing_position": 326.088,
+     *           "server_time": 1453429948,
+     *           "volume": 1,
+     *           "online": true,
+     *           "open_graph_state": {
+     *               "private_session": false,
+     *               "posting_disabled": true
+     *           },
+     *           "running": true
+     *       }
+     *
+     *
+     * @apiErrorExample Error-Response:
+     *     HTTP/1.1 200
+     *     {
+     *         error: 'Valid actions are only "back" and "next".'
+     *     }
+     */
+router.route('/play')
+    .post((req, res) => {
+        const body = req.body;
+        return spotifyWebHelper.play(body.url, (err, jsonBlob) => {
+            if (err || jsonBlob.error) {
+                return res.json({ error: 'Could not change the song.' });
+            }
+
+            return res.json(jsonBlob);
+        });
+    });
 
 router.route('/playing')
 
