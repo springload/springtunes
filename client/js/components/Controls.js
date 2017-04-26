@@ -23,18 +23,28 @@ class Controls extends Component {
         super(props);
         this.state = {
             url: '',
+            error: '',
         };
         this.updateURL = this.updateURL.bind(this);
+        this.checkURL = this.checkURL.bind(this);
     }
 
-    updateURL(url) {
-        let newUrl = url;
-        if (newUrl.indexOf('https://open.spotify.com/user/') !== 0) {
-            newUrl = '';
+    checkURL(url) {
+        if (url !== '' && url.indexOf('https://open.spotify.com/user/') === 0) {
+            this.props.playURL(url);
+            this.setState({
+                error: '',
+            });
+        } else {
+            this.setState({
+                error: 'Invalid URL provided. You can only play playlists. URL must start with \'https://open.spotify.com/user/...\'',
+            });
         }
+    }
 
+    updateURL(urlInput) {
         this.setState({
-            url: newUrl,
+            url: urlInput,
         });
     }
 
@@ -51,11 +61,10 @@ class Controls extends Component {
             nextClick,
             muteClick,
             unmuteClick,
-            playURL,
             volumeChange,
         } = this.props;
 
-        const { url } = this.state;
+        const { url, error } = this.state;
 
         return (
             <div className="controls">
@@ -76,32 +85,48 @@ class Controls extends Component {
                 <button onClick={nextClick} disabled={isFetching}>
                     Next <Icon name="fa-step-forward" iconType="small" />
                 </button>
-            {!isMuted &&
-                <button onClick={muteClick} disabled={!isFetching && isModifyingMute} title="Mute">
-                    <Icon name="fa-volume-up" iconType="small" />
-                </button>
-            }
-            {isMuted &&
-                <button onClick={unmuteClick} disabled={!isFetching && isModifyingMute} title="Unmute">
-                    <Icon name="fa-volume-off" iconType="small" />
-                </button>
-            }
+                {!isMuted &&
+                    <button onClick={muteClick} disabled={!isFetching && isModifyingMute} title="Mute">
+                        <Icon name="fa-volume-up" iconType="small" />
+                    </button>
+                }
+                {isMuted &&
+                    <button onClick={unmuteClick} disabled={!isFetching && isModifyingMute} title="Unmute">
+                        <Icon name="fa-volume-off" iconType="small" />
+                    </button>
+                }
                 <div className="volume-control">
                     <span>Volume</span>
                     <Slider value={volume} onChange={volumeChange} disabled={isFetching} />
                 </div>
 
                 <div className="url-control">
-                    <input
-                        className="input--large"
-                        type="text"
-                        name="url"
-                        placeholder="https://open.spotify.com/user/spotify/playlist/..."
-                        onBlur={evt => this.updateURL(evt.target.value)}
-                    />
-                    <button onClick={() => playURL(url)} disabled={isFetching} title="Play URL">
-                        Play URL
-                    </button>
+                    <form
+                        onSubmit={(evt) => {
+                            this.checkURL(url);
+                            evt.preventDefault();
+                        }}
+                    >
+                        <label htmlFor="spotify-url" className="input__label">
+                            <span className="u-accessible">
+                                Spotify URL
+                            </span>
+                            <input
+                                id="spotify-url"
+                                className="input--large"
+                                type="text"
+                                name="url"
+                                placeholder="https://open.spotify.com/user/spotify/playlist/..."
+                                onChange={evt => this.updateURL(evt.target.value)}
+                            />
+                        </label>
+                        <button disabled={isFetching} title="Play URL">
+                            Play URL
+                        </button>
+                        { error !== '' && (
+                            <div className="error">{error}</div>
+                        )}
+                    </form>
                 </div>
             </div>
         );

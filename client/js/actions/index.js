@@ -130,5 +130,11 @@ export const playURL = url => (dispatch) => {
     dispatch(requestSong());
     api.playURL(url)
     .then(response => response.json())
-    .then(jsonResponse => dispatch(receiveSong(jsonResponse)));
+    .then((jsonResponse) => {
+        if (jsonResponse.error) {
+            dispatch(receiveError(new Error(jsonResponse.error)));
+        } else {
+            dispatch(receiveSong(jsonResponse));
+        }
+    });
 };

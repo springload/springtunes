@@ -70,6 +70,32 @@ exports[`Controls component renders correctly with isFetching true 1`] = `
       value={50}
       vertical={false} />
   </div>
+  <div
+    className="url-control">
+    <form
+      onSubmit={[Function]}>
+      <label
+        className="input__label"
+        htmlFor="spotify-url">
+        <span
+          className="u-accessible">
+          Spotify URL
+        </span>
+        <input
+          className="input--large"
+          id="spotify-url"
+          name="url"
+          onChange={[Function]}
+          placeholder="https://open.spotify.com/user/spotify/playlist/..."
+          type="text" />
+      </label>
+      <button
+        disabled={true}
+        title="Play URL">
+        Play URL
+      </button>
+    </form>
+  </div>
 </div>
 `;
 
@@ -144,6 +170,32 @@ exports[`Controls component renders correctly with isModifyingMute true 1`] = `
       tipTransitionName=""
       value={50}
       vertical={false} />
+  </div>
+  <div
+    className="url-control">
+    <form
+      onSubmit={[Function]}>
+      <label
+        className="input__label"
+        htmlFor="spotify-url">
+        <span
+          className="u-accessible">
+          Spotify URL
+        </span>
+        <input
+          className="input--large"
+          id="spotify-url"
+          name="url"
+          onChange={[Function]}
+          placeholder="https://open.spotify.com/user/spotify/playlist/..."
+          type="text" />
+      </label>
+      <button
+        disabled={false}
+        title="Play URL">
+        Play URL
+      </button>
+    </form>
   </div>
 </div>
 `;
@@ -220,6 +272,32 @@ exports[`Controls component renders correctly with isMuted 1`] = `
       value={50}
       vertical={false} />
   </div>
+  <div
+    className="url-control">
+    <form
+      onSubmit={[Function]}>
+      <label
+        className="input__label"
+        htmlFor="spotify-url">
+        <span
+          className="u-accessible">
+          Spotify URL
+        </span>
+        <input
+          className="input--large"
+          id="spotify-url"
+          name="url"
+          onChange={[Function]}
+          placeholder="https://open.spotify.com/user/spotify/playlist/..."
+          type="text" />
+      </label>
+      <button
+        disabled={false}
+        title="Play URL">
+        Play URL
+      </button>
+    </form>
+  </div>
 </div>
 `;
 
@@ -294,6 +372,32 @@ exports[`Controls component renders correctly with isPlaying true 1`] = `
       tipTransitionName=""
       value={50}
       vertical={false} />
+  </div>
+  <div
+    className="url-control">
+    <form
+      onSubmit={[Function]}>
+      <label
+        className="input__label"
+        htmlFor="spotify-url">
+        <span
+          className="u-accessible">
+          Spotify URL
+        </span>
+        <input
+          className="input--large"
+          id="spotify-url"
+          name="url"
+          onChange={[Function]}
+          placeholder="https://open.spotify.com/user/spotify/playlist/..."
+          type="text" />
+      </label>
+      <button
+        disabled={false}
+        title="Play URL">
+        Play URL
+      </button>
+    </form>
   </div>
 </div>
 `;
@@ -370,5 +474,544 @@ exports[`Controls component renders correctly with min params 1`] = `
       value={50}
       vertical={false} />
   </div>
+  <div
+    className="url-control">
+    <form
+      onSubmit={[Function]}>
+      <label
+        className="input__label"
+        htmlFor="spotify-url">
+        <span
+          className="u-accessible">
+          Spotify URL
+        </span>
+        <input
+          className="input--large"
+          id="spotify-url"
+          name="url"
+          onChange={[Function]}
+          placeholder="https://open.spotify.com/user/spotify/playlist/..."
+          type="text" />
+      </label>
+      <button
+        disabled={false}
+        title="Play URL">
+        Play URL
+      </button>
+    </form>
+  </div>
 </div>
+`;
+
+exports[`Controls component submit form 1`] = `
+ShallowWrapper {
+  "complexSelector": ComplexSelector {
+    "buildPredicate": [Function],
+    "childrenOfNode": [Function],
+    "findWhereUnwrapped": [Function],
+  },
+  "length": 1,
+  "node": <div
+    className="controls">
+    <button
+        className="btn-orange"
+        disabled={false}
+        onClick={[Function]}>
+        <Icon
+            iconType="small"
+            name="fa-refresh" />
+         Refresh
+    </button>
+    <button
+        disabled={false}
+        onClick={[Function]}>
+        <Icon
+            iconType="small"
+            name="fa-step-backward" />
+         Back
+    </button>
+    <button
+        disabled={false}
+        onClick={[Function]}>
+        <span>
+            <Icon
+                iconType="small"
+                name="fa-pause" />
+             Pause
+        </span>
+    </button>
+    <button
+        disabled={false}
+        onClick={[Function]}>
+        Next 
+        <Icon
+            iconType="small"
+            name="fa-step-forward" />
+    </button>
+    <button
+        disabled={false}
+        onClick={[Function]}
+        title="Unmute">
+        <Icon
+            iconType="small"
+            name="fa-volume-off" />
+    </button>
+    <div
+        className="volume-control">
+        <span>
+            Volume
+        </span>
+        <Slider
+            allowCross={true}
+            className=""
+            disabled={false}
+            dots={false}
+            handle={<Handle />}
+            included={true}
+            marks={Object {}}
+            max={100}
+            min={0}
+            onAfterChange={[Function]}
+            onBeforeChange={[Function]}
+            onChange={[Function]}
+            prefixCls="rc-slider"
+            range={false}
+            step={1}
+            tipFormatter={[Function]}
+            tipTransitionName=""
+            value={50}
+            vertical={false} />
+    </div>
+    <div
+        className="url-control">
+        <form
+            onSubmit={[Function]}>
+            <label
+                className="input__label"
+                htmlFor="spotify-url">
+                <span
+                    className="u-accessible">
+                    Spotify URL
+                </span>
+                <input
+                    className="input--large"
+                    id="spotify-url"
+                    name="url"
+                    onChange={[Function]}
+                    placeholder="https://open.spotify.com/user/spotify/playlist/..."
+                    type="text" />
+            </label>
+            <button
+                disabled={false}
+                title="Play URL">
+                Play URL
+            </button>
+            <div
+                className="error">
+                Invalid URL provided. You can only play playlists. URL must start with \'https://open.spotify.com/user/...\'
+            </div>
+        </form>
+    </div>
+</div>,
+  "nodes": Array [
+    <div
+      className="controls">
+      <button
+            className="btn-orange"
+            disabled={false}
+            onClick={[Function]}>
+            <Icon
+                  iconType="small"
+                  name="fa-refresh" />
+             Refresh
+      </button>
+      <button
+            disabled={false}
+            onClick={[Function]}>
+            <Icon
+                  iconType="small"
+                  name="fa-step-backward" />
+             Back
+      </button>
+      <button
+            disabled={false}
+            onClick={[Function]}>
+            <span>
+                  <Icon
+                        iconType="small"
+                        name="fa-pause" />
+                   Pause
+            </span>
+      </button>
+      <button
+            disabled={false}
+            onClick={[Function]}>
+            Next 
+            <Icon
+                  iconType="small"
+                  name="fa-step-forward" />
+      </button>
+      <button
+            disabled={false}
+            onClick={[Function]}
+            title="Unmute">
+            <Icon
+                  iconType="small"
+                  name="fa-volume-off" />
+      </button>
+      <div
+            className="volume-control">
+            <span>
+                  Volume
+            </span>
+            <Slider
+                  allowCross={true}
+                  className=""
+                  disabled={false}
+                  dots={false}
+                  handle={<Handle />}
+                  included={true}
+                  marks={Object {}}
+                  max={100}
+                  min={0}
+                  onAfterChange={[Function]}
+                  onBeforeChange={[Function]}
+                  onChange={[Function]}
+                  prefixCls="rc-slider"
+                  range={false}
+                  step={1}
+                  tipFormatter={[Function]}
+                  tipTransitionName=""
+                  value={50}
+                  vertical={false} />
+      </div>
+      <div
+            className="url-control">
+            <form
+                  onSubmit={[Function]}>
+                  <label
+                        className="input__label"
+                        htmlFor="spotify-url">
+                        <span
+                              className="u-accessible">
+                              Spotify URL
+                        </span>
+                        <input
+                              className="input--large"
+                              id="spotify-url"
+                              name="url"
+                              onChange={[Function]}
+                              placeholder="https://open.spotify.com/user/spotify/playlist/..."
+                              type="text" />
+                  </label>
+                  <button
+                        disabled={false}
+                        title="Play URL">
+                        Play URL
+                  </button>
+                  <div
+                        className="error">
+                        Invalid URL provided. You can only play playlists. URL must start with \'https://open.spotify.com/user/...\'
+                  </div>
+            </form>
+      </div>
+</div>,
+  ],
+  "options": Object {},
+  "renderer": ReactShallowRenderer {
+    "_instance": ShallowComponentWrapper {
+      "_calledComponentWillUnmount": false,
+      "_compositeType": 0,
+      "_context": Object {},
+      "_currentElement": <Controls
+        backClick={[Function]}
+        isFetching={false}
+        isModifyingMute={false}
+        isMuted={true}
+        isPlaying={true}
+        muteClick={[Function]}
+        nextClick={[Function]}
+        playURL={[Function]}
+        refreshClick={[Function]}
+        togglePauseClick={[Function]}
+        unmuteClick={[Function]}
+        volume={50}
+        volumeChange={[Function]} />,
+      "_debugID": 35,
+      "_hostContainerInfo": null,
+      "_hostParent": null,
+      "_instance": Controls {
+        "_reactInternalInstance": [Circular],
+        "checkURL": [Function],
+        "context": Object {},
+        "props": Object {
+          "backClick": [Function],
+          "isFetching": false,
+          "isModifyingMute": false,
+          "isMuted": true,
+          "isPlaying": true,
+          "muteClick": [Function],
+          "nextClick": [Function],
+          "playURL": [Function],
+          "refreshClick": [Function],
+          "togglePauseClick": [Function],
+          "unmuteClick": [Function],
+          "volume": 50,
+          "volumeChange": [Function],
+        },
+        "refs": Object {},
+        "state": Object {
+          "error": "Invalid URL provided. You can only play playlists. URL must start with \'https://open.spotify.com/user/...\'",
+          "url": "",
+        },
+        "updateURL": [Function],
+        "updater": Object {
+          "enqueueCallback": [Function],
+          "enqueueCallbackInternal": [Function],
+          "enqueueElementInternal": [Function],
+          "enqueueForceUpdate": [Function],
+          "enqueueReplaceState": [Function],
+          "enqueueSetState": [Function],
+          "isMounted": [Function],
+          "validateCallback": [Function],
+        },
+      },
+      "_mountOrder": 18,
+      "_pendingCallbacks": null,
+      "_pendingElement": null,
+      "_pendingForceUpdate": false,
+      "_pendingReplaceState": false,
+      "_pendingStateQueue": null,
+      "_renderedComponent": NoopInternalComponent {
+        "_currentElement": <div
+          className="controls">
+          <button
+                    className="btn-orange"
+                    disabled={false}
+                    onClick={[Function]}>
+                    <Icon
+                              iconType="small"
+                              name="fa-refresh" />
+                     Refresh
+          </button>
+          <button
+                    disabled={false}
+                    onClick={[Function]}>
+                    <Icon
+                              iconType="small"
+                              name="fa-step-backward" />
+                     Back
+          </button>
+          <button
+                    disabled={false}
+                    onClick={[Function]}>
+                    <span>
+                              <Icon
+                                        iconType="small"
+                                        name="fa-pause" />
+                               Pause
+                    </span>
+          </button>
+          <button
+                    disabled={false}
+                    onClick={[Function]}>
+                    Next 
+                    <Icon
+                              iconType="small"
+                              name="fa-step-forward" />
+          </button>
+          <button
+                    disabled={false}
+                    onClick={[Function]}
+                    title="Unmute">
+                    <Icon
+                              iconType="small"
+                              name="fa-volume-off" />
+          </button>
+          <div
+                    className="volume-control">
+                    <span>
+                              Volume
+                    </span>
+                    <Slider
+                              allowCross={true}
+                              className=""
+                              disabled={false}
+                              dots={false}
+                              handle={<Handle />}
+                              included={true}
+                              marks={Object {}}
+                              max={100}
+                              min={0}
+                              onAfterChange={[Function]}
+                              onBeforeChange={[Function]}
+                              onChange={[Function]}
+                              prefixCls="rc-slider"
+                              range={false}
+                              step={1}
+                              tipFormatter={[Function]}
+                              tipTransitionName=""
+                              value={50}
+                              vertical={false} />
+          </div>
+          <div
+                    className="url-control">
+                    <form
+                              onSubmit={[Function]}>
+                              <label
+                                        className="input__label"
+                                        htmlFor="spotify-url">
+                                        <span
+                                                  className="u-accessible">
+                                                  Spotify URL
+                                        </span>
+                                        <input
+                                                  className="input--large"
+                                                  id="spotify-url"
+                                                  name="url"
+                                                  onChange={[Function]}
+                                                  placeholder="https://open.spotify.com/user/spotify/playlist/..."
+                                                  type="text" />
+                              </label>
+                              <button
+                                        disabled={false}
+                                        title="Play URL">
+                                        Play URL
+                              </button>
+                              <div
+                                        className="error">
+                                        Invalid URL provided. You can only play playlists. URL must start with \'https://open.spotify.com/user/...\'
+                              </div>
+                    </form>
+          </div>
+</div>,
+        "_debugID": 36,
+        "_renderedOutput": <div
+          className="controls">
+          <button
+                    className="btn-orange"
+                    disabled={false}
+                    onClick={[Function]}>
+                    <Icon
+                              iconType="small"
+                              name="fa-refresh" />
+                     Refresh
+          </button>
+          <button
+                    disabled={false}
+                    onClick={[Function]}>
+                    <Icon
+                              iconType="small"
+                              name="fa-step-backward" />
+                     Back
+          </button>
+          <button
+                    disabled={false}
+                    onClick={[Function]}>
+                    <span>
+                              <Icon
+                                        iconType="small"
+                                        name="fa-pause" />
+                               Pause
+                    </span>
+          </button>
+          <button
+                    disabled={false}
+                    onClick={[Function]}>
+                    Next 
+                    <Icon
+                              iconType="small"
+                              name="fa-step-forward" />
+          </button>
+          <button
+                    disabled={false}
+                    onClick={[Function]}
+                    title="Unmute">
+                    <Icon
+                              iconType="small"
+                              name="fa-volume-off" />
+          </button>
+          <div
+                    className="volume-control">
+                    <span>
+                              Volume
+                    </span>
+                    <Slider
+                              allowCross={true}
+                              className=""
+                              disabled={false}
+                              dots={false}
+                              handle={<Handle />}
+                              included={true}
+                              marks={Object {}}
+                              max={100}
+                              min={0}
+                              onAfterChange={[Function]}
+                              onBeforeChange={[Function]}
+                              onChange={[Function]}
+                              prefixCls="rc-slider"
+                              range={false}
+                              step={1}
+                              tipFormatter={[Function]}
+                              tipTransitionName=""
+                              value={50}
+                              vertical={false} />
+          </div>
+          <div
+                    className="url-control">
+                    <form
+                              onSubmit={[Function]}>
+                              <label
+                                        className="input__label"
+                                        htmlFor="spotify-url">
+                                        <span
+                                                  className="u-accessible">
+                                                  Spotify URL
+                                        </span>
+                                        <input
+                                                  className="input--large"
+                                                  id="spotify-url"
+                                                  name="url"
+                                                  onChange={[Function]}
+                                                  placeholder="https://open.spotify.com/user/spotify/playlist/..."
+                                                  type="text" />
+                              </label>
+                              <button
+                                        disabled={false}
+                                        title="Play URL">
+                                        Play URL
+                              </button>
+                              <div
+                                        className="error">
+                                        Invalid URL provided. You can only play playlists. URL must start with \'https://open.spotify.com/user/...\'
+                              </div>
+                    </form>
+          </div>
+</div>,
+      },
+      "_renderedNodeType": 0,
+      "_rootNodeID": 0,
+      "_topLevelWrapper": null,
+      "_updateBatchNumber": null,
+      "_warnedAboutRefsInRender": false,
+    },
+    "getRenderOutput": [Function],
+    "render": [Function],
+  },
+  "root": [Circular],
+  "unrendered": <Controls
+    backClick={[Function]}
+    isFetching={false}
+    isModifyingMute={false}
+    isMuted={true}
+    isPlaying={true}
+    muteClick={[Function]}
+    nextClick={[Function]}
+    playURL={[Function]}
+    refreshClick={[Function]}
+    togglePauseClick={[Function]}
+    unmuteClick={[Function]}
+    volume={50}
+    volumeChange={[Function]} />,
+}
 `;

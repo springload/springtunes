@@ -57,12 +57,17 @@ button {
     }
 }
 
+.input__label {
+    display: inline-block;
+    vertical-align: top;
+}
+
 .input--large {
+    height: 40px !important;
+    margin-bottom: 5px !important;
     width: 24em;
     margin-right:.5rem;
     vertical-align: top;
-    padding-top: 19px !important;
-    padding-bottom: 19px !important;
 }
 
 .rc-slider {

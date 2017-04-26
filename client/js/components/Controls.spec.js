@@ -1,7 +1,7 @@
 import React from 'react';
-import Controls from './Controls';
 import ReactTestUtils from 'react-addons-test-utils';
 import { shallow } from 'enzyme';
+import Controls from './Controls';
 
 const emptyFunc = () => {};
 
@@ -22,7 +22,8 @@ describe('Controls component', () => {
                 muteClick={emptyFunc}
                 unmuteClick={emptyFunc}
                 volumeChange={emptyFunc}
-            />
+                playURL={emptyFunc}
+            />,
         );
         expect(result).toMatchSnapshot();
     });
@@ -43,7 +44,8 @@ describe('Controls component', () => {
                 muteClick={emptyFunc}
                 unmuteClick={emptyFunc}
                 volumeChange={emptyFunc}
-            />
+                playURL={emptyFunc}
+            />,
         );
         expect(result).toMatchSnapshot();
     });
@@ -64,7 +66,8 @@ describe('Controls component', () => {
                 muteClick={emptyFunc}
                 unmuteClick={emptyFunc}
                 volumeChange={emptyFunc}
-            />
+                playURL={emptyFunc}
+            />,
         );
         expect(result).toMatchSnapshot();
     });
@@ -85,7 +88,8 @@ describe('Controls component', () => {
                 muteClick={emptyFunc}
                 unmuteClick={emptyFunc}
                 volumeChange={emptyFunc}
-            />
+                playURL={emptyFunc}
+            />,
         );
         expect(result).toMatchSnapshot();
     });
@@ -106,7 +110,8 @@ describe('Controls component', () => {
                 muteClick={emptyFunc}
                 unmuteClick={emptyFunc}
                 volumeChange={emptyFunc}
-            />
+                playURL={emptyFunc}
+            />,
         );
         expect(result).toMatchSnapshot();
     });
@@ -129,7 +134,8 @@ describe('Controls component', () => {
                 muteClick={emptyFunc}
                 unmuteClick={emptyFunc}
                 volumeChange={emptyFunc}
-            />
+                playURL={emptyFunc}
+            />,
         );
 
         component.find('button').first().simulate('click');
@@ -154,7 +160,8 @@ describe('Controls component', () => {
                 muteClick={emptyFunc}
                 unmuteClick={emptyFunc}
                 volumeChange={emptyFunc}
-            />
+                playURL={emptyFunc}
+            />,
         );
 
         component.find('button').at(1).simulate('click');
@@ -179,7 +186,8 @@ describe('Controls component', () => {
                 muteClick={emptyFunc}
                 unmuteClick={emptyFunc}
                 volumeChange={emptyFunc}
-            />
+                playURL={emptyFunc}
+            />,
         );
 
         component.find('button').at(2).simulate('click');
@@ -204,7 +212,8 @@ describe('Controls component', () => {
                 muteClick={emptyFunc}
                 unmuteClick={emptyFunc}
                 volumeChange={emptyFunc}
-            />
+                playURL={emptyFunc}
+            />,
         );
 
         component.find('button').at(3).simulate('click');
@@ -229,7 +238,8 @@ describe('Controls component', () => {
                 muteClick={testOnClick}
                 unmuteClick={emptyFunc}
                 volumeChange={emptyFunc}
-            />
+                playURL={emptyFunc}
+            />,
         );
 
         component.find('button').at(4).simulate('click');
@@ -254,7 +264,8 @@ describe('Controls component', () => {
                 muteClick={emptyFunc}
                 unmuteClick={testOnClick}
                 volumeChange={emptyFunc}
-            />
+                playURL={emptyFunc}
+            />,
         );
 
         component.find('button').at(4).simulate('click');
@@ -277,10 +288,11 @@ describe('Controls component', () => {
                 muteClick={emptyFunc}
                 unmuteClick={emptyFunc}
                 volumeChange={emptyFunc}
-            />
+                playURL={emptyFunc}
+            />,
         );
 
-        expect(component.find('button').length).toBe(5);
+        expect(component.find('button').length).toBe(6);
     });
 
     // should show all the buttons when muted
@@ -299,9 +311,157 @@ describe('Controls component', () => {
                 muteClick={emptyFunc}
                 unmuteClick={emptyFunc}
                 volumeChange={emptyFunc}
-            />
+                playURL={emptyFunc}
+            />,
         );
 
-        expect(component.find('button').length).toBe(5);
+        expect(component.find('button').length).toBe(6);
+    });
+
+    it('updateURL works', () => {
+        const shallowRenderer = ReactTestUtils.createRenderer();
+        shallowRenderer.render(
+            <Controls
+                isFetching={false}
+                isModifyingMute={false}
+                isMuted={false}
+                isPlaying={false}
+                volume={50}
+                refreshClick={emptyFunc}
+                togglePauseClick={emptyFunc}
+                backClick={emptyFunc}
+                nextClick={emptyFunc}
+                muteClick={emptyFunc}
+                unmuteClick={emptyFunc}
+                volumeChange={emptyFunc}
+                playURL={emptyFunc}
+            />,
+        );
+        const instance = shallowRenderer.getMountedInstance();
+        instance.updateURL('http://newurl');
+        expect(instance.state.url).toBe('http://newurl');
+    });
+
+    it('checkURL works invalid', () => {
+        const shallowRenderer = ReactTestUtils.createRenderer();
+        shallowRenderer.render(
+            <Controls
+                isFetching={false}
+                isModifyingMute={false}
+                isMuted={false}
+                isPlaying={false}
+                volume={50}
+                refreshClick={emptyFunc}
+                togglePauseClick={emptyFunc}
+                backClick={emptyFunc}
+                nextClick={emptyFunc}
+                muteClick={emptyFunc}
+                unmuteClick={emptyFunc}
+                volumeChange={emptyFunc}
+                playURL={emptyFunc}
+            />,
+        );
+        const instance = shallowRenderer.getMountedInstance();
+        instance.checkURL('http://newurl');
+        expect(instance.state.error).toBe('Invalid URL provided. You can only play playlists. URL must start with \'https://open.spotify.com/user/...\'');
+    });
+
+    it('checkURL works empty', () => {
+        const shallowRenderer = ReactTestUtils.createRenderer();
+        shallowRenderer.render(
+            <Controls
+                isFetching={false}
+                isModifyingMute={false}
+                isMuted={false}
+                isPlaying={false}
+                volume={50}
+                refreshClick={emptyFunc}
+                togglePauseClick={emptyFunc}
+                backClick={emptyFunc}
+                nextClick={emptyFunc}
+                muteClick={emptyFunc}
+                unmuteClick={emptyFunc}
+                volumeChange={emptyFunc}
+                playURL={emptyFunc}
+            />,
+        );
+        const instance = shallowRenderer.getMountedInstance();
+        instance.checkURL('');
+        expect(instance.state.error).toBe('Invalid URL provided. You can only play playlists. URL must start with \'https://open.spotify.com/user/...\'');
+    });
+
+    it('checkURL works valid', () => {
+        const shallowRenderer = ReactTestUtils.createRenderer();
+        shallowRenderer.render(
+            <Controls
+                isFetching={false}
+                isModifyingMute={false}
+                isMuted={false}
+                isPlaying={false}
+                volume={50}
+                refreshClick={emptyFunc}
+                togglePauseClick={emptyFunc}
+                backClick={emptyFunc}
+                nextClick={emptyFunc}
+                muteClick={emptyFunc}
+                unmuteClick={emptyFunc}
+                volumeChange={emptyFunc}
+                playURL={emptyFunc}
+            />,
+        );
+        const instance = shallowRenderer.getMountedInstance();
+        instance.checkURL('https://open.spotify.com/user/springload/playlist/6oYWzKyhPbfy2I83KS7JK5');
+        expect(instance.state.error).toBe('');
+    });
+
+    it('submit form', () => {
+        let testClick = false;
+        const testOnClick = () => { testClick = true; };
+
+        const component = shallow(
+            <Controls
+                isFetching={false}
+                isModifyingMute={false}
+                isMuted={true}
+                isPlaying={true}
+                volume={50}
+                refreshClick={emptyFunc}
+                togglePauseClick={emptyFunc}
+                backClick={emptyFunc}
+                nextClick={emptyFunc}
+                muteClick={emptyFunc}
+                unmuteClick={emptyFunc}
+                volumeChange={emptyFunc}
+                playURL={testOnClick}
+            />,
+        );
+
+        component.find('form').at(0).simulate('submit', { preventDefault: () => {} });
+        expect(testClick).toBeFalsy();
+
+        expect(component).toMatchSnapshot();
+    });
+
+    it('input change', () => {
+        const component = shallow(
+            <Controls
+                isFetching={false}
+                isModifyingMute={false}
+                isMuted={true}
+                isPlaying={true}
+                volume={50}
+                refreshClick={emptyFunc}
+                togglePauseClick={emptyFunc}
+                backClick={emptyFunc}
+                nextClick={emptyFunc}
+                muteClick={emptyFunc}
+                unmuteClick={emptyFunc}
+                volumeChange={emptyFunc}
+                playURL={emptyFunc}
+            />,
+        );
+
+        component.find('input').at(0).simulate('change', { target: { value: 'newValue' } });
+        expect(component.state().url).toBe('newValue');
     });
 });
