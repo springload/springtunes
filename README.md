@@ -4,6 +4,7 @@
 Control your Spotify client remotely from your browser without having to log in to anything.
 
 Current features:
+- Play a song/playlist using Spotify URL
 - Current track/artist/album
 - Previous song
 - Next song

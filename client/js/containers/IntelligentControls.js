@@ -8,9 +8,10 @@ import {
   muteIfNeeded,
   unmuteIfNeeded,
   changeVolume,
+  playURL,
 } from '../actions';
 
-const mapStateToProps = (state) => (
+const mapStateToProps = state => (
     {
         lastUpdated: state.song.lastUpdated,
         isFetching: state.song.isFetching,
@@ -21,7 +22,7 @@ const mapStateToProps = (state) => (
     }
 );
 
-const dispatchToProps = (dispatch) => (
+const dispatchToProps = dispatch => (
     {
         refreshClick: (evt) => {
             evt.preventDefault();
@@ -56,10 +57,14 @@ const dispatchToProps = (dispatch) => (
         volumeChange: (volume) => {
             dispatch(changeVolume(volume));
         },
+
+        playURL: (url) => {
+            dispatch(playURL(url));
+        },
     }
 );
 
 export default connect(
   mapStateToProps,
-  dispatchToProps
+  dispatchToProps,
 )(Controls);

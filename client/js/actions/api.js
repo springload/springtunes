@@ -48,13 +48,22 @@ api.unmute = () => fetch('/api/volume', {
     body: JSON.stringify({ action: 'unmute' }),
 });
 
-api.changeVolume = (volumeValue) => fetch('/api/volume', {
+api.changeVolume = volumeValue => fetch('/api/volume', {
     method: 'PUT',
     headers: {
         Accept: 'application/json',
         'Content-Type': 'application/json',
     },
     body: JSON.stringify({ volume: volumeValue }),
+});
+
+api.playURL = urlString => fetch('/api/play', {
+    method: 'POST',
+    headers: {
+        Accept: 'application/json',
+        'Content-Type': 'application/json',
+    },
+    body: JSON.stringify({ url: urlString }),
 });
 
 export default api;

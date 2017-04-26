@@ -2,7 +2,7 @@
   "in": [
   	"node_modules/normalize-css/normalize.css",
     "client/scss/lib/skeleton.css",
-	"client/scss/screen.scss"
+	  "client/scss/screen.scss"
   ],
 
   "out": "public/css/screen.min.css",

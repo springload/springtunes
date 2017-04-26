@@ -47,6 +47,7 @@ button {
 }
 
 .volume-control {
+    margin-bottom: 1rem;
     span {
         @extend %inline-block;
         vertical-align: middle !important;
@@ -54,6 +55,19 @@ button {
         font-size: 14px;
         text-transform: uppercase;
     }
+}
+
+.input__label {
+    display: inline-block;
+    vertical-align: top;
+}
+
+.input--large {
+    height: 40px !important;
+    margin-bottom: 5px !important;
+    width: 24em;
+    margin-right:.5rem;
+    vertical-align: top;
 }
 
 .rc-slider {
