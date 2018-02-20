@@ -1,12 +1,17 @@
-import React, { Component, PropTypes } from 'react';
+import PropTypes from 'prop-types';
+import React, { Component } from 'react';
 import LastUpdated from '../components/LastUpdated';
 import IntelligentCurrentSong from '../containers/IntelligentCurrentSong';
 import IntelligentControls from '../containers/IntelligentControls';
 import Logo from '../components/Logo';
 
 const propTypes = {
-    lastUpdated: PropTypes.number.isRequired,
-    fetchSongIfNeeded: PropTypes.func.isRequired,
+    lastUpdated: PropTypes.number,
+    fetchSongIfNeeded: PropTypes.func.isRequired
+};
+
+const defaultProps = {
+    lastUpdated: 0
 };
 
 class App extends Component {
@@ -37,5 +42,6 @@ class App extends Component {
 }
 
 App.propTypes = propTypes;
+App.defaultProps = defaultProps;
 
 export default App;
