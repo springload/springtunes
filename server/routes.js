@@ -1,6 +1,6 @@
 /* eslint-disable no-console */
 const express = require('express');
-const SpotifyWebHelper = require('spotify-web-helper'); // eslint-disable-line import/no-unresolved
+const SpotifyWebHelper = require('spotify-web-helper');
 const spotify = require('spotify-node-applescript');
 
 const spotifyWebHelper = new SpotifyWebHelper();
