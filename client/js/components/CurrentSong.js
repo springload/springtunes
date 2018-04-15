@@ -7,7 +7,7 @@ import Icon from '../components/Icon';
 
 const propTypes = {
     isFetching: PropTypes.bool.isRequired,
-    currentSong: PropTypes.Object.isRequired,
+    currentSong: PropTypes.object.isRequired, //eslint-disable-line react/forbid-prop-types
     hasError: PropTypes.bool,
     error: PropTypes.string,
 };
