@@ -2,17 +2,15 @@ const path = require('path');
 const webpack = require('webpack');
 
 const config = {
-    entry: [
-        './client/js/index',
-    ],
+    entry: ['./client/js/index'],
     output: {
         path: path.join(__dirname, 'dist'),
         filename: 'bundle.js',
-        publicPath: '/static/',
+        publicPath: '/static/'
     },
     plugins: [
-        new webpack.optimize.OccurenceOrderPlugin(),
-        new webpack.NoErrorsPlugin(),
+        new webpack.optimize.OccurrenceOrderPlugin(),
+        new webpack.NoErrorsPlugin()
     ],
     module: {
         loaders: [
@@ -22,22 +20,22 @@ const config = {
                 exclude: /node_modules/,
                 include: __dirname,
                 query: {
-                    cacheDirectory: true,
-                },
+                    cacheDirectory: true
+                }
             },
             {
                 test: /\.svg$/,
-                loader: 'raw-loader',
-            },
-        ],
+                loader: 'raw-loader'
+            }
+        ]
     },
-    watch: true,
+    watch: true
 };
 
 const prod = new webpack.DefinePlugin({
     'process.env': {
-        NODE_ENV: JSON.stringify(process.env.NODE_ENV),
-    },
+        NODE_ENV: JSON.stringify(process.env.NODE_ENV)
+    }
 });
 
 config.plugins.push(prod);
