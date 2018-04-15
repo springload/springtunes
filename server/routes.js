@@ -1,6 +1,6 @@
 /* eslint-disable no-console */
 const express = require('express');
-const SpotifyWebHelper = require('spotify-web-helper');
+const SpotifyWebHelper = require('spotify-web-helper'); // eslint-disable-line import/no-unresolved
 const spotify = require('spotify-node-applescript');
 
 const spotifyWebHelper = new SpotifyWebHelper();
@@ -29,13 +29,14 @@ router
      *           "status": "ok"
      *     }
      *
-     **/
+     * */
     .get((req, res) => res.json({ status: 'ok' }));
 
 const getCurrentSong = res => {
     spotify.isRunning((err, isRunning) => {
         if (!isRunning)
             return res.json({ error: 'Looks like Spotify is not running.' });
+        return true;
     });
     spotifyWebHelper
         .getStatus()
@@ -368,7 +369,7 @@ router
      */
     .post((req, res) => {
         const errorMsg = 'Valid action are only "mute" and "unmute".';
-        const body = req.body;
+        const { body } = req;
 
         if (body.action === 'mute') {
             return spotify.muteVolume(() => res.json({ isMuted: true }));
@@ -449,7 +450,7 @@ router
     .put((req, res) => {
         const errorMsg =
             'Valid action is only volume and must be integer value (0<=X<=100)';
-        const body = req.body;
+        const { body } = req;
 
         if (
             typeof body.volume === 'number' &&

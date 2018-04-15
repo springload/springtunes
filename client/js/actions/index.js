@@ -1,5 +1,5 @@
 import api from './api';
-import { ACTIONS } from './constants';
+import ACTIONS from './constants';
 import createAction from '../utils/createAction';
 import { shouldFetchSong, shouldModifyMute } from '../utils/';
 

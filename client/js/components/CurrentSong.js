@@ -1,3 +1,5 @@
+/* eslint react/no-unescaped-entities: 0 */
+
 import PropTypes from 'prop-types';
 import React from 'react';
 import Processing from '../components/Processing';
@@ -5,9 +7,14 @@ import Icon from '../components/Icon';
 
 const propTypes = {
     isFetching: PropTypes.bool.isRequired,
-    currentSong: PropTypes.object.isRequired,
+    currentSong: PropTypes.Object.isRequired,
     hasError: PropTypes.bool,
     error: PropTypes.string,
+};
+
+const defaultProps = {
+    hasError: false,
+    error: '',
 };
 
 const CurrentSong = ({ currentSong, isFetching, hasError, error }) => (
@@ -65,5 +72,6 @@ const CurrentSong = ({ currentSong, isFetching, hasError, error }) => (
 );
 
 CurrentSong.propTypes = propTypes;
+CurrentSong.defaultProps = defaultProps;
 
 export default CurrentSong;

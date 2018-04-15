@@ -1,6 +1,6 @@
 import React from 'react';
-import CurrentSong from './CurrentSong';
 import renderer from 'react-test-renderer';
+import CurrentSong from './CurrentSong';
 
 jest.mock('./Processing', () => 'div');
 jest.mock('./Icon', () => 'div');

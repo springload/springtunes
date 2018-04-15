@@ -1,6 +1,6 @@
 import React from 'react';
-import Processing from './Processing';
 import renderer from 'react-test-renderer';
+import Processing from './Processing';
 
 describe('Processing component', () => {
     it('renders correctly with min params', () => {

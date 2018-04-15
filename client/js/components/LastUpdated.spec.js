@@ -1,6 +1,6 @@
 import React from 'react';
-import LastUpdated from './LastUpdated';
 import renderer from 'react-test-renderer';
+import LastUpdated from './LastUpdated';
 
 describe('LastUpdated component', () => {
     it('renders correctly with min params', () => {

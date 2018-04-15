@@ -10,12 +10,15 @@ const propTypes = {
     iconType: PropTypes.string.isRequired,
 };
 
-const Icon = ({ name, iconType }) => (
-    <SVGInline
-        svg={require(`../../../public/img/icons/${name}.svg`)} // eslint-disable-line global-require
-        className={`icon-type-${iconType}`}
-    />
-);
+const Icon = ({ name, iconType }) => {
+    const svgFile = `../../../public/img/icons/${name}.svg`;
+    return (
+        <SVGInline
+            svg={require(svgFile)} // eslint-disable-line global-require, import/no-dynamic-require
+            className={`icon-type-${iconType}`}
+        />
+    );
+};
 
 Icon.propTypes = propTypes;
 

@@ -6,11 +6,12 @@ const bodyParser = require('body-parser');
 const express = require('express');
 const router = require('./routes');
 const app = new (require('express'))();
+
 const port = process.env.PORT || 3000;
 
 if (process.env.NODE_ENV === 'development') {
-    const webpack = require('webpack');
-    const webpackDevMiddleware = require('webpack-dev-middleware');
+    const webpack = require('webpack'); // eslint-disable-line import/no-extraneous-dependencies
+    const webpackDevMiddleware = require('webpack-dev-middleware'); // eslint-disable-line import/no-extraneous-dependencies
     const config = require('../webpack.development.config.js');
     const compiler = webpack(config);
     app.use(
