@@ -1,24 +1,33 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
 exports[`CurrentSong component renders correctly when error 1`] = `
 <div
-  className="current-song">
+  className="current-song"
+>
   <div
-    className="song-details">
+    className="song-details"
+  >
     <div
-      className="song-details__graphic">
-      <Icon
+      className="song-details__graphic"
+    >
+      <div
         iconType="big"
-        name="fa-headphones" />
+        name="fa-headphones"
+      />
     </div>
     <div
-      className="song-details__content">
+      className="song-details__content"
+    >
       <div
-        className="twelve columns">
+        className="twelve columns"
+      >
         <div>
           <h2>
             <a
               href="http://test.com"
               target="_blank"
-              title="View track: Test song">
+              title="View track: Test song"
+            >
               Test song
             </a>
           </h2>
@@ -26,7 +35,8 @@ exports[`CurrentSong component renders correctly when error 1`] = `
             <a
               href="http://test.com"
               target="_blank"
-              title="View Artist: Test artist">
+              title="View Artist: Test artist"
+            >
               Test artist
             </a>
           </h3>
@@ -35,18 +45,20 @@ exports[`CurrentSong component renders correctly when error 1`] = `
               className="color-text-cement"
               href="http://test.com"
               target="_blank"
-              title="View Album: Test album">
+              title="View Album: Test album"
+            >
               Test album
             </a>
           </h3>
         </div>
         <div
-          className="error">
+          className="error"
+        >
           Error occurred.
           <br />
-          Details are: \"
+          Details are: "
           ERROR
-          \"
+          "
         </div>
       </div>
     </div>
@@ -56,20 +68,26 @@ exports[`CurrentSong component renders correctly when error 1`] = `
 
 exports[`CurrentSong component renders correctly when fetching 1`] = `
 <div
-  className="current-song">
+  className="current-song"
+>
   <div
-    className="song-details">
+    className="song-details"
+  >
     <div
-      className="song-details__graphic">
-      <Icon
+      className="song-details__graphic"
+    >
+      <div
         iconType="big"
-        name="fa-headphones" />
+        name="fa-headphones"
+      />
     </div>
     <div
-      className="song-details__content">
+      className="song-details__content"
+    >
       <div
-        className="twelve columns">
-        <Processing />
+        className="twelve columns"
+      >
+        <div />
       </div>
     </div>
   </div>
@@ -78,25 +96,32 @@ exports[`CurrentSong component renders correctly when fetching 1`] = `
 
 exports[`CurrentSong component renders correctly with min params 1`] = `
 <div
-  className="current-song">
+  className="current-song"
+>
   <div
-    className="song-details">
+    className="song-details"
+  >
     <div
-      className="song-details__graphic">
-      <Icon
+      className="song-details__graphic"
+    >
+      <div
         iconType="big"
-        name="fa-headphones" />
+        name="fa-headphones"
+      />
     </div>
     <div
-      className="song-details__content">
+      className="song-details__content"
+    >
       <div
-        className="twelve columns">
+        className="twelve columns"
+      >
         <div>
           <h2>
             <a
               href="http://test.com"
               target="_blank"
-              title="View track: Test song">
+              title="View track: Test song"
+            >
               Test song
             </a>
           </h2>
@@ -104,7 +129,8 @@ exports[`CurrentSong component renders correctly with min params 1`] = `
             <a
               href="http://test.com"
               target="_blank"
-              title="View Artist: Test artist">
+              title="View Artist: Test artist"
+            >
               Test artist
             </a>
           </h3>
@@ -113,7 +139,8 @@ exports[`CurrentSong component renders correctly with min params 1`] = `
               className="color-text-cement"
               href="http://test.com"
               target="_blank"
-              title="View Album: Test album">
+              title="View Album: Test album"
+            >
               Test album
             </a>
           </h3>

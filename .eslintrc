@@ -1,23 +1,29 @@
 {
-    "extends": "airbnb",
+    "parser": "babel-eslint",
+    "extends": [
+        "airbnb",
+        "plugin:react/recommended",
+        "plugin:flowtype/recommended",
+        "prettier",
+        "prettier/react",
+        "prettier/flowtype"
+    ],
+    "plugins": [
+        "react",
+        "flowtype",
+        "flowtype-errors",
+    ],
     "rules": {
-        "indent": [2, 4],
-        "max-len": [1, 120, 4, {"ignoreUrls": true}],
-        "no-new": [1],
-        "no-extra-semi": [2],
+        "flowtype-errors/show-errors": 2,
         "no-warning-comments": [1, { "terms": ["todo", "fixme", "xxx"], "location": "start" }],
         "react/sort-comp": [0],
         "react/jsx-boolean-value": [0],
-        "id-length": [1, {"min": 2, "exceptions": ["x", "y", "e", "i", "j", "k", "d", "n", "_", "$"]}],
-        "jsx-quotes": [2, "prefer-double"],
-        "arrow-body-style": [2, "as-needed"],
-        "react/jsx-indent-props": [1, 4],
-        "react/jsx-indent": [1, 4],
-        "react/prefer-stateless-function": [0],
-        "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }]
+        "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
+        "jsx-a11y/no-static-element-interactions": [0]
     },
     "env": {
+        "jest": true,
         "es6": true,
-        "jest": true
-    }
+        "browser": true
+    },
 }

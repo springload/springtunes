@@ -8,3 +8,4 @@ gulpfile.js
 core/static/
 doc/
 dist/
+webpack.*

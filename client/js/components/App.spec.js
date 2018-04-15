@@ -1,29 +1,31 @@
 import React from 'react';
+import renderer from 'react-test-renderer';
 import App from './App';
-import ReactTestUtils from 'react-addons-test-utils';
+
+jest.mock('./Logo', () => 'div');
+jest.mock('./LastUpdated', () => 'div');
+jest.mock('../containers/IntelligentCurrentSong', () => 'div');
+jest.mock('../containers/IntelligentControls', () => 'div');
 
 describe('App component', () => {
     it('renders correctly with min params', () => {
-        const shallowRenderer = ReactTestUtils.createRenderer();
-        const result = shallowRenderer.render(
-            <App
-                lastUpdated={23525345345}
-                fetchSongIfNeeded={() => {}}
-            />
+        const result = renderer.create(
+            <App lastUpdated={23525345345} fetchSongIfNeeded={() => {}} />,
         );
         expect(result).toMatchSnapshot();
     });
 
     it('fetchSong is called', () => {
         let fetchSong = false;
-        const shallowRenderer = ReactTestUtils.createRenderer();
-        shallowRenderer.render(
+        const shallowRenderer = renderer.create(
             <App
                 lastUpdated={23525345345}
-                fetchSongIfNeeded={() => { fetchSong = true; }}
-            />
+                fetchSongIfNeeded={() => {
+                    fetchSong = true;
+                }}
+            />,
         );
-        const instance = shallowRenderer.getMountedInstance();
+        const instance = shallowRenderer.getInstance();
         instance.componentDidMount();
         expect(fetchSong).toBeTruthy();
     });

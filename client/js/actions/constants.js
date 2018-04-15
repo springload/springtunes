@@ -1,6 +1,6 @@
 import keyMirror from 'keymirror';
 
-export const ACTIONS = keyMirror({
+export default keyMirror({
     REQUEST_SONG: null,
     REQUEST_MUTE: null,
     RECEIVE_ERROR: null,

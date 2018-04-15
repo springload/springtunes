@@ -1,13 +1,10 @@
 import React from 'react';
+import renderer from 'react-test-renderer';
 import Logo from './Logo';
-import ReactTestUtils from 'react-addons-test-utils';
 
 describe('Logo component', () => {
     it('renders correctly with min params', () => {
-        const shallowRenderer = ReactTestUtils.createRenderer();
-        const result = shallowRenderer.render(
-            <Logo />
-        );
+        const result = renderer.create(<Logo />).toJSON();
         expect(result).toMatchSnapshot();
     });
 });

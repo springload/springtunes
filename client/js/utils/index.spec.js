@@ -15,41 +15,51 @@ describe('Utils - index', () => {
         });
 
         it('empty song', () => {
-            expect(shouldFetchSong({
-                current: {},
-            })).toBeTruthy();
+            expect(
+                shouldFetchSong({
+                    current: {},
+                }),
+            ).toBeTruthy();
         });
 
         it('empty song & not fetching', () => {
-            expect(shouldFetchSong({
-                current: {},
-                isFetching: false,
-            })).toBeTruthy();
+            expect(
+                shouldFetchSong({
+                    current: {},
+                    isFetching: false,
+                }),
+            ).toBeTruthy();
         });
 
         it('empty song & fetching', () => {
-            expect(shouldFetchSong({
-                current: {},
-                isFetching: true,
-            })).toBeTruthy();
+            expect(
+                shouldFetchSong({
+                    current: {},
+                    isFetching: true,
+                }),
+            ).toBeTruthy();
         });
 
         it('not empty song & fetching', () => {
-            expect(shouldFetchSong({
-                current: {
-                    name: 'test song',
-                },
-                isFetching: true,
-            })).toBeFalsy();
+            expect(
+                shouldFetchSong({
+                    current: {
+                        name: 'test song',
+                    },
+                    isFetching: true,
+                }),
+            ).toBeFalsy();
         });
 
         it('not empty song & not fetching', () => {
-            expect(shouldFetchSong({
-                current: {
-                    name: 'test song',
-                },
-                isFetching: false,
-            })).toBeTruthy();
+            expect(
+                shouldFetchSong({
+                    current: {
+                        name: 'test song',
+                    },
+                    isFetching: false,
+                }),
+            ).toBeTruthy();
         });
     });
 
@@ -67,43 +77,67 @@ describe('Utils - index', () => {
         });
 
         it('is modifying', () => {
-            expect(shouldModifyMute({
-                isModifyingMute: true,
-            })).toBeFalsy();
+            expect(
+                shouldModifyMute({
+                    isModifyingMute: true,
+                }),
+            ).toBeFalsy();
         });
 
         it('is not modifying', () => {
-            expect(shouldModifyMute({
-                isModifyingMute: false,
-            })).toBeTruthy();
+            expect(
+                shouldModifyMute({
+                    isModifyingMute: false,
+                }),
+            ).toBeTruthy();
         });
 
         it('is not modifying, not muted and called by mute', () => {
-            expect(shouldModifyMute({
-                isModifyingMute: false,
-                isMuted: false,
-            }, 'mute')).toBeTruthy();
+            expect(
+                shouldModifyMute(
+                    {
+                        isModifyingMute: false,
+                        isMuted: false,
+                    },
+                    'mute',
+                ),
+            ).toBeTruthy();
         });
 
         it('is not modifying, muted and called by unmute', () => {
-            expect(shouldModifyMute({
-                isModifyingMute: false,
-                isMuted: true,
-            }, 'unmute')).toBeTruthy();
+            expect(
+                shouldModifyMute(
+                    {
+                        isModifyingMute: false,
+                        isMuted: true,
+                    },
+                    'unmute',
+                ),
+            ).toBeTruthy();
         });
 
         it('is not modifying, muted and called by mute', () => {
-            expect(shouldModifyMute({
-                isModifyingMute: false,
-                isMuted: true,
-            }, 'mute')).toBeFalsy();
+            expect(
+                shouldModifyMute(
+                    {
+                        isModifyingMute: false,
+                        isMuted: true,
+                    },
+                    'mute',
+                ),
+            ).toBeFalsy();
         });
 
         it('is not modifying, not muted and called by unmute', () => {
-            expect(shouldModifyMute({
-                isModifyingMute: false,
-                isMuted: false,
-            }, 'unmute')).toBeFalsy();
+            expect(
+                shouldModifyMute(
+                    {
+                        isModifyingMute: false,
+                        isMuted: false,
+                    },
+                    'unmute',
+                ),
+            ).toBeFalsy();
         });
     });
 });

@@ -2,15 +2,12 @@ import { createStore, applyMiddleware, compose } from 'redux';
 import thunk from 'redux-thunk';
 import rootReducer from '../reducers';
 
-
 /**
  * Redux store, responsible for keeping track of the state of the application.
  * The reducers effect transformations on the state depending on actions.
  */
 
-const middleware = [
-    thunk,
-];
+const middleware = [thunk];
 
 const springtunesCreateStore = () => {
     const stateDefault = {
@@ -30,10 +27,14 @@ const springtunesCreateStore = () => {
             message: '',
         },
     };
-    return createStore(rootReducer, stateDefault, compose(
-        applyMiddleware(...middleware),
-        global.devToolsExtension ? global.devToolsExtension() : fct => fct // Expose store to Redux DevTools extension.
-    ));
+    return createStore(
+        rootReducer,
+        stateDefault,
+        compose(
+            applyMiddleware(...middleware),
+            global.devToolsExtension ? global.devToolsExtension() : fct => fct, // Expose store to Redux DevTools extension.
+        ),
+    );
 };
 
 export default springtunesCreateStore;

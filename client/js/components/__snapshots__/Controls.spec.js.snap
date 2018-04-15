@@ -1,97 +1,140 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
 exports[`Controls component renders correctly with isFetching true 1`] = `
 <div
-  className="controls">
+  className="controls"
+>
   <button
     className="btn-orange"
     disabled={true}
-    onClick={[Function]}>
-    <Icon
+    onClick={[Function]}
+  >
+    <div
       iconType="small"
-      name="fa-refresh" />
+      name="fa-refresh"
+    />
      Refresh
   </button>
   <button
     disabled={true}
-    onClick={[Function]}>
-    <Icon
+    onClick={[Function]}
+  >
+    <div
       iconType="small"
-      name="fa-step-backward" />
+      name="fa-step-backward"
+    />
      Back
   </button>
   <button
     disabled={true}
-    onClick={[Function]}>
+    onClick={[Function]}
+  >
     <span>
-      <Icon
+      <div
         iconType="small"
-        name="fa-play" />
+        name="fa-play"
+      />
        Play
     </span>
   </button>
   <button
     disabled={true}
-    onClick={[Function]}>
+    onClick={[Function]}
+  >
     Next 
-    <Icon
+    <div
       iconType="small"
-      name="fa-step-forward" />
+      name="fa-step-forward"
+    />
   </button>
   <button
     disabled={false}
     onClick={[Function]}
-    title="Mute">
-    <Icon
+    title="Mute"
+  >
+    <div
       iconType="small"
-      name="fa-volume-up" />
+      name="fa-volume-up"
+    />
   </button>
   <div
-    className="volume-control">
+    className="volume-control"
+  >
     <span>
       Volume
     </span>
-    <Slider
-      allowCross={true}
-      className=""
-      disabled={true}
-      dots={false}
-      handle={<Handle />}
-      included={true}
-      marks={Object {}}
-      max={100}
-      min={0}
-      onAfterChange={[Function]}
-      onBeforeChange={[Function]}
-      onChange={[Function]}
-      prefixCls="rc-slider"
-      range={false}
-      step={1}
-      tipFormatter={[Function]}
-      tipTransitionName=""
-      value={50}
-      vertical={false} />
+    <div
+      className="rc-slider rc-slider-disabled"
+      onBlur={[Function]}
+      onFocus={[Function]}
+      onKeyDown={[Function]}
+      onMouseDown={[Function]}
+      onTouchStart={[Function]}
+      style={undefined}
+    >
+      <div
+        className="rc-slider-rail"
+        style={Object {}}
+      />
+      <div
+        className="rc-slider-track"
+        style={
+          Object {
+            "left": "0%",
+            "width": "50%",
+          }
+        }
+      />
+      <div
+        className="rc-slider-step"
+      />
+      <div
+        aria-disabled={true}
+        aria-valuemax={100}
+        aria-valuemin={0}
+        aria-valuenow={50}
+        className="rc-slider-handle"
+        role="slider"
+        style={
+          Object {
+            "left": "50%",
+          }
+        }
+        tabIndex={0}
+      />
+      <div
+        className="rc-slider-mark"
+      />
+    </div>
   </div>
   <div
-    className="url-control">
+    className="url-control"
+  >
     <form
-      onSubmit={[Function]}>
+      onSubmit={[Function]}
+    >
       <label
         className="input__label"
-        htmlFor="spotify-url">
+        htmlFor="spotify-url"
+      >
         <span
-          className="u-accessible">
-          Spotify URL
+          className="u-accessible"
+        >
+          Spotify URI
         </span>
         <input
           className="input--large"
           id="spotify-url"
           name="url"
           onChange={[Function]}
-          placeholder="https://open.spotify.com/user/spotify/playlist/..."
-          type="text" />
+          placeholder="spotify:user:...:playlist:..."
+          type="text"
+        />
       </label>
       <button
         disabled={true}
-        title="Play URL">
+        title="Play URL"
+      >
         Play URL
       </button>
     </form>
@@ -101,98 +144,139 @@ exports[`Controls component renders correctly with isFetching true 1`] = `
 
 exports[`Controls component renders correctly with isModifyingMute true 1`] = `
 <div
-  className="controls">
+  className="controls"
+>
   <button
     className="btn-orange"
     disabled={false}
-    onClick={[Function]}>
-    <Icon
+    onClick={[Function]}
+  >
+    <div
       iconType="small"
-      name="fa-refresh" />
+      name="fa-refresh"
+    />
      Refresh
   </button>
   <button
     disabled={false}
-    onClick={[Function]}>
-    <Icon
+    onClick={[Function]}
+  >
+    <div
       iconType="small"
-      name="fa-step-backward" />
+      name="fa-step-backward"
+    />
      Back
   </button>
   <button
     disabled={false}
-    onClick={[Function]}>
+    onClick={[Function]}
+  >
     <span>
-      <Icon
+      <div
         iconType="small"
-        name="fa-play" />
+        name="fa-play"
+      />
        Play
     </span>
   </button>
   <button
     disabled={false}
-    onClick={[Function]}>
+    onClick={[Function]}
+  >
     Next 
-    <Icon
+    <div
       iconType="small"
-      name="fa-step-forward" />
+      name="fa-step-forward"
+    />
   </button>
   <button
     disabled={true}
     onClick={[Function]}
-    title="Mute">
-    <Icon
+    title="Mute"
+  >
+    <div
       iconType="small"
-      name="fa-volume-up" />
+      name="fa-volume-up"
+    />
   </button>
   <div
-    className="volume-control">
+    className="volume-control"
+  >
     <span>
       Volume
     </span>
-    <Slider
-      allowCross={true}
-      className=""
-      disabled={false}
-      dots={false}
-      handle={<Handle />}
-      included={true}
-      marks={Object {}}
-      max={100}
-      min={0}
-      onAfterChange={[Function]}
-      onBeforeChange={[Function]}
-      onChange={[Function]}
-      prefixCls="rc-slider"
-      range={false}
-      step={1}
-      tipFormatter={[Function]}
-      tipTransitionName=""
-      value={50}
-      vertical={false} />
+    <div
+      className="rc-slider"
+      onBlur={[Function]}
+      onFocus={[Function]}
+      onKeyDown={[Function]}
+      onMouseDown={[Function]}
+      onTouchStart={[Function]}
+      style={undefined}
+    >
+      <div
+        className="rc-slider-rail"
+        style={Object {}}
+      />
+      <div
+        className="rc-slider-track"
+        style={
+          Object {
+            "left": "0%",
+            "width": "50%",
+          }
+        }
+      />
+      <div
+        className="rc-slider-step"
+      />
+      <div
+        aria-disabled={false}
+        aria-valuemax={100}
+        aria-valuemin={0}
+        aria-valuenow={50}
+        className="rc-slider-handle"
+        role="slider"
+        style={
+          Object {
+            "left": "50%",
+          }
+        }
+        tabIndex={0}
+      />
+      <div
+        className="rc-slider-mark"
+      />
+    </div>
   </div>
   <div
-    className="url-control">
+    className="url-control"
+  >
     <form
-      onSubmit={[Function]}>
+      onSubmit={[Function]}
+    >
       <label
         className="input__label"
-        htmlFor="spotify-url">
+        htmlFor="spotify-url"
+      >
         <span
-          className="u-accessible">
-          Spotify URL
+          className="u-accessible"
+        >
+          Spotify URI
         </span>
         <input
           className="input--large"
           id="spotify-url"
           name="url"
           onChange={[Function]}
-          placeholder="https://open.spotify.com/user/spotify/playlist/..."
-          type="text" />
+          placeholder="spotify:user:...:playlist:..."
+          type="text"
+        />
       </label>
       <button
         disabled={false}
-        title="Play URL">
+        title="Play URL"
+      >
         Play URL
       </button>
     </form>
@@ -202,98 +286,139 @@ exports[`Controls component renders correctly with isModifyingMute true 1`] = `
 
 exports[`Controls component renders correctly with isMuted 1`] = `
 <div
-  className="controls">
+  className="controls"
+>
   <button
     className="btn-orange"
     disabled={false}
-    onClick={[Function]}>
-    <Icon
+    onClick={[Function]}
+  >
+    <div
       iconType="small"
-      name="fa-refresh" />
+      name="fa-refresh"
+    />
      Refresh
   </button>
   <button
     disabled={false}
-    onClick={[Function]}>
-    <Icon
+    onClick={[Function]}
+  >
+    <div
       iconType="small"
-      name="fa-step-backward" />
+      name="fa-step-backward"
+    />
      Back
   </button>
   <button
     disabled={false}
-    onClick={[Function]}>
+    onClick={[Function]}
+  >
     <span>
-      <Icon
+      <div
         iconType="small"
-        name="fa-play" />
+        name="fa-play"
+      />
        Play
     </span>
   </button>
   <button
     disabled={false}
-    onClick={[Function]}>
+    onClick={[Function]}
+  >
     Next 
-    <Icon
+    <div
       iconType="small"
-      name="fa-step-forward" />
+      name="fa-step-forward"
+    />
   </button>
   <button
     disabled={false}
     onClick={[Function]}
-    title="Unmute">
-    <Icon
+    title="Unmute"
+  >
+    <div
       iconType="small"
-      name="fa-volume-off" />
+      name="fa-volume-off"
+    />
   </button>
   <div
-    className="volume-control">
+    className="volume-control"
+  >
     <span>
       Volume
     </span>
-    <Slider
-      allowCross={true}
-      className=""
-      disabled={false}
-      dots={false}
-      handle={<Handle />}
-      included={true}
-      marks={Object {}}
-      max={100}
-      min={0}
-      onAfterChange={[Function]}
-      onBeforeChange={[Function]}
-      onChange={[Function]}
-      prefixCls="rc-slider"
-      range={false}
-      step={1}
-      tipFormatter={[Function]}
-      tipTransitionName=""
-      value={50}
-      vertical={false} />
+    <div
+      className="rc-slider"
+      onBlur={[Function]}
+      onFocus={[Function]}
+      onKeyDown={[Function]}
+      onMouseDown={[Function]}
+      onTouchStart={[Function]}
+      style={undefined}
+    >
+      <div
+        className="rc-slider-rail"
+        style={Object {}}
+      />
+      <div
+        className="rc-slider-track"
+        style={
+          Object {
+            "left": "0%",
+            "width": "50%",
+          }
+        }
+      />
+      <div
+        className="rc-slider-step"
+      />
+      <div
+        aria-disabled={false}
+        aria-valuemax={100}
+        aria-valuemin={0}
+        aria-valuenow={50}
+        className="rc-slider-handle"
+        role="slider"
+        style={
+          Object {
+            "left": "50%",
+          }
+        }
+        tabIndex={0}
+      />
+      <div
+        className="rc-slider-mark"
+      />
+    </div>
   </div>
   <div
-    className="url-control">
+    className="url-control"
+  >
     <form
-      onSubmit={[Function]}>
+      onSubmit={[Function]}
+    >
       <label
         className="input__label"
-        htmlFor="spotify-url">
+        htmlFor="spotify-url"
+      >
         <span
-          className="u-accessible">
-          Spotify URL
+          className="u-accessible"
+        >
+          Spotify URI
         </span>
         <input
           className="input--large"
           id="spotify-url"
           name="url"
           onChange={[Function]}
-          placeholder="https://open.spotify.com/user/spotify/playlist/..."
-          type="text" />
+          placeholder="spotify:user:...:playlist:..."
+          type="text"
+        />
       </label>
       <button
         disabled={false}
-        title="Play URL">
+        title="Play URL"
+      >
         Play URL
       </button>
     </form>
@@ -303,98 +428,139 @@ exports[`Controls component renders correctly with isMuted 1`] = `
 
 exports[`Controls component renders correctly with isPlaying true 1`] = `
 <div
-  className="controls">
+  className="controls"
+>
   <button
     className="btn-orange"
     disabled={false}
-    onClick={[Function]}>
-    <Icon
+    onClick={[Function]}
+  >
+    <div
       iconType="small"
-      name="fa-refresh" />
+      name="fa-refresh"
+    />
      Refresh
   </button>
   <button
     disabled={false}
-    onClick={[Function]}>
-    <Icon
+    onClick={[Function]}
+  >
+    <div
       iconType="small"
-      name="fa-step-backward" />
+      name="fa-step-backward"
+    />
      Back
   </button>
   <button
     disabled={false}
-    onClick={[Function]}>
+    onClick={[Function]}
+  >
     <span>
-      <Icon
+      <div
         iconType="small"
-        name="fa-pause" />
+        name="fa-pause"
+      />
        Pause
     </span>
   </button>
   <button
     disabled={false}
-    onClick={[Function]}>
+    onClick={[Function]}
+  >
     Next 
-    <Icon
+    <div
       iconType="small"
-      name="fa-step-forward" />
+      name="fa-step-forward"
+    />
   </button>
   <button
     disabled={false}
     onClick={[Function]}
-    title="Mute">
-    <Icon
+    title="Mute"
+  >
+    <div
       iconType="small"
-      name="fa-volume-up" />
+      name="fa-volume-up"
+    />
   </button>
   <div
-    className="volume-control">
+    className="volume-control"
+  >
     <span>
       Volume
     </span>
-    <Slider
-      allowCross={true}
-      className=""
-      disabled={false}
-      dots={false}
-      handle={<Handle />}
-      included={true}
-      marks={Object {}}
-      max={100}
-      min={0}
-      onAfterChange={[Function]}
-      onBeforeChange={[Function]}
-      onChange={[Function]}
-      prefixCls="rc-slider"
-      range={false}
-      step={1}
-      tipFormatter={[Function]}
-      tipTransitionName=""
-      value={50}
-      vertical={false} />
+    <div
+      className="rc-slider"
+      onBlur={[Function]}
+      onFocus={[Function]}
+      onKeyDown={[Function]}
+      onMouseDown={[Function]}
+      onTouchStart={[Function]}
+      style={undefined}
+    >
+      <div
+        className="rc-slider-rail"
+        style={Object {}}
+      />
+      <div
+        className="rc-slider-track"
+        style={
+          Object {
+            "left": "0%",
+            "width": "50%",
+          }
+        }
+      />
+      <div
+        className="rc-slider-step"
+      />
+      <div
+        aria-disabled={false}
+        aria-valuemax={100}
+        aria-valuemin={0}
+        aria-valuenow={50}
+        className="rc-slider-handle"
+        role="slider"
+        style={
+          Object {
+            "left": "50%",
+          }
+        }
+        tabIndex={0}
+      />
+      <div
+        className="rc-slider-mark"
+      />
+    </div>
   </div>
   <div
-    className="url-control">
+    className="url-control"
+  >
     <form
-      onSubmit={[Function]}>
+      onSubmit={[Function]}
+    >
       <label
         className="input__label"
-        htmlFor="spotify-url">
+        htmlFor="spotify-url"
+      >
         <span
-          className="u-accessible">
-          Spotify URL
+          className="u-accessible"
+        >
+          Spotify URI
         </span>
         <input
           className="input--large"
           id="spotify-url"
           name="url"
           onChange={[Function]}
-          placeholder="https://open.spotify.com/user/spotify/playlist/..."
-          type="text" />
+          placeholder="spotify:user:...:playlist:..."
+          type="text"
+        />
       </label>
       <button
         disabled={false}
-        title="Play URL">
+        title="Play URL"
+      >
         Play URL
       </button>
     </form>
@@ -404,98 +570,139 @@ exports[`Controls component renders correctly with isPlaying true 1`] = `
 
 exports[`Controls component renders correctly with min params 1`] = `
 <div
-  className="controls">
+  className="controls"
+>
   <button
     className="btn-orange"
     disabled={false}
-    onClick={[Function]}>
-    <Icon
+    onClick={[Function]}
+  >
+    <div
       iconType="small"
-      name="fa-refresh" />
+      name="fa-refresh"
+    />
      Refresh
   </button>
   <button
     disabled={false}
-    onClick={[Function]}>
-    <Icon
+    onClick={[Function]}
+  >
+    <div
       iconType="small"
-      name="fa-step-backward" />
+      name="fa-step-backward"
+    />
      Back
   </button>
   <button
     disabled={false}
-    onClick={[Function]}>
+    onClick={[Function]}
+  >
     <span>
-      <Icon
+      <div
         iconType="small"
-        name="fa-play" />
+        name="fa-play"
+      />
        Play
     </span>
   </button>
   <button
     disabled={false}
-    onClick={[Function]}>
+    onClick={[Function]}
+  >
     Next 
-    <Icon
+    <div
       iconType="small"
-      name="fa-step-forward" />
+      name="fa-step-forward"
+    />
   </button>
   <button
     disabled={false}
     onClick={[Function]}
-    title="Mute">
-    <Icon
+    title="Mute"
+  >
+    <div
       iconType="small"
-      name="fa-volume-up" />
+      name="fa-volume-up"
+    />
   </button>
   <div
-    className="volume-control">
+    className="volume-control"
+  >
     <span>
       Volume
     </span>
-    <Slider
-      allowCross={true}
-      className=""
-      disabled={false}
-      dots={false}
-      handle={<Handle />}
-      included={true}
-      marks={Object {}}
-      max={100}
-      min={0}
-      onAfterChange={[Function]}
-      onBeforeChange={[Function]}
-      onChange={[Function]}
-      prefixCls="rc-slider"
-      range={false}
-      step={1}
-      tipFormatter={[Function]}
-      tipTransitionName=""
-      value={50}
-      vertical={false} />
+    <div
+      className="rc-slider"
+      onBlur={[Function]}
+      onFocus={[Function]}
+      onKeyDown={[Function]}
+      onMouseDown={[Function]}
+      onTouchStart={[Function]}
+      style={undefined}
+    >
+      <div
+        className="rc-slider-rail"
+        style={Object {}}
+      />
+      <div
+        className="rc-slider-track"
+        style={
+          Object {
+            "left": "0%",
+            "width": "50%",
+          }
+        }
+      />
+      <div
+        className="rc-slider-step"
+      />
+      <div
+        aria-disabled={false}
+        aria-valuemax={100}
+        aria-valuemin={0}
+        aria-valuenow={50}
+        className="rc-slider-handle"
+        role="slider"
+        style={
+          Object {
+            "left": "50%",
+          }
+        }
+        tabIndex={0}
+      />
+      <div
+        className="rc-slider-mark"
+      />
+    </div>
   </div>
   <div
-    className="url-control">
+    className="url-control"
+  >
     <form
-      onSubmit={[Function]}>
+      onSubmit={[Function]}
+    >
       <label
         className="input__label"
-        htmlFor="spotify-url">
+        htmlFor="spotify-url"
+      >
         <span
-          className="u-accessible">
-          Spotify URL
+          className="u-accessible"
+        >
+          Spotify URI
         </span>
         <input
           className="input--large"
           id="spotify-url"
           name="url"
           onChange={[Function]}
-          placeholder="https://open.spotify.com/user/spotify/playlist/..."
-          type="text" />
+          placeholder="spotify:user:...:playlist:..."
+          type="text"
+        />
       </label>
       <button
         disabled={false}
-        title="Play URL">
+        title="Play URL"
+      >
         Play URL
       </button>
     </form>
@@ -505,501 +712,9 @@ exports[`Controls component renders correctly with min params 1`] = `
 
 exports[`Controls component submit form 1`] = `
 ShallowWrapper {
-  "complexSelector": ComplexSelector {
-    "buildPredicate": [Function],
-    "childrenOfNode": [Function],
-    "findWhereUnwrapped": [Function],
-  },
   "length": 1,
-  "node": <div
-    className="controls">
-    <button
-        className="btn-orange"
-        disabled={false}
-        onClick={[Function]}>
-        <Icon
-            iconType="small"
-            name="fa-refresh" />
-         Refresh
-    </button>
-    <button
-        disabled={false}
-        onClick={[Function]}>
-        <Icon
-            iconType="small"
-            name="fa-step-backward" />
-         Back
-    </button>
-    <button
-        disabled={false}
-        onClick={[Function]}>
-        <span>
-            <Icon
-                iconType="small"
-                name="fa-pause" />
-             Pause
-        </span>
-    </button>
-    <button
-        disabled={false}
-        onClick={[Function]}>
-        Next 
-        <Icon
-            iconType="small"
-            name="fa-step-forward" />
-    </button>
-    <button
-        disabled={false}
-        onClick={[Function]}
-        title="Unmute">
-        <Icon
-            iconType="small"
-            name="fa-volume-off" />
-    </button>
-    <div
-        className="volume-control">
-        <span>
-            Volume
-        </span>
-        <Slider
-            allowCross={true}
-            className=""
-            disabled={false}
-            dots={false}
-            handle={<Handle />}
-            included={true}
-            marks={Object {}}
-            max={100}
-            min={0}
-            onAfterChange={[Function]}
-            onBeforeChange={[Function]}
-            onChange={[Function]}
-            prefixCls="rc-slider"
-            range={false}
-            step={1}
-            tipFormatter={[Function]}
-            tipTransitionName=""
-            value={50}
-            vertical={false} />
-    </div>
-    <div
-        className="url-control">
-        <form
-            onSubmit={[Function]}>
-            <label
-                className="input__label"
-                htmlFor="spotify-url">
-                <span
-                    className="u-accessible">
-                    Spotify URL
-                </span>
-                <input
-                    className="input--large"
-                    id="spotify-url"
-                    name="url"
-                    onChange={[Function]}
-                    placeholder="https://open.spotify.com/user/spotify/playlist/..."
-                    type="text" />
-            </label>
-            <button
-                disabled={false}
-                title="Play URL">
-                Play URL
-            </button>
-            <div
-                className="error">
-                Invalid URL provided. You can only play playlists. URL must start with \'https://open.spotify.com/user/...\'
-            </div>
-        </form>
-    </div>
-</div>,
-  "nodes": Array [
-    <div
-      className="controls">
-      <button
-            className="btn-orange"
-            disabled={false}
-            onClick={[Function]}>
-            <Icon
-                  iconType="small"
-                  name="fa-refresh" />
-             Refresh
-      </button>
-      <button
-            disabled={false}
-            onClick={[Function]}>
-            <Icon
-                  iconType="small"
-                  name="fa-step-backward" />
-             Back
-      </button>
-      <button
-            disabled={false}
-            onClick={[Function]}>
-            <span>
-                  <Icon
-                        iconType="small"
-                        name="fa-pause" />
-                   Pause
-            </span>
-      </button>
-      <button
-            disabled={false}
-            onClick={[Function]}>
-            Next 
-            <Icon
-                  iconType="small"
-                  name="fa-step-forward" />
-      </button>
-      <button
-            disabled={false}
-            onClick={[Function]}
-            title="Unmute">
-            <Icon
-                  iconType="small"
-                  name="fa-volume-off" />
-      </button>
-      <div
-            className="volume-control">
-            <span>
-                  Volume
-            </span>
-            <Slider
-                  allowCross={true}
-                  className=""
-                  disabled={false}
-                  dots={false}
-                  handle={<Handle />}
-                  included={true}
-                  marks={Object {}}
-                  max={100}
-                  min={0}
-                  onAfterChange={[Function]}
-                  onBeforeChange={[Function]}
-                  onChange={[Function]}
-                  prefixCls="rc-slider"
-                  range={false}
-                  step={1}
-                  tipFormatter={[Function]}
-                  tipTransitionName=""
-                  value={50}
-                  vertical={false} />
-      </div>
-      <div
-            className="url-control">
-            <form
-                  onSubmit={[Function]}>
-                  <label
-                        className="input__label"
-                        htmlFor="spotify-url">
-                        <span
-                              className="u-accessible">
-                              Spotify URL
-                        </span>
-                        <input
-                              className="input--large"
-                              id="spotify-url"
-                              name="url"
-                              onChange={[Function]}
-                              placeholder="https://open.spotify.com/user/spotify/playlist/..."
-                              type="text" />
-                  </label>
-                  <button
-                        disabled={false}
-                        title="Play URL">
-                        Play URL
-                  </button>
-                  <div
-                        className="error">
-                        Invalid URL provided. You can only play playlists. URL must start with \'https://open.spotify.com/user/...\'
-                  </div>
-            </form>
-      </div>
-</div>,
-  ],
-  "options": Object {},
-  "renderer": ReactShallowRenderer {
-    "_instance": ShallowComponentWrapper {
-      "_calledComponentWillUnmount": false,
-      "_compositeType": 0,
-      "_context": Object {},
-      "_currentElement": <Controls
-        backClick={[Function]}
-        isFetching={false}
-        isModifyingMute={false}
-        isMuted={true}
-        isPlaying={true}
-        muteClick={[Function]}
-        nextClick={[Function]}
-        playURL={[Function]}
-        refreshClick={[Function]}
-        togglePauseClick={[Function]}
-        unmuteClick={[Function]}
-        volume={50}
-        volumeChange={[Function]} />,
-      "_debugID": 35,
-      "_hostContainerInfo": null,
-      "_hostParent": null,
-      "_instance": Controls {
-        "_reactInternalInstance": [Circular],
-        "checkURL": [Function],
-        "context": Object {},
-        "props": Object {
-          "backClick": [Function],
-          "isFetching": false,
-          "isModifyingMute": false,
-          "isMuted": true,
-          "isPlaying": true,
-          "muteClick": [Function],
-          "nextClick": [Function],
-          "playURL": [Function],
-          "refreshClick": [Function],
-          "togglePauseClick": [Function],
-          "unmuteClick": [Function],
-          "volume": 50,
-          "volumeChange": [Function],
-        },
-        "refs": Object {},
-        "state": Object {
-          "error": "Invalid URL provided. You can only play playlists. URL must start with \'https://open.spotify.com/user/...\'",
-          "url": "",
-        },
-        "updateURL": [Function],
-        "updater": Object {
-          "enqueueCallback": [Function],
-          "enqueueCallbackInternal": [Function],
-          "enqueueElementInternal": [Function],
-          "enqueueForceUpdate": [Function],
-          "enqueueReplaceState": [Function],
-          "enqueueSetState": [Function],
-          "isMounted": [Function],
-          "validateCallback": [Function],
-        },
-      },
-      "_mountOrder": 18,
-      "_pendingCallbacks": null,
-      "_pendingElement": null,
-      "_pendingForceUpdate": false,
-      "_pendingReplaceState": false,
-      "_pendingStateQueue": null,
-      "_renderedComponent": NoopInternalComponent {
-        "_currentElement": <div
-          className="controls">
-          <button
-                    className="btn-orange"
-                    disabled={false}
-                    onClick={[Function]}>
-                    <Icon
-                              iconType="small"
-                              name="fa-refresh" />
-                     Refresh
-          </button>
-          <button
-                    disabled={false}
-                    onClick={[Function]}>
-                    <Icon
-                              iconType="small"
-                              name="fa-step-backward" />
-                     Back
-          </button>
-          <button
-                    disabled={false}
-                    onClick={[Function]}>
-                    <span>
-                              <Icon
-                                        iconType="small"
-                                        name="fa-pause" />
-                               Pause
-                    </span>
-          </button>
-          <button
-                    disabled={false}
-                    onClick={[Function]}>
-                    Next 
-                    <Icon
-                              iconType="small"
-                              name="fa-step-forward" />
-          </button>
-          <button
-                    disabled={false}
-                    onClick={[Function]}
-                    title="Unmute">
-                    <Icon
-                              iconType="small"
-                              name="fa-volume-off" />
-          </button>
-          <div
-                    className="volume-control">
-                    <span>
-                              Volume
-                    </span>
-                    <Slider
-                              allowCross={true}
-                              className=""
-                              disabled={false}
-                              dots={false}
-                              handle={<Handle />}
-                              included={true}
-                              marks={Object {}}
-                              max={100}
-                              min={0}
-                              onAfterChange={[Function]}
-                              onBeforeChange={[Function]}
-                              onChange={[Function]}
-                              prefixCls="rc-slider"
-                              range={false}
-                              step={1}
-                              tipFormatter={[Function]}
-                              tipTransitionName=""
-                              value={50}
-                              vertical={false} />
-          </div>
-          <div
-                    className="url-control">
-                    <form
-                              onSubmit={[Function]}>
-                              <label
-                                        className="input__label"
-                                        htmlFor="spotify-url">
-                                        <span
-                                                  className="u-accessible">
-                                                  Spotify URL
-                                        </span>
-                                        <input
-                                                  className="input--large"
-                                                  id="spotify-url"
-                                                  name="url"
-                                                  onChange={[Function]}
-                                                  placeholder="https://open.spotify.com/user/spotify/playlist/..."
-                                                  type="text" />
-                              </label>
-                              <button
-                                        disabled={false}
-                                        title="Play URL">
-                                        Play URL
-                              </button>
-                              <div
-                                        className="error">
-                                        Invalid URL provided. You can only play playlists. URL must start with \'https://open.spotify.com/user/...\'
-                              </div>
-                    </form>
-          </div>
-</div>,
-        "_debugID": 36,
-        "_renderedOutput": <div
-          className="controls">
-          <button
-                    className="btn-orange"
-                    disabled={false}
-                    onClick={[Function]}>
-                    <Icon
-                              iconType="small"
-                              name="fa-refresh" />
-                     Refresh
-          </button>
-          <button
-                    disabled={false}
-                    onClick={[Function]}>
-                    <Icon
-                              iconType="small"
-                              name="fa-step-backward" />
-                     Back
-          </button>
-          <button
-                    disabled={false}
-                    onClick={[Function]}>
-                    <span>
-                              <Icon
-                                        iconType="small"
-                                        name="fa-pause" />
-                               Pause
-                    </span>
-          </button>
-          <button
-                    disabled={false}
-                    onClick={[Function]}>
-                    Next 
-                    <Icon
-                              iconType="small"
-                              name="fa-step-forward" />
-          </button>
-          <button
-                    disabled={false}
-                    onClick={[Function]}
-                    title="Unmute">
-                    <Icon
-                              iconType="small"
-                              name="fa-volume-off" />
-          </button>
-          <div
-                    className="volume-control">
-                    <span>
-                              Volume
-                    </span>
-                    <Slider
-                              allowCross={true}
-                              className=""
-                              disabled={false}
-                              dots={false}
-                              handle={<Handle />}
-                              included={true}
-                              marks={Object {}}
-                              max={100}
-                              min={0}
-                              onAfterChange={[Function]}
-                              onBeforeChange={[Function]}
-                              onChange={[Function]}
-                              prefixCls="rc-slider"
-                              range={false}
-                              step={1}
-                              tipFormatter={[Function]}
-                              tipTransitionName=""
-                              value={50}
-                              vertical={false} />
-          </div>
-          <div
-                    className="url-control">
-                    <form
-                              onSubmit={[Function]}>
-                              <label
-                                        className="input__label"
-                                        htmlFor="spotify-url">
-                                        <span
-                                                  className="u-accessible">
-                                                  Spotify URL
-                                        </span>
-                                        <input
-                                                  className="input--large"
-                                                  id="spotify-url"
-                                                  name="url"
-                                                  onChange={[Function]}
-                                                  placeholder="https://open.spotify.com/user/spotify/playlist/..."
-                                                  type="text" />
-                              </label>
-                              <button
-                                        disabled={false}
-                                        title="Play URL">
-                                        Play URL
-                              </button>
-                              <div
-                                        className="error">
-                                        Invalid URL provided. You can only play playlists. URL must start with \'https://open.spotify.com/user/...\'
-                              </div>
-                    </form>
-          </div>
-</div>,
-      },
-      "_renderedNodeType": 0,
-      "_rootNodeID": 0,
-      "_topLevelWrapper": null,
-      "_updateBatchNumber": null,
-      "_warnedAboutRefsInRender": false,
-    },
-    "getRenderOutput": [Function],
-    "render": [Function],
-  },
-  "root": [Circular],
-  "unrendered": <Controls
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <Controls
     backClick={[Function]}
     isFetching={false}
     isModifyingMute={false}
@@ -1012,6 +727,1193 @@ ShallowWrapper {
     togglePauseClick={[Function]}
     unmuteClick={[Function]}
     volume={50}
-    volumeChange={[Function]} />,
+    volumeChange={[Function]}
+  />,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "host",
+    "props": Object {
+      "children": Array [
+        <button
+          className="btn-orange"
+          disabled={false}
+          onClick={[Function]}
+        >
+          <div
+            iconType="small"
+            name="fa-refresh"
+          />
+           Refresh
+        </button>,
+        <button
+          disabled={false}
+          onClick={[Function]}
+        >
+          <div
+            iconType="small"
+            name="fa-step-backward"
+          />
+           Back
+        </button>,
+        <button
+          disabled={false}
+          onClick={[Function]}
+        >
+          <span>
+            <div
+              iconType="small"
+              name="fa-pause"
+            />
+             Pause
+          </span>
+        </button>,
+        <button
+          disabled={false}
+          onClick={[Function]}
+        >
+          Next 
+          <div
+            iconType="small"
+            name="fa-step-forward"
+          />
+        </button>,
+        false,
+        <button
+          disabled={false}
+          onClick={[Function]}
+          title="Unmute"
+        >
+          <div
+            iconType="small"
+            name="fa-volume-off"
+          />
+        </button>,
+        <div
+          className="volume-control"
+        >
+          <span>
+            Volume
+          </span>
+          <ComponentEnhancer(undefined)
+            activeDotStyle={Object {}}
+            className=""
+            disabled={false}
+            dotStyle={Object {}}
+            dots={false}
+            handle={[Function]}
+            handleStyle={
+              Array [
+                Object {},
+              ]
+            }
+            included={true}
+            marks={Object {}}
+            max={100}
+            min={0}
+            onAfterChange={[Function]}
+            onBeforeChange={[Function]}
+            onChange={[Function]}
+            prefixCls="rc-slider"
+            railStyle={Object {}}
+            step={1}
+            trackStyle={
+              Array [
+                Object {},
+              ]
+            }
+            value={50}
+            vertical={false}
+          />
+        </div>,
+        <div
+          className="url-control"
+        >
+          <form
+            onSubmit={[Function]}
+          >
+            <label
+              className="input__label"
+              htmlFor="spotify-url"
+            >
+              <span
+                className="u-accessible"
+              >
+                Spotify URI
+              </span>
+              <input
+                className="input--large"
+                id="spotify-url"
+                name="url"
+                onChange={[Function]}
+                placeholder="spotify:user:...:playlist:..."
+                type="text"
+              />
+            </label>
+            <button
+              disabled={false}
+              title="Play URL"
+            >
+              Play URL
+            </button>
+            <div
+              className="error"
+            >
+              Invalid URI provided. You can only play playlists. URI must start with 'spotify:user:...:playlist:...'
+            </div>
+          </form>
+        </div>,
+      ],
+      "className": "controls",
+    },
+    "ref": null,
+    "rendered": Array [
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <div
+              iconType="small"
+              name="fa-refresh"
+            />,
+            " Refresh",
+          ],
+          "className": "btn-orange",
+          "disabled": false,
+          "onClick": [Function],
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "iconType": "small",
+              "name": "fa-refresh",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": "div",
+          },
+          " Refresh",
+        ],
+        "type": "button",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <div
+              iconType="small"
+              name="fa-step-backward"
+            />,
+            " Back",
+          ],
+          "disabled": false,
+          "onClick": [Function],
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "iconType": "small",
+              "name": "fa-step-backward",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": "div",
+          },
+          " Back",
+        ],
+        "type": "button",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <span>
+              <div
+                iconType="small"
+                name="fa-pause"
+              />
+               Pause
+            </span>,
+            false,
+          ],
+          "disabled": false,
+          "onClick": [Function],
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                <div
+                  iconType="small"
+                  name="fa-pause"
+                />,
+                " Pause",
+              ],
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "iconType": "small",
+                  "name": "fa-pause",
+                },
+                "ref": null,
+                "rendered": null,
+                "type": "div",
+              },
+              " Pause",
+            ],
+            "type": "span",
+          },
+          false,
+        ],
+        "type": "button",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            "Next ",
+            <div
+              iconType="small"
+              name="fa-step-forward"
+            />,
+          ],
+          "disabled": false,
+          "onClick": [Function],
+        },
+        "ref": null,
+        "rendered": Array [
+          "Next ",
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "iconType": "small",
+              "name": "fa-step-forward",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": "div",
+          },
+        ],
+        "type": "button",
+      },
+      false,
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": <div
+            iconType="small"
+            name="fa-volume-off"
+          />,
+          "disabled": false,
+          "onClick": [Function],
+          "title": "Unmute",
+        },
+        "ref": null,
+        "rendered": Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "iconType": "small",
+            "name": "fa-volume-off",
+          },
+          "ref": null,
+          "rendered": null,
+          "type": "div",
+        },
+        "type": "button",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": Array [
+            <span>
+              Volume
+            </span>,
+            <ComponentEnhancer(undefined)
+              activeDotStyle={Object {}}
+              className=""
+              disabled={false}
+              dotStyle={Object {}}
+              dots={false}
+              handle={[Function]}
+              handleStyle={
+                Array [
+                  Object {},
+                ]
+              }
+              included={true}
+              marks={Object {}}
+              max={100}
+              min={0}
+              onAfterChange={[Function]}
+              onBeforeChange={[Function]}
+              onChange={[Function]}
+              prefixCls="rc-slider"
+              railStyle={Object {}}
+              step={1}
+              trackStyle={
+                Array [
+                  Object {},
+                ]
+              }
+              value={50}
+              vertical={false}
+            />,
+          ],
+          "className": "volume-control",
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": "Volume",
+            },
+            "ref": null,
+            "rendered": "Volume",
+            "type": "span",
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "class",
+            "props": Object {
+              "activeDotStyle": Object {},
+              "className": "",
+              "disabled": false,
+              "dotStyle": Object {},
+              "dots": false,
+              "handle": [Function],
+              "handleStyle": Array [
+                Object {},
+              ],
+              "included": true,
+              "marks": Object {},
+              "max": 100,
+              "min": 0,
+              "onAfterChange": [Function],
+              "onBeforeChange": [Function],
+              "onChange": [Function],
+              "prefixCls": "rc-slider",
+              "railStyle": Object {},
+              "step": 1,
+              "trackStyle": Array [
+                Object {},
+              ],
+              "value": 50,
+              "vertical": false,
+            },
+            "ref": null,
+            "rendered": null,
+            "type": [Function],
+          },
+        ],
+        "type": "div",
+      },
+      Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "host",
+        "props": Object {
+          "children": <form
+            onSubmit={[Function]}
+          >
+            <label
+              className="input__label"
+              htmlFor="spotify-url"
+            >
+              <span
+                className="u-accessible"
+              >
+                Spotify URI
+              </span>
+              <input
+                className="input--large"
+                id="spotify-url"
+                name="url"
+                onChange={[Function]}
+                placeholder="spotify:user:...:playlist:..."
+                type="text"
+              />
+            </label>
+            <button
+              disabled={false}
+              title="Play URL"
+            >
+              Play URL
+            </button>
+            <div
+              className="error"
+            >
+              Invalid URI provided. You can only play playlists. URI must start with 'spotify:user:...:playlist:...'
+            </div>
+          </form>,
+          "className": "url-control",
+        },
+        "ref": null,
+        "rendered": Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <label
+                className="input__label"
+                htmlFor="spotify-url"
+              >
+                <span
+                  className="u-accessible"
+                >
+                  Spotify URI
+                </span>
+                <input
+                  className="input--large"
+                  id="spotify-url"
+                  name="url"
+                  onChange={[Function]}
+                  placeholder="spotify:user:...:playlist:..."
+                  type="text"
+                />
+              </label>,
+              <button
+                disabled={false}
+                title="Play URL"
+              >
+                Play URL
+              </button>,
+              <div
+                className="error"
+              >
+                Invalid URI provided. You can only play playlists. URI must start with 'spotify:user:...:playlist:...'
+              </div>,
+            ],
+            "onSubmit": [Function],
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  <span
+                    className="u-accessible"
+                  >
+                    Spotify URI
+                  </span>,
+                  <input
+                    className="input--large"
+                    id="spotify-url"
+                    name="url"
+                    onChange={[Function]}
+                    placeholder="spotify:user:...:playlist:..."
+                    type="text"
+                  />,
+                ],
+                "className": "input__label",
+                "htmlFor": "spotify-url",
+              },
+              "ref": null,
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "children": "Spotify URI",
+                    "className": "u-accessible",
+                  },
+                  "ref": null,
+                  "rendered": "Spotify URI",
+                  "type": "span",
+                },
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "className": "input--large",
+                    "id": "spotify-url",
+                    "name": "url",
+                    "onChange": [Function],
+                    "placeholder": "spotify:user:...:playlist:...",
+                    "type": "text",
+                  },
+                  "ref": null,
+                  "rendered": null,
+                  "type": "input",
+                },
+              ],
+              "type": "label",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "Play URL",
+                "disabled": false,
+                "title": "Play URL",
+              },
+              "ref": null,
+              "rendered": "Play URL",
+              "type": "button",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "Invalid URI provided. You can only play playlists. URI must start with 'spotify:user:...:playlist:...'",
+                "className": "error",
+              },
+              "ref": null,
+              "rendered": "Invalid URI provided. You can only play playlists. URI must start with 'spotify:user:...:playlist:...'",
+              "type": "div",
+            },
+          ],
+          "type": "form",
+        },
+        "type": "div",
+      },
+    ],
+    "type": "div",
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "host",
+      "props": Object {
+        "children": Array [
+          <button
+            className="btn-orange"
+            disabled={false}
+            onClick={[Function]}
+          >
+            <div
+              iconType="small"
+              name="fa-refresh"
+            />
+             Refresh
+          </button>,
+          <button
+            disabled={false}
+            onClick={[Function]}
+          >
+            <div
+              iconType="small"
+              name="fa-step-backward"
+            />
+             Back
+          </button>,
+          <button
+            disabled={false}
+            onClick={[Function]}
+          >
+            <span>
+              <div
+                iconType="small"
+                name="fa-pause"
+              />
+               Pause
+            </span>
+          </button>,
+          <button
+            disabled={false}
+            onClick={[Function]}
+          >
+            Next 
+            <div
+              iconType="small"
+              name="fa-step-forward"
+            />
+          </button>,
+          false,
+          <button
+            disabled={false}
+            onClick={[Function]}
+            title="Unmute"
+          >
+            <div
+              iconType="small"
+              name="fa-volume-off"
+            />
+          </button>,
+          <div
+            className="volume-control"
+          >
+            <span>
+              Volume
+            </span>
+            <ComponentEnhancer(undefined)
+              activeDotStyle={Object {}}
+              className=""
+              disabled={false}
+              dotStyle={Object {}}
+              dots={false}
+              handle={[Function]}
+              handleStyle={
+                Array [
+                  Object {},
+                ]
+              }
+              included={true}
+              marks={Object {}}
+              max={100}
+              min={0}
+              onAfterChange={[Function]}
+              onBeforeChange={[Function]}
+              onChange={[Function]}
+              prefixCls="rc-slider"
+              railStyle={Object {}}
+              step={1}
+              trackStyle={
+                Array [
+                  Object {},
+                ]
+              }
+              value={50}
+              vertical={false}
+            />
+          </div>,
+          <div
+            className="url-control"
+          >
+            <form
+              onSubmit={[Function]}
+            >
+              <label
+                className="input__label"
+                htmlFor="spotify-url"
+              >
+                <span
+                  className="u-accessible"
+                >
+                  Spotify URI
+                </span>
+                <input
+                  className="input--large"
+                  id="spotify-url"
+                  name="url"
+                  onChange={[Function]}
+                  placeholder="spotify:user:...:playlist:..."
+                  type="text"
+                />
+              </label>
+              <button
+                disabled={false}
+                title="Play URL"
+              >
+                Play URL
+              </button>
+              <div
+                className="error"
+              >
+                Invalid URI provided. You can only play playlists. URI must start with 'spotify:user:...:playlist:...'
+              </div>
+            </form>
+          </div>,
+        ],
+        "className": "controls",
+      },
+      "ref": null,
+      "rendered": Array [
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <div
+                iconType="small"
+                name="fa-refresh"
+              />,
+              " Refresh",
+            ],
+            "className": "btn-orange",
+            "disabled": false,
+            "onClick": [Function],
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "iconType": "small",
+                "name": "fa-refresh",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": "div",
+            },
+            " Refresh",
+          ],
+          "type": "button",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <div
+                iconType="small"
+                name="fa-step-backward"
+              />,
+              " Back",
+            ],
+            "disabled": false,
+            "onClick": [Function],
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "iconType": "small",
+                "name": "fa-step-backward",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": "div",
+            },
+            " Back",
+          ],
+          "type": "button",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <span>
+                <div
+                  iconType="small"
+                  name="fa-pause"
+                />
+                 Pause
+              </span>,
+              false,
+            ],
+            "disabled": false,
+            "onClick": [Function],
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": Array [
+                  <div
+                    iconType="small"
+                    name="fa-pause"
+                  />,
+                  " Pause",
+                ],
+              },
+              "ref": null,
+              "rendered": Array [
+                Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "host",
+                  "props": Object {
+                    "iconType": "small",
+                    "name": "fa-pause",
+                  },
+                  "ref": null,
+                  "rendered": null,
+                  "type": "div",
+                },
+                " Pause",
+              ],
+              "type": "span",
+            },
+            false,
+          ],
+          "type": "button",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              "Next ",
+              <div
+                iconType="small"
+                name="fa-step-forward"
+              />,
+            ],
+            "disabled": false,
+            "onClick": [Function],
+          },
+          "ref": null,
+          "rendered": Array [
+            "Next ",
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "iconType": "small",
+                "name": "fa-step-forward",
+              },
+              "ref": null,
+              "rendered": null,
+              "type": "div",
+            },
+          ],
+          "type": "button",
+        },
+        false,
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": <div
+              iconType="small"
+              name="fa-volume-off"
+            />,
+            "disabled": false,
+            "onClick": [Function],
+            "title": "Unmute",
+          },
+          "ref": null,
+          "rendered": Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "iconType": "small",
+              "name": "fa-volume-off",
+            },
+            "ref": null,
+            "rendered": null,
+            "type": "div",
+          },
+          "type": "button",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": Array [
+              <span>
+                Volume
+              </span>,
+              <ComponentEnhancer(undefined)
+                activeDotStyle={Object {}}
+                className=""
+                disabled={false}
+                dotStyle={Object {}}
+                dots={false}
+                handle={[Function]}
+                handleStyle={
+                  Array [
+                    Object {},
+                  ]
+                }
+                included={true}
+                marks={Object {}}
+                max={100}
+                min={0}
+                onAfterChange={[Function]}
+                onBeforeChange={[Function]}
+                onChange={[Function]}
+                prefixCls="rc-slider"
+                railStyle={Object {}}
+                step={1}
+                trackStyle={
+                  Array [
+                    Object {},
+                  ]
+                }
+                value={50}
+                vertical={false}
+              />,
+            ],
+            "className": "volume-control",
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "Volume",
+              },
+              "ref": null,
+              "rendered": "Volume",
+              "type": "span",
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "activeDotStyle": Object {},
+                "className": "",
+                "disabled": false,
+                "dotStyle": Object {},
+                "dots": false,
+                "handle": [Function],
+                "handleStyle": Array [
+                  Object {},
+                ],
+                "included": true,
+                "marks": Object {},
+                "max": 100,
+                "min": 0,
+                "onAfterChange": [Function],
+                "onBeforeChange": [Function],
+                "onChange": [Function],
+                "prefixCls": "rc-slider",
+                "railStyle": Object {},
+                "step": 1,
+                "trackStyle": Array [
+                  Object {},
+                ],
+                "value": 50,
+                "vertical": false,
+              },
+              "ref": null,
+              "rendered": null,
+              "type": [Function],
+            },
+          ],
+          "type": "div",
+        },
+        Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "host",
+          "props": Object {
+            "children": <form
+              onSubmit={[Function]}
+            >
+              <label
+                className="input__label"
+                htmlFor="spotify-url"
+              >
+                <span
+                  className="u-accessible"
+                >
+                  Spotify URI
+                </span>
+                <input
+                  className="input--large"
+                  id="spotify-url"
+                  name="url"
+                  onChange={[Function]}
+                  placeholder="spotify:user:...:playlist:..."
+                  type="text"
+                />
+              </label>
+              <button
+                disabled={false}
+                title="Play URL"
+              >
+                Play URL
+              </button>
+              <div
+                className="error"
+              >
+                Invalid URI provided. You can only play playlists. URI must start with 'spotify:user:...:playlist:...'
+              </div>
+            </form>,
+            "className": "url-control",
+          },
+          "ref": null,
+          "rendered": Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "host",
+            "props": Object {
+              "children": Array [
+                <label
+                  className="input__label"
+                  htmlFor="spotify-url"
+                >
+                  <span
+                    className="u-accessible"
+                  >
+                    Spotify URI
+                  </span>
+                  <input
+                    className="input--large"
+                    id="spotify-url"
+                    name="url"
+                    onChange={[Function]}
+                    placeholder="spotify:user:...:playlist:..."
+                    type="text"
+                  />
+                </label>,
+                <button
+                  disabled={false}
+                  title="Play URL"
+                >
+                  Play URL
+                </button>,
+                <div
+                  className="error"
+                >
+                  Invalid URI provided. You can only play playlists. URI must start with 'spotify:user:...:playlist:...'
+                </div>,
+              ],
+              "onSubmit": [Function],
+            },
+            "ref": null,
+            "rendered": Array [
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": Array [
+                    <span
+                      className="u-accessible"
+                    >
+                      Spotify URI
+                    </span>,
+                    <input
+                      className="input--large"
+                      id="spotify-url"
+                      name="url"
+                      onChange={[Function]}
+                      placeholder="spotify:user:...:playlist:..."
+                      type="text"
+                    />,
+                  ],
+                  "className": "input__label",
+                  "htmlFor": "spotify-url",
+                },
+                "ref": null,
+                "rendered": Array [
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "children": "Spotify URI",
+                      "className": "u-accessible",
+                    },
+                    "ref": null,
+                    "rendered": "Spotify URI",
+                    "type": "span",
+                  },
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "host",
+                    "props": Object {
+                      "className": "input--large",
+                      "id": "spotify-url",
+                      "name": "url",
+                      "onChange": [Function],
+                      "placeholder": "spotify:user:...:playlist:...",
+                      "type": "text",
+                    },
+                    "ref": null,
+                    "rendered": null,
+                    "type": "input",
+                  },
+                ],
+                "type": "label",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "Play URL",
+                  "disabled": false,
+                  "title": "Play URL",
+                },
+                "ref": null,
+                "rendered": "Play URL",
+                "type": "button",
+              },
+              Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "Invalid URI provided. You can only play playlists. URI must start with 'spotify:user:...:playlist:...'",
+                  "className": "error",
+                },
+                "ref": null,
+                "rendered": "Invalid URI provided. You can only play playlists. URI must start with 'spotify:user:...:playlist:...'",
+                "type": "div",
+              },
+            ],
+            "type": "form",
+          },
+          "type": "div",
+        },
+      ],
+      "type": "div",
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+      },
+    },
+  },
 }
 `;

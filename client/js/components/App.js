@@ -6,8 +6,12 @@ import IntelligentControls from '../containers/IntelligentControls';
 import Logo from '../components/Logo';
 
 const propTypes = {
-    lastUpdated: PropTypes.number.isRequired,
+    lastUpdated: PropTypes.number,
     fetchSongIfNeeded: PropTypes.func.isRequired,
+};
+
+const defaultProps = {
+    lastUpdated: 0,
 };
 
 class App extends Component {
@@ -38,5 +42,6 @@ class App extends Component {
 }
 
 App.propTypes = propTypes;
+App.defaultProps = defaultProps;
 
 export default App;

@@ -1,10 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
 exports[`Logo component renders correctly with min params 1`] = `
 <div
-  className="logo">
+  className="logo"
+>
   <img
     alt="Springtunes Logo"
     height="41"
     src="../img/springtunes.svg"
-    width="250" />
+    width="250"
+  />
 </div>
 `;

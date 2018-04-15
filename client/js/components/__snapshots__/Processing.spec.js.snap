@@ -1,10 +1,14 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
 exports[`Processing component renders correctly with min params 1`] = `
 <div
-  className="loading">
+  className="loading"
+>
   <img
     alt="Processing... please wait..."
     height="24"
     src="../img/processing.gif"
-    width="24" />
+    width="24"
+  />
 </div>
 `;
