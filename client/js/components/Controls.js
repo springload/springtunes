@@ -146,8 +146,8 @@ class Controls extends Component {
                                 }
                             />
                         </label>
-                        <button disabled={isFetching} title="Play URL">
-                            Play URL
+                        <button disabled={isFetching} title="Play URI">
+                            Play URI
                         </button>
                         {error !== '' && <div className="error">{error}</div>}
                     </form>
