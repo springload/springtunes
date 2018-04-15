@@ -1,12 +1,9 @@
 /* eslint-disable no-console */
 const express = require('express');
-const osaSpotify = require('osa-spotify');
-const nodeSpotifyWebHelper = require('node-spotify-webhelper');
+const SpotifyWebHelper = require('spotify-web-helper');
 const spotify = require('spotify-node-applescript');
 
-const spotifyWebHelper = new nodeSpotifyWebHelper.SpotifyWebHelper({
-    port: 4389
-});
+const spotifyWebHelper = new SpotifyWebHelper();
 
 const router = express();
 
@@ -36,15 +33,18 @@ router
     .get((req, res) => res.json({ status: 'ok' }));
 
 const getCurrentSong = res => {
-    spotifyWebHelper.getStatus((err, jsonBlob) => {
-        if (err) {
-            console.log(err);
-            return res.json({ error: 'Could not get the current song.' });
-        }
-
-        console.log(jsonBlob);
-        return res.json(jsonBlob);
+    spotify.isRunning((err, isRunning) => {
+        if (!isRunning)
+            return res.json({ error: 'Looks like Spotify is not running.' });
     });
+    spotifyWebHelper
+        .getStatus()
+        .then(dataRes => {
+            if (!dataRes || !dataRes.track)
+                return res.json({ error: 'Could not get the current song.' });
+            return res.json(dataRes);
+        })
+        .catch(() => res.json({ error: 'Could not get the current song.' }));
 };
 
 /**
@@ -114,14 +114,15 @@ const getCurrentSong = res => {
  *     }
  */
 router.route('/play').post((req, res) => {
-    const body = req.body;
-    return spotifyWebHelper.play(body.url, (err, jsonBlob) => {
-        if (err || jsonBlob.error) {
-            return res.json({ error: 'Could not change the song.' });
-        }
-
-        return res.json(jsonBlob);
-    });
+    const { body } = req;
+    return spotifyWebHelper.player
+        .play(body.url)
+        .then(() => getCurrentSong(res))
+        .catch(() =>
+            res.json({
+                error: 'Something went wrong while trying to play the track.'
+            })
+        );
 });
 
 router
@@ -262,13 +263,13 @@ router
     .post((req, res) => {
         const errorMsg = 'Valid actions are only "back" and "next".';
 
-        const body = req.body;
+        const { body } = req;
         if (body.action === 'back') {
-            return osaSpotify.back().then(() => getCurrentSong(res));
+            return spotify.previous(() => getCurrentSong(res));
         }
 
         if (body.action === 'next') {
-            return osaSpotify.next().then(() => getCurrentSong(res));
+            return spotify.next(() => getCurrentSong(res));
         }
 
         return res.json({ error: errorMsg });
@@ -338,7 +339,7 @@ router
      *         error: 'Valid actions are only "back" and "next".'
      *     }
      */
-    .put((req, res) => osaSpotify.toggle().then(() => getCurrentSong(res)));
+    .put((req, res) => spotify.playPause(() => getCurrentSong(res)));
 
 router
     .route('/volume')

@@ -43,8 +43,6 @@
     "isomorphic-fetch": "^2.1.1",
     "keymirror": "^0.1.1",
     "lodash": "^4.17.0",
-    "node-spotify-webhelper": "0.0.6",
-    "osa-spotify": "^2.4.0",
     "raw-loader": "^0.5.1",
     "rc-slider": "^8.6.0",
     "react": "^16.2.0",
@@ -55,6 +53,7 @@
     "redux-logger": "^3.0.6",
     "redux-thunk": "^2.0.1",
     "spotify-node-applescript": "^1.1.1",
+    "spotify-web-helper": "vincentaudebert/spotify-web-helper",
     "uglifyjs": "^2.4.10"
   },
   "devDependencies": {
