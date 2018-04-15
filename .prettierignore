@@ -3,3 +3,5 @@ flow-typed
 bin
 .githooks
 dist
+doc
+public

@@ -120,8 +120,8 @@ router.route('/play').post((req, res) => {
         .then(() => getCurrentSong(res))
         .catch(() =>
             res.json({
-                error: 'Something went wrong while trying to play the track.'
-            })
+                error: 'Something went wrong while trying to play the track.',
+            }),
         );
 });
 
@@ -457,7 +457,7 @@ router
             body.volume <= 100
         ) {
             return spotify.setVolume(body.volume, () =>
-                res.json({ value: body.volume })
+                res.json({ value: body.volume }),
             );
         }
 

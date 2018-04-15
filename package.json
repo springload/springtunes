@@ -77,6 +77,7 @@
     "normalize-css": "^2.3.1",
     "object-assign": "^4.1.0",
     "pleeease-cli": "^4.0.0",
+    "prettier": "^1.12.0",
     "react-addons-test-utils": "^15.4.0",
     "react-test-renderer": "^16.3.1",
     "react-transform-hmr": "^1.0.0",
@@ -99,7 +100,7 @@
     "test": "jest",
     "test:watch": "jest --watch",
     "test:coverage": "jest --coverage",
-    "prettier": "prettier **/*.js --write"
+    "prettier": "prettier server/*.js client/js/**/*.js --write"
   },
   "jest": {
     "setupFiles": [

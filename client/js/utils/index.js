@@ -1,5 +1,10 @@
-export const shouldFetchSong = (song) => {
-    if (!song || Object.keys(song).length === 0 || Object.keys(song.current).length === 0) return true;
+export const shouldFetchSong = song => {
+    if (
+        !song ||
+        Object.keys(song).length === 0 ||
+        Object.keys(song.current).length === 0
+    )
+        return true;
     if (song.isFetching) return false;
     return true;
 };

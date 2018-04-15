@@ -18,7 +18,7 @@ const CurrentSong = ({ currentSong, isFetching, hasError, error }) => (
             </div>
             <div className="song-details__content">
                 <div className="twelve columns">
-                    {!isFetching &&
+                    {!isFetching && (
                         <div>
                             <h2>
                                 <a
@@ -49,16 +49,15 @@ const CurrentSong = ({ currentSong, isFetching, hasError, error }) => (
                                 </a>
                             </h3>
                         </div>
-                    }
-                    {isFetching &&
-                        <Processing />
-                    }
-                    {!isFetching && hasError &&
-                        <div className="error">
-                            Error occurred.<br />
-                            Details are: "{error}"
-                        </div>
-                    }
+                    )}
+                    {isFetching && <Processing />}
+                    {!isFetching &&
+                        hasError && (
+                            <div className="error">
+                                Error occurred.<br />
+                                Details are: "{error}"
+                            </div>
+                        )}
                 </div>
             </div>
         </div>

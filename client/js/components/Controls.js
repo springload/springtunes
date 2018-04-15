@@ -16,7 +16,7 @@ const propTypes = {
     muteClick: PropTypes.func.isRequired,
     unmuteClick: PropTypes.func.isRequired,
     playURL: PropTypes.func.isRequired,
-    volumeChange: PropTypes.func.isRequired
+    volumeChange: PropTypes.func.isRequired,
 };
 
 class Controls extends Component {
@@ -24,7 +24,7 @@ class Controls extends Component {
         super(props);
         this.state = {
             url: '',
-            error: ''
+            error: '',
         };
         this.updateURL = this.updateURL.bind(this);
         this.checkURL = this.checkURL.bind(this);
@@ -38,19 +38,19 @@ class Controls extends Component {
         ) {
             this.props.playURL(url);
             this.setState({
-                error: ''
+                error: '',
             });
         } else {
             this.setState({
                 error:
-                    "Invalid URI provided. You can only play playlists. URI must start with 'spotify:user:...:playlist:...'"
+                    "Invalid URI provided. You can only play playlists. URI must start with 'spotify:user:...:playlist:...'",
             });
         }
     }
 
     updateURL(urlInput) {
         this.setState({
-            url: urlInput
+            url: urlInput,
         });
     }
 
@@ -67,7 +67,7 @@ class Controls extends Component {
             nextClick,
             muteClick,
             unmuteClick,
-            volumeChange
+            volumeChange,
         } = this.props;
 
         const { url, error } = this.state;

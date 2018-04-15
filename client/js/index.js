@@ -10,5 +10,5 @@ render(
     <Provider store={store}>
         <IntelligentApp />
     </Provider>,
-    document.getElementById('root')
+    document.getElementById('root'),
 );

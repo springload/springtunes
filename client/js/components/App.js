@@ -7,11 +7,11 @@ import Logo from '../components/Logo';
 
 const propTypes = {
     lastUpdated: PropTypes.number,
-    fetchSongIfNeeded: PropTypes.func.isRequired
+    fetchSongIfNeeded: PropTypes.func.isRequired,
 };
 
 const defaultProps = {
-    lastUpdated: 0
+    lastUpdated: 0,
 };
 
 class App extends Component {
