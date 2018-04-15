@@ -1,13 +1,10 @@
 import React from 'react';
 import Processing from './Processing';
-import ReactTestUtils from 'react-addons-test-utils';
+import renderer from 'react-test-renderer';
 
 describe('Processing component', () => {
     it('renders correctly with min params', () => {
-        const shallowRenderer = ReactTestUtils.createRenderer();
-        const result = shallowRenderer.render(
-            <Processing />
-        );
+        const result = renderer.create(<Processing />).toJSON();
         expect(result).toMatchSnapshot();
     });
 });
