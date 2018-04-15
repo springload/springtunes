@@ -1,4 +1,5 @@
-import React, { PropTypes } from 'react';
+import PropTypes from 'prop-types';
+import React from 'react';
 
 const propTypes = {
     lastUpdated: PropTypes.number.isRequired,
@@ -6,9 +7,7 @@ const propTypes = {
 
 const LastUpdated = ({ lastUpdated }) => (
     <div className="last-updated__time">
-        <p>
-            Last updated at {new Date(lastUpdated).toLocaleTimeString()}
-        </p>
+        <p>Last updated at {new Date(lastUpdated).toLocaleTimeString()}</p>
     </div>
 );
 

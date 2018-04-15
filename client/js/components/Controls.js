@@ -1,4 +1,5 @@
-import React, { PropTypes, Component } from 'react';
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import Slider from 'rc-slider';
 import Icon from '../components/Icon';
 
@@ -30,14 +31,19 @@ class Controls extends Component {
     }
 
     checkURL(url) {
-        if (url !== '' && url.indexOf('https://open.spotify.com/user/') === 0) {
+        if (
+            url !== '' &&
+            url.indexOf('spotify:user:') === 0 &&
+            url.indexOf(':playlist:') !== -1
+        ) {
             this.props.playURL(url);
             this.setState({
                 error: '',
             });
         } else {
             this.setState({
-                error: 'Invalid URL provided. You can only play playlists. URL must start with \'https://open.spotify.com/user/...\'',
+                error:
+                    "Invalid URI provided. You can only play playlists. URI must start with 'spotify:user:...:playlist:...'",
             });
         }
     }
@@ -68,64 +74,82 @@ class Controls extends Component {
 
         return (
             <div className="controls">
-                <button className="btn-orange" onClick={refreshClick} disabled={isFetching}>
+                <button
+                    className="btn-orange"
+                    onClick={refreshClick}
+                    disabled={isFetching}
+                >
                     <Icon name="fa-refresh" iconType="small" /> Refresh
                 </button>
                 <button onClick={backClick} disabled={isFetching}>
                     <Icon name="fa-step-backward" iconType="small" /> Back
                 </button>
                 <button onClick={togglePauseClick} disabled={isFetching}>
-                    {isPlaying &&
-                        <span><Icon name="fa-pause" iconType="small" /> Pause</span>
-                    }
-                    {!isPlaying &&
-                        <span><Icon name="fa-play" iconType="small" /> Play</span>
-                    }
+                    {isPlaying && (
+                        <span>
+                            <Icon name="fa-pause" iconType="small" /> Pause
+                        </span>
+                    )}
+                    {!isPlaying && (
+                        <span>
+                            <Icon name="fa-play" iconType="small" /> Play
+                        </span>
+                    )}
                 </button>
                 <button onClick={nextClick} disabled={isFetching}>
                     Next <Icon name="fa-step-forward" iconType="small" />
                 </button>
-                {!isMuted &&
-                    <button onClick={muteClick} disabled={!isFetching && isModifyingMute} title="Mute">
+                {!isMuted && (
+                    <button
+                        onClick={muteClick}
+                        disabled={!isFetching && isModifyingMute}
+                        title="Mute"
+                    >
                         <Icon name="fa-volume-up" iconType="small" />
                     </button>
-                }
-                {isMuted &&
-                    <button onClick={unmuteClick} disabled={!isFetching && isModifyingMute} title="Unmute">
+                )}
+                {isMuted && (
+                    <button
+                        onClick={unmuteClick}
+                        disabled={!isFetching && isModifyingMute}
+                        title="Unmute"
+                    >
                         <Icon name="fa-volume-off" iconType="small" />
                     </button>
-                }
+                )}
                 <div className="volume-control">
                     <span>Volume</span>
-                    <Slider value={volume} onChange={volumeChange} disabled={isFetching} />
+                    <Slider
+                        value={volume}
+                        onChange={volumeChange}
+                        disabled={isFetching}
+                    />
                 </div>
 
                 <div className="url-control">
                     <form
-                        onSubmit={(evt) => {
+                        onSubmit={evt => {
                             this.checkURL(url);
                             evt.preventDefault();
                         }}
                     >
                         <label htmlFor="spotify-url" className="input__label">
-                            <span className="u-accessible">
-                                Spotify URL
-                            </span>
+                            <span className="u-accessible">Spotify URI</span>
                             <input
                                 id="spotify-url"
                                 className="input--large"
                                 type="text"
                                 name="url"
-                                placeholder="https://open.spotify.com/user/spotify/playlist/..."
-                                onChange={evt => this.updateURL(evt.target.value)}
+                                placeholder="spotify:user:...:playlist:..."
+                                onChange={evt =>
+                                    this.updateURL(evt.target.value)
+                                }
                             />
                         </label>
-                        <button disabled={isFetching} title="Play URL">
-                            Play URL
+                        <button disabled={isFetching} title="Play URI">
+                            Play URI
                         </button>
-                        { error !== '' && (
-                            <div className="error">{error}</div>
-                        )}
+                        {error !== '' && <div className="error">{error}</div>}
                     </form>
                 </div>
             </div>

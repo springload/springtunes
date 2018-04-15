@@ -1,70 +1,63 @@
 import { connect } from 'react-redux';
 import Controls from '../components/Controls';
 import {
-  fetchSongIfNeeded,
-  togglePauseIfNeeded,
-  nextIfNeeded,
-  backIfNeeded,
-  muteIfNeeded,
-  unmuteIfNeeded,
-  changeVolume,
-  playURL,
+    fetchSongIfNeeded,
+    togglePauseIfNeeded,
+    nextIfNeeded,
+    backIfNeeded,
+    muteIfNeeded,
+    unmuteIfNeeded,
+    changeVolume,
+    playURL,
 } from '../actions';
 
-const mapStateToProps = state => (
-    {
-        lastUpdated: state.song.lastUpdated,
-        isFetching: state.song.isFetching,
-        isPlaying: state.song.isPlaying,
-        isMuted: state.volume.isMuted,
-        isModifyingMute: state.volume.isModifyingMute,
-        volume: state.volume.value,
-    }
-);
+const mapStateToProps = state => ({
+    lastUpdated: state.song.lastUpdated,
+    isFetching: state.song.isFetching,
+    isPlaying: state.song.isPlaying,
+    isMuted: state.volume.isMuted,
+    isModifyingMute: state.volume.isModifyingMute,
+    volume: state.volume.value,
+});
 
-const dispatchToProps = dispatch => (
-    {
-        refreshClick: (evt) => {
-            evt.preventDefault();
-            dispatch(fetchSongIfNeeded());
-        },
+const dispatchToProps = dispatch => ({
+    refreshClick: evt => {
+        evt.preventDefault();
+        dispatch(fetchSongIfNeeded());
+    },
 
-        togglePauseClick: (evt) => {
-            evt.preventDefault();
-            dispatch(togglePauseIfNeeded());
-        },
+    togglePauseClick: evt => {
+        evt.preventDefault();
+        dispatch(togglePauseIfNeeded());
+    },
 
-        nextClick: (evt) => {
-            evt.preventDefault();
-            dispatch(nextIfNeeded());
-        },
+    nextClick: evt => {
+        evt.preventDefault();
+        dispatch(nextIfNeeded());
+    },
 
-        backClick: (evt) => {
-            evt.preventDefault();
-            dispatch(backIfNeeded());
-        },
+    backClick: evt => {
+        evt.preventDefault();
+        dispatch(backIfNeeded());
+    },
 
-        muteClick: (evt) => {
-            evt.preventDefault();
-            dispatch(muteIfNeeded());
-        },
+    muteClick: evt => {
+        evt.preventDefault();
+        dispatch(muteIfNeeded());
+    },
 
-        unmuteClick: (evt) => {
-            evt.preventDefault();
-            dispatch(unmuteIfNeeded());
-        },
+    unmuteClick: evt => {
+        evt.preventDefault();
+        dispatch(unmuteIfNeeded());
+    },
 
-        volumeChange: (volume) => {
-            dispatch(changeVolume(volume));
-        },
+    volumeChange: volume => {
+        dispatch(changeVolume(volume));
+    },
 
-        playURL: (url) => {
-            dispatch(playURL(url));
-        },
-    }
-);
+    playURL: url => {
+        dispatch(playURL(url));
+    },
+});
 
-export default connect(
-  mapStateToProps,
-  dispatchToProps,
-)(Controls);
+export default connect(mapStateToProps, dispatchToProps)(Controls);

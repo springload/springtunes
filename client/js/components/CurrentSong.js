@@ -1,12 +1,20 @@
-import React, { PropTypes } from 'react';
+/* eslint react/no-unescaped-entities: 0 */
+
+import PropTypes from 'prop-types';
+import React from 'react';
 import Processing from '../components/Processing';
 import Icon from '../components/Icon';
 
 const propTypes = {
     isFetching: PropTypes.bool.isRequired,
-    currentSong: PropTypes.object.isRequired,
+    currentSong: PropTypes.object.isRequired, //eslint-disable-line react/forbid-prop-types
     hasError: PropTypes.bool,
     error: PropTypes.string,
+};
+
+const defaultProps = {
+    hasError: false,
+    error: '',
 };
 
 const CurrentSong = ({ currentSong, isFetching, hasError, error }) => (
@@ -17,7 +25,7 @@ const CurrentSong = ({ currentSong, isFetching, hasError, error }) => (
             </div>
             <div className="song-details__content">
                 <div className="twelve columns">
-                    {!isFetching &&
+                    {!isFetching && (
                         <div>
                             <h2>
                                 <a
@@ -48,16 +56,15 @@ const CurrentSong = ({ currentSong, isFetching, hasError, error }) => (
                                 </a>
                             </h3>
                         </div>
-                    }
-                    {isFetching &&
-                        <Processing />
-                    }
-                    {!isFetching && hasError &&
-                        <div className="error">
-                            Error occurred.<br />
-                            Details are: "{error}"
-                        </div>
-                    }
+                    )}
+                    {isFetching && <Processing />}
+                    {!isFetching &&
+                        hasError && (
+                            <div className="error">
+                                Error occurred.<br />
+                                Details are: "{error}"
+                            </div>
+                        )}
                 </div>
             </div>
         </div>
@@ -65,5 +72,6 @@ const CurrentSong = ({ currentSong, isFetching, hasError, error }) => (
 );
 
 CurrentSong.propTypes = propTypes;
+CurrentSong.defaultProps = defaultProps;
 
 export default CurrentSong;

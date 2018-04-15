@@ -3,9 +3,8 @@
 import identity from 'lodash/identity';
 
 export default function createAction(type, payloadCreator, metaCreator) {
-    const finalPayloadCreator = typeof payloadCreator === 'function'
-      ? payloadCreator
-      : identity;
+    const finalPayloadCreator =
+        typeof payloadCreator === 'function' ? payloadCreator : identity;
 
     const actionCreator = (...args) => {
         const hasError = args[0] instanceof Error;

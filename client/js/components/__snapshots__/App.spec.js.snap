@@ -1,25 +1,33 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
 exports[`App component renders correctly with min params 1`] = `
 <div>
   <div
-    className="header">
+    className="header"
+  >
     <div
-      className="header__logo container">
-      <Logo />
+      className="header__logo container"
+    >
+      <div />
     </div>
   </div>
   <div
-    className="container section">
+    className="container section"
+  >
     <div
-      className="last-updated">
+      className="last-updated"
+    >
       <p
-        className="u-text-uppercase">
+        className="u-text-uppercase"
+      >
         Now Playing
       </p>
-      <LastUpdated
-        lastUpdated={23525345345} />
+      <div
+        lastUpdated={23525345345}
+      />
     </div>
-    <Connect(CurrentSong) />
-    <Connect(Controls) />
+    <div />
+    <div />
   </div>
 </div>
 `;
