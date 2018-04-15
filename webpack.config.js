@@ -10,7 +10,7 @@ const config = {
     },
     plugins: [
         new webpack.optimize.OccurrenceOrderPlugin(),
-        new webpack.NoEmitOnErrorsPlugin()
+        new webpack.NoErrorsPlugin()
     ],
     module: {
         loaders: [
