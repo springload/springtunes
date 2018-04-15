@@ -1,14 +1,15 @@
 import React from 'react';
-import ReactTestUtils from 'react-addons-test-utils';
+import renderer from 'react-test-renderer';
 import { shallow } from 'enzyme';
 import Controls from './Controls';
+
+jest.mock('./Icon', () => 'div');
 
 const emptyFunc = () => {};
 
 describe('Controls component', () => {
     it('renders correctly with min params', () => {
-        const shallowRenderer = ReactTestUtils.createRenderer();
-        const result = shallowRenderer.render(
+        const result = renderer.create(
             <Controls
                 isFetching={false}
                 isModifyingMute={false}
@@ -29,8 +30,7 @@ describe('Controls component', () => {
     });
 
     it('renders correctly with isFetching true', () => {
-        const shallowRenderer = ReactTestUtils.createRenderer();
-        const result = shallowRenderer.render(
+        const result = renderer.create(
             <Controls
                 isFetching={true}
                 isModifyingMute={false}
@@ -51,8 +51,7 @@ describe('Controls component', () => {
     });
 
     it('renders correctly with isModifyingMute true', () => {
-        const shallowRenderer = ReactTestUtils.createRenderer();
-        const result = shallowRenderer.render(
+        const result = renderer.create(
             <Controls
                 isFetching={false}
                 isModifyingMute={true}
@@ -73,8 +72,7 @@ describe('Controls component', () => {
     });
 
     it('renders correctly with isMuted', () => {
-        const shallowRenderer = ReactTestUtils.createRenderer();
-        const result = shallowRenderer.render(
+        const result = renderer.create(
             <Controls
                 isFetching={false}
                 isModifyingMute={false}
@@ -95,8 +93,7 @@ describe('Controls component', () => {
     });
 
     it('renders correctly with isPlaying true', () => {
-        const shallowRenderer = ReactTestUtils.createRenderer();
-        const result = shallowRenderer.render(
+        const result = renderer.create(
             <Controls
                 isFetching={false}
                 isModifyingMute={false}
@@ -118,7 +115,9 @@ describe('Controls component', () => {
 
     it('execute correctly refreshClick', () => {
         let testClick = false;
-        const testOnClick = () => { testClick = true; };
+        const testOnClick = () => {
+            testClick = true;
+        };
 
         const component = shallow(
             <Controls
@@ -138,13 +137,18 @@ describe('Controls component', () => {
             />,
         );
 
-        component.find('button').first().simulate('click');
+        component
+            .find('button')
+            .first()
+            .simulate('click');
         expect(testClick).toBeTruthy();
     });
 
     it('execute correctly backClick', () => {
         let testClick = false;
-        const testOnClick = () => { testClick = true; };
+        const testOnClick = () => {
+            testClick = true;
+        };
 
         const component = shallow(
             <Controls
@@ -164,13 +168,18 @@ describe('Controls component', () => {
             />,
         );
 
-        component.find('button').at(1).simulate('click');
+        component
+            .find('button')
+            .at(1)
+            .simulate('click');
         expect(testClick).toBeTruthy();
     });
 
     it('execute correctly togglePauseClick', () => {
         let testClick = false;
-        const testOnClick = () => { testClick = true; };
+        const testOnClick = () => {
+            testClick = true;
+        };
 
         const component = shallow(
             <Controls
@@ -190,13 +199,18 @@ describe('Controls component', () => {
             />,
         );
 
-        component.find('button').at(2).simulate('click');
+        component
+            .find('button')
+            .at(2)
+            .simulate('click');
         expect(testClick).toBeTruthy();
     });
 
     it('execute correctly nextClick', () => {
         let testClick = false;
-        const testOnClick = () => { testClick = true; };
+        const testOnClick = () => {
+            testClick = true;
+        };
 
         const component = shallow(
             <Controls
@@ -216,13 +230,18 @@ describe('Controls component', () => {
             />,
         );
 
-        component.find('button').at(3).simulate('click');
+        component
+            .find('button')
+            .at(3)
+            .simulate('click');
         expect(testClick).toBeTruthy();
     });
 
     it('execute correctly muteClick', () => {
         let testClick = false;
-        const testOnClick = () => { testClick = true; };
+        const testOnClick = () => {
+            testClick = true;
+        };
 
         const component = shallow(
             <Controls
@@ -242,13 +261,18 @@ describe('Controls component', () => {
             />,
         );
 
-        component.find('button').at(4).simulate('click');
+        component
+            .find('button')
+            .at(4)
+            .simulate('click');
         expect(testClick).toBeTruthy();
     });
 
     it('execute correctly unmuteClick', () => {
         let testClick = false;
-        const testOnClick = () => { testClick = true; };
+        const testOnClick = () => {
+            testClick = true;
+        };
 
         const component = shallow(
             <Controls
@@ -268,7 +292,10 @@ describe('Controls component', () => {
             />,
         );
 
-        component.find('button').at(4).simulate('click');
+        component
+            .find('button')
+            .at(4)
+            .simulate('click');
         expect(testClick).toBeTruthy();
     });
 
@@ -319,8 +346,7 @@ describe('Controls component', () => {
     });
 
     it('updateURL works', () => {
-        const shallowRenderer = ReactTestUtils.createRenderer();
-        shallowRenderer.render(
+        const shallowRenderer = renderer.create(
             <Controls
                 isFetching={false}
                 isModifyingMute={false}
@@ -337,14 +363,13 @@ describe('Controls component', () => {
                 playURL={emptyFunc}
             />,
         );
-        const instance = shallowRenderer.getMountedInstance();
+        const instance = shallowRenderer.getInstance();
         instance.updateURL('http://newurl');
         expect(instance.state.url).toBe('http://newurl');
     });
 
     it('checkURL works invalid', () => {
-        const shallowRenderer = ReactTestUtils.createRenderer();
-        shallowRenderer.render(
+        const shallowRenderer = renderer.create(
             <Controls
                 isFetching={false}
                 isModifyingMute={false}
@@ -361,14 +386,15 @@ describe('Controls component', () => {
                 playURL={emptyFunc}
             />,
         );
-        const instance = shallowRenderer.getMountedInstance();
+        const instance = shallowRenderer.getInstance();
         instance.checkURL('http://newurl');
-        expect(instance.state.error).toBe('Invalid URL provided. You can only play playlists. URL must start with \'https://open.spotify.com/user/...\'');
+        expect(instance.state.error).toBe(
+            "Invalid URI provided. You can only play playlists. URI must start with 'spotify:user:...:playlist:...'",
+        );
     });
 
     it('checkURL works empty', () => {
-        const shallowRenderer = ReactTestUtils.createRenderer();
-        shallowRenderer.render(
+        const shallowRenderer = renderer.create(
             <Controls
                 isFetching={false}
                 isModifyingMute={false}
@@ -385,14 +411,15 @@ describe('Controls component', () => {
                 playURL={emptyFunc}
             />,
         );
-        const instance = shallowRenderer.getMountedInstance();
+        const instance = shallowRenderer.getInstance();
         instance.checkURL('');
-        expect(instance.state.error).toBe('Invalid URL provided. You can only play playlists. URL must start with \'https://open.spotify.com/user/...\'');
+        expect(instance.state.error).toBe(
+            "Invalid URI provided. You can only play playlists. URI must start with 'spotify:user:...:playlist:...'",
+        );
     });
 
     it('checkURL works valid', () => {
-        const shallowRenderer = ReactTestUtils.createRenderer();
-        shallowRenderer.render(
+        const shallowRenderer = renderer.create(
             <Controls
                 isFetching={false}
                 isModifyingMute={false}
@@ -409,14 +436,18 @@ describe('Controls component', () => {
                 playURL={emptyFunc}
             />,
         );
-        const instance = shallowRenderer.getMountedInstance();
-        instance.checkURL('https://open.spotify.com/user/springload/playlist/6oYWzKyhPbfy2I83KS7JK5');
+        const instance = shallowRenderer.getInstance();
+        instance.checkURL(
+            'spotify:user:spotify:playlist:37i9dQZF1DX1lp03JVa0o6',
+        );
         expect(instance.state.error).toBe('');
     });
 
     it('submit form', () => {
         let testClick = false;
-        const testOnClick = () => { testClick = true; };
+        const testOnClick = () => {
+            testClick = true;
+        };
 
         const component = shallow(
             <Controls
@@ -436,7 +467,10 @@ describe('Controls component', () => {
             />,
         );
 
-        component.find('form').at(0).simulate('submit', { preventDefault: () => {} });
+        component
+            .find('form')
+            .at(0)
+            .simulate('submit', { preventDefault: () => {} });
         expect(testClick).toBeFalsy();
 
         expect(component).toMatchSnapshot();
@@ -461,7 +495,10 @@ describe('Controls component', () => {
             />,
         );
 
-        component.find('input').at(0).simulate('change', { target: { value: 'newValue' } });
+        component
+            .find('input')
+            .at(0)
+            .simulate('change', { target: { value: 'newValue' } });
         expect(component.state().url).toBe('newValue');
     });
 });
