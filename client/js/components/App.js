@@ -1,4 +1,5 @@
-import React, { Component, PropTypes } from 'react';
+import PropTypes from 'prop-types';
+import React, { Component } from 'react';
 import LastUpdated from '../components/LastUpdated';
 import IntelligentCurrentSong from '../containers/IntelligentCurrentSong';
 import IntelligentControls from '../containers/IntelligentControls';
