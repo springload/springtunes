@@ -1,15 +1,12 @@
 import React from 'react';
 import LastUpdated from './LastUpdated';
-import ReactTestUtils from 'react-addons-test-utils';
+import renderer from 'react-test-renderer';
 
 describe('LastUpdated component', () => {
     it('renders correctly with min params', () => {
-        const shallowRenderer = ReactTestUtils.createRenderer();
-        const result = shallowRenderer.render(
-            <LastUpdated
-                lastUpdated={2342342342}
-            />
-        );
+        const result = renderer
+            .create(<LastUpdated lastUpdated={2342342342} />)
+            .toJSON();
         expect(result).toMatchSnapshot();
     });
 });
