@@ -1,43 +1,39 @@
-const path = require('path');
+// Used to run webpack dev server to test the demo in local
 const webpack = require('webpack');
+const path = require('path');
+// const HtmlWebpackPlugin = require('html-webpack-plugin');
 
-const config = {
-    entry: ['./client/js/index'],
+module.exports = (env, options) => ({
+    mode: options.mode,
+    devtool: 'source-map',
+    entry: path.resolve(__dirname, './client/js/index.js'),
     output: {
         path: path.join(__dirname, 'dist'),
         filename: 'bundle.js',
-        publicPath: '/static/'
+        publicPath: '/static/',
     },
-    plugins: [
-        new webpack.optimize.OccurrenceOrderPlugin(),
-        new webpack.NoErrorsPlugin()
-    ],
     module: {
-        loaders: [
+        rules: [
             {
                 test: /\.js$/,
-                loader: 'babel-loader',
-                exclude: /node_modules/,
+                exclude: [/node_modules/],
                 include: __dirname,
-                query: {
-                    cacheDirectory: true
-                }
+                use: [
+                    {
+                        loader: 'babel-loader',
+                    },
+                ],
             },
             {
                 test: /\.svg$/,
-                loader: 'raw-loader'
-            }
-        ]
+                loader: 'raw-loader',
+            },
+        ],
     },
-    watch: true
-};
 
-const prod = new webpack.DefinePlugin({
-    'process.env': {
-        NODE_ENV: JSON.stringify(process.env.NODE_ENV)
-    }
+    plugins: [
+        options.mode === 'development'
+            ? new webpack.HotModuleReplacementPlugin()
+            : () => {},
+    ],
 });
-
-config.plugins.push(prod);
-
-module.exports = config;
